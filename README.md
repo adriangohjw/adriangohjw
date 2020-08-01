@@ -5,4 +5,5 @@
 - 📋 24 years old + Male
 - 🏢 NodeFlair, ShopBack
 - ⚙️ Tech stacks: `.rb`, `.py`, `.js`
+- 📓 My blog: [adriangohjw.github.io](https://adriangohjw.github.io/)
 - 📫 Reach me: [twitter.com/adriangohjw](https://twitter.com/adriangohjw)
