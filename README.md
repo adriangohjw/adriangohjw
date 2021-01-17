@@ -5,5 +5,6 @@
 - 📋 24 years old + Male
 - 🏢 NodeFlair, ShopBack
 - ⚙️ Tech stacks: `.rb`, `.py`, `.js`, `.sol`
+- 💎 Creator of [al_and_ml](https://github.com/adriangohjw/ai_and_ml) gem 
 - 📓 My blog: [adriangohjw.github.io](https://adriangohjw.github.io/)
 - 📫 Reach me: [twitter.com/adriangohjw](https://twitter.com/adriangohjw)
