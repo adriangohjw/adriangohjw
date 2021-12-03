@@ -13,6 +13,7 @@
 
 | Project Name | Repository |
 |-|-|
+| [@limmyweekend (Scheduled Twitter Tweets)](https://twitter.com/limmyweekend) | https://github.com/adriangohjw/limmyweekend-twitter |
 | [Simple URL Shortener](https://url.adriangohjw.com/) | https://github.com/adriangohjw/rails-url-shortener |
 | [Simple API Mocker](https://api-mocker.adriangohjw.com/) | https://github.com/adriangohjw/api-mocker |
 | [News search site (using TheNewsAPI)](https://the-news-api.adriangohjw.com/) | https://github.com/adriangohjw/the-news-api |
