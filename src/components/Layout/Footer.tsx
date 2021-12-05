@@ -95,26 +95,10 @@ export function Footer() {
               <FooterLink href="/reference">React APIs</FooterLink>
               <FooterLink href="/reference/reactdom">React DOM APIs</FooterLink>
             </div>
-            <div className="flex flex-col sm:col-start-2 xl:col-start-4">
-              <FooterLink href="/" isHeader={true}>
-                Community
-              </FooterLink>
-              <FooterLink href="https://github.com/facebook/react/blob/main/CODE_OF_CONDUCT.md">
-                Code of Conduct
-              </FooterLink>
-              <FooterLink href="/community/acknowledgements">
-                Acknowledgements
-              </FooterLink>
-              <FooterLink href="/community/meet-the-team">
-                Meet the Team
-              </FooterLink>
-              {/* <FooterLink href="/">Community Resources</FooterLink> */}
-            </div>
             <div className="flex flex-col">
               <FooterLink isHeader={true}>More</FooterLink>
               {/* <FooterLink href="/">Tutorial</FooterLink> */}
               {/* <FooterLink href="/">Blog</FooterLink> */}
-              {/* <FooterLink href="/">Acknowledgements</FooterLink> */}
               <FooterLink href="https://reactnative.dev/">
                 React Native
               </FooterLink>

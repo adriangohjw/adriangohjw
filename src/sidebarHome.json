@@ -10,17 +10,6 @@
         {
           "title": "Overview",
           "path": "/"
-        },
-        {
-          "title": "Community",
-          "path": "/community",
-          "routes": [{
-            "title": "Acknowledgements",
-            "path": "/community/acknowledgements"
-          }, {
-            "title": "Meet the Team",
-            "path": "/community/meet-the-team"
-          }]
         }
       ]
     }
