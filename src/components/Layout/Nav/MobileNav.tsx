@@ -10,12 +10,15 @@ import {SidebarRouteTree} from '../Sidebar';
 import sidebarHome from '../../../sidebarHome.json';
 import sidebarLearn from '../../../sidebarLearn.json';
 import sidebarReference from '../../../sidebarReference.json';
+import sidebarBlog from '../../../sidebarBlog.json';
 
-function inferSection(pathname: string): 'learn' | 'reference' | 'home' {
+function inferSection(pathname: string): 'learn' | 'reference' | 'home' | 'blog' {
   if (pathname.startsWith('/learn')) {
     return 'learn';
   } else if (pathname.startsWith('/reference')) {
     return 'reference';
+  } else if (pathname.startsWith('/blog')) {
+    return 'blog';
   } else {
     return 'home';
   }
@@ -36,6 +39,10 @@ export function MobileNav() {
     case 'reference':
       tree = sidebarReference.routes[0];
       break;
+    case 'blog':
+      console.error('123');
+      tree = sidebarBlog.routes[0];
+      break;
   }
 
   return (
@@ -54,6 +61,11 @@ export function MobileNav() {
         <TabButton
           isActive={section === 'reference'}
           onClick={() => setSection('reference')}>
+          API
+        </TabButton>
+        <TabButton
+          isActive={section === 'blog'}
+          onClick={() => setSection('blog')}>
           API
         </TabButton>
       </div>

@@ -12,7 +12,6 @@ import {IconHamburger} from 'components/Icon/IconHamburger';
 import {Search} from 'components/Search';
 import {MenuContext} from 'components/useMenu';
 
-import {Logo} from '../../Logo';
 import NavLink from './NavLink';
 
 declare global {
@@ -63,11 +62,13 @@ const lightIcon = (
   </svg>
 );
 
-function inferSection(pathname: string): 'learn' | 'reference' | 'home' {
+function inferSection(pathname: string): 'learn' | 'reference' | 'home' | 'blog' {
   if (pathname.startsWith('/learn')) {
     return 'learn';
   } else if (pathname.startsWith('/reference')) {
     return 'reference';
+  } else if (pathname.startsWith('/blog')) {
+    return 'blog';
   } else {
     return 'home';
   }
@@ -77,18 +78,6 @@ export default function Nav() {
   const {pathname} = useRouter();
   const {isOpen, toggleOpen} = React.useContext(MenuContext);
   const section = inferSection(pathname);
-
-  function handleFeedback() {
-    const nodes: any = document.querySelectorAll(
-      '#_hj_feedback_container button'
-    );
-    if (nodes.length > 0) {
-      nodes[nodes.length - 1].click();
-    } else {
-      window.location.href =
-        'https://github.com/reactjs/reactjs.org/issues/3308';
-    }
-  }
 
   return (
     <nav className="sticky top-0 items-center w-full flex lg:block justify-between bg-wash dark:bg-wash-dark pt-0 lg:pt-4 pr-5 lg:px-5 z-50">
@@ -104,7 +93,6 @@ export default function Nav() {
         </button>
         <NextLink href="/">
           <a className="inline-flex text-l font-normal items-center text-primary dark:text-primary-dark py-1 mr-0 sm:mr-3 whitespace-nowrap">
-            <Logo className="text-sm mr-2 w-8 h-8 text-link dark:text-link-dark" />
             adriangohjw
           </a>
         </NextLink>
@@ -145,6 +133,9 @@ export default function Nav() {
         </NavLink>
         <NavLink href="/reference" isActive={section === 'reference'}>
           API
+        </NavLink>
+        <NavLink href="/blog" isActive={section === 'blog'}>
+          Blog
         </NavLink>
       </div>
       <div className="flex my-4 h-10 mx-0 w-full lg:hidden justify-end slg:max-w-sm">
