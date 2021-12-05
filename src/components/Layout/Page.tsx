@@ -16,6 +16,7 @@ interface PageProps {
 export function Page({routeTree, children}: PageProps) {
   return (
     <MenuProvider>
+      {console.log(routeTree)}
       <SidebarContext.Provider value={routeTree}>
         <div className="h-auto lg:h-screen flex flex-row">
           <div className="no-bg-scrollbar h-auto lg:h-full lg:overflow-y-scroll fixed flex flex-row lg:flex-col py-0 top-0 left-0 right-0 lg:max-w-xs w-full shadow lg:shadow-none z-50">

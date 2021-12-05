@@ -9,7 +9,6 @@ import {MenuContext} from 'components/useMenu';
 import {useMediaQuery} from '../useMediaQuery';
 import {SidebarRouteTree} from './SidebarRouteTree';
 import {Search} from 'components/Search';
-import {Button} from 'components/Button';
 import {MobileNav} from '../Nav/MobileNav';
 
 const SIDEBAR_BREAKPOINT = 1023;
@@ -23,18 +22,6 @@ export function Sidebar({isMobileOnly}: {isMobileOnly?: boolean}) {
   // HACK. Fix up the data structures instead.
   if ((routeTree as any).routes.length === 1) {
     routeTree = (routeTree as any).routes[0];
-  }
-
-  function handleFeedback() {
-    const nodes: any = document.querySelectorAll(
-      '#_hj_feedback_container button'
-    );
-    if (nodes.length > 0) {
-      nodes[nodes.length - 1].click();
-    } else {
-      window.location.href =
-        'https://github.com/reactjs/reactjs.org/issues/3308';
-    }
   }
 
   return (

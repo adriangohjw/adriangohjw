@@ -32,7 +32,7 @@ Each React component is a JavaScript function that may contain some markup that 
 
 <Note>
 
-[JSX and React are two separate things](/blog/2020/09/22/introducing-the-new-jsx-transform.html#whats-a-jsx-transform) you _can_ use independently of each other.
+[JSX and React are two separate things]() you _can_ use independently of each other.
 
 </Note>
 

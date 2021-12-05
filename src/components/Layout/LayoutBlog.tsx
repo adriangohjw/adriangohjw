@@ -13,12 +13,12 @@ interface PageFrontmatter {
   status: string;
 }
 
-export default function withAPI(p: PageFrontmatter) {
-  function LayoutAPI(props: MarkdownProps<PageFrontmatter>) {
+export default function withBlog(p: PageFrontmatter) {
+  function LayoutBlog(props: MarkdownProps<PageFrontmatter>) {
     return <MarkdownPage {...props} meta={p} />;
   }
-  LayoutAPI.appShell = AppShell;
-  return LayoutAPI;
+  LayoutBlog.appShell = AppShell;
+  return LayoutBlog;
 }
 
 function AppShell(props: {children: React.ReactNode}) {

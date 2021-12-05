@@ -77,4 +77,4 @@ You may prefer to create and configure your own toolchain. A JavaScript build to
 
 In a larger project, you might also want to have a tool to manage multiple packages in a single repository. [Nx](https://nx.dev/react) is an example of such a tool.
 
-If you prefer to set up your own JavaScript toolchain from scratch, [check out this guide](https://blog.usejournal.com/creating-a-react-app-from-scratch-f3c693b84658) that re-creates some of the Create React App functionality.
+If you prefer to set up your own JavaScript toolchain from scratch, [check out this guide]() that re-creates some of the Create React App functionality.

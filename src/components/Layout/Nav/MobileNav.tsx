@@ -40,7 +40,6 @@ export function MobileNav() {
       tree = sidebarReference.routes[0];
       break;
     case 'blog':
-      console.error('123');
       tree = sidebarBlog.routes[0];
       break;
   }
@@ -66,7 +65,7 @@ export function MobileNav() {
         <TabButton
           isActive={section === 'blog'}
           onClick={() => setSection('blog')}>
-          API
+          Blog
         </TabButton>
       </div>
       <SidebarRouteTree routeTree={tree as RouteItem} isMobile={true} />

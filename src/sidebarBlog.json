@@ -8,14 +8,8 @@
       "path": "",
       "routes": [
         {
-          "title": "Blog",
-          "path": "/blog",
-          "routes": [
-            {
-              "title": "i made our database queries 293x faster with materialized views",
-              "path": "/blog/improve-database-view-performance-with-materialized-view"
-            }
-          ]
+          "title": "i made our database queries 293x faster with materialized views",
+          "path": "/blog/improve-database-view-performance-with-materialized-view"
         }
       ]
     }
