@@ -10,10 +10,6 @@ import '../styles/algolia.css';
 import '../styles/index.css';
 import '../styles/sandpack.css';
 import '@codesandbox/sandpack-react/dist/index.css';
-import {hotjar} from 'utils/hotjar';
-if (typeof window !== 'undefined') {
-  hotjar(process.env.NEXT_PUBLIC_HJ_SITE_ID, process.env.NEXT_PUBLIC_HJ_SITE_V);
-}
 
 const EmptyAppShell: React.FC = ({children}) => <>{children}</>;
 
