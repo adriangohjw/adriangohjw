@@ -4,6 +4,8 @@ title: i made our database queries 293x faster with materialized views
 
 <Intro>
 
+<Illustration src="/images/blog/database-materialized-views/thumbnail.png" />
+
 Before I lose you, here's the performance improvement that we got out of this optimization technique.
 - Database query from 527ms to 1.8ms (293x faster)
 - APIs from 1310ms to 477ms (2.75x faster)
@@ -53,6 +55,8 @@ For instance, our <b>database's CPU utilization drops and fluctuates much less r
 - Peak CPU utilization drops by an average of 78%
 - Non-peak CPU utilization drops by an average of 67%
 - The difference in utilization between peak and non-peak shrinks from 3x to 2x 
+
+<Illustration src="/images/blog/database-materialized-views/cpu-utilization.png" />
 
 This allows us to deal with spikes in database requests with greater ease, as well as scale down our database resources. As such, we can <b>save up on some of our costs for cloud services</b>. (Damn it, probably shouldn't have invested in Amazon)
 
