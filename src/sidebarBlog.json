@@ -38,17 +38,31 @@
             {
               "title": "Rails: Scenic gem for Database Views",
               "path": "/blog/ruby-scenic-gem"
+            },
+            {
+              "title": "Improving code readability: Abstractions",
+              "path": "/blog/readability-through-abstraction"
+            },
+            {
+              "title": "Improving code readability: 5 simple tips",
+              "path": "/blog/writing-readable-code"
             }
           ]
         },
         {
-          "title": "Mindset + Management",
+          "title": "Management",
           "path": "/blog",
           "routes": [
             {
               "title": "engineering is cost management",
               "path": "/blog/engineering-is-cost-management"
-            },
+            }
+          ]
+        },
+        {
+          "title": "Opinions",
+          "path": "/blog",
+          "routes": [
             {
               "title": "To test or not to test (Startup Perspective)",
               "path": "/blog/to-test-or-not-to-test-startup-perspective"
@@ -56,7 +70,7 @@
           ]
         },
         {
-          "title": "Productivity",
+          "title": "Others",
           "path": "/blog",
           "routes": [
             {
