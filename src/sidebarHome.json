@@ -1,0 +1,17 @@
+{
+  "title": "About me",
+  "heading": true,
+  "path": "/",
+  "routes": [
+    {
+      "heading": true,
+      "path": "",
+      "routes": [
+        {
+          "title": "Who am I?",
+          "path": "/"
+        }
+      ]
+    }
+  ]
+}

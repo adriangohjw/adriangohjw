@@ -1,0 +1,115 @@
+{
+  "title": "Blog",
+  "heading": true,
+  "path": "/blog",
+  "routes": [
+    {
+      "heading": true,
+      "path": "",
+      "routes": [
+        {
+          "title": "Technical",
+          "path": "/blog",
+          "routes": [
+            {
+              "title": "i made our database queries 293x faster with materialized views",
+              "path": "/blog/improve-database-view-performance-with-materialized-view"
+            },
+            {
+              "title": "Conversational Form in 65 lines of code - Here's how I built it",
+              "path": "/blog/how-i-built-a-conversational-form"
+            },
+            {
+              "title": "Kill Bloated Controller with Method Chaining",
+              "path": "/blog/method-chaining-with-query-object"
+            },
+            {
+              "title": "🚀 [Cheat Sheet] Refactoring: Improving the Design of Existing Code",
+              "path": "/blog/cheat-sheet-refactoring-improving-the-design-of-existing-code",
+              "routes": [
+                {
+                  "title": "Chapter 6: Composing Methods",
+                  "path": "/blog/cheat-sheet-refactoring-improving-the-design-of-existing-code/chapter-6-composing-methods"
+                },
+                {
+                  "title": "Chapter 7: Moving Features Between Objects",
+                  "path": "/blog/cheat-sheet-refactoring-improving-the-design-of-existing-code/chapter-7-moving-features-between-objects"
+                },
+                {
+                  "title": "Chapter 8: Organizing Data",
+                  "path": "/blog/cheat-sheet-refactoring-improving-the-design-of-existing-code/chapter-8-organizing-data"
+                },
+                {
+                  "title": "Chapter 9: Simplifying Conditional Expressions",
+                  "path": "/blog/cheat-sheet-refactoring-improving-the-design-of-existing-code/chapter-9-simplifying-conditional-expressions"
+                },
+                {
+                  "title": "Chapter 10: Making Method Calls Simpler",
+                  "path": "/blog/cheat-sheet-refactoring-improving-the-design-of-existing-code/chapter-10-making-method-calls-simpler"
+                },
+                {
+                  "title": "Chapter 11: Dealing with Generalization",
+                  "path": "/blog/cheat-sheet-refactoring-improving-the-design-of-existing-code/chapter-11-dealing-with-generalization"
+                }
+              ]
+            },
+            {
+              "title": "i hate fat models - part 1",
+              "path": "/blog/i-hate-fat-models-part-1-query-object"
+            },
+            {
+              "title": "Value Objects to avoid Primitive Obsession",
+              "path": "/blog/value-objects-to-avoid-primitive-obsession"
+            },
+            {
+              "title": "Rails: Scenic gem for Database Views",
+              "path": "/blog/ruby-scenic-gem"
+            },
+            {
+              "title": "Improving code readability: Abstractions",
+              "path": "/blog/readability-through-abstraction"
+            },
+            {
+              "title": "Improving code readability: 5 simple tips",
+              "path": "/blog/writing-readable-code"
+            }
+          ]
+        },
+        {
+          "title": "Management",
+          "path": "/blog/engineering-is-cost-management",
+          "routes": [
+            {
+              "title": "engineering is cost management",
+              "path": "/blog/engineering-is-cost-management"
+            }
+          ]
+        },
+        {
+          "title": "Opinions",
+          "path": "/blog/to-test-or-not-to-test-startup-perspective",
+          "routes": [
+            {
+              "title": "To test or not to test (Startup Perspective)",
+              "path": "/blog/to-test-or-not-to-test-startup-perspective"
+            }
+          ]
+        },
+        {
+          "title": "Others",
+          "path": "/blog/i-spoke-at-rubysg-behind-the-gems",
+          "routes": [
+            {
+              "title": "i spoke at RubySG Behind The Gems (19/08/21)",
+              "path": "/blog/i-spoke-at-rubysg-behind-the-gems"
+            },
+            {
+              "title": "Engineering Productivity for Everyone (including co-workers)",
+              "path": "/blog/engineering-productivity-for-everyone-including-co-workers"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
