@@ -26,6 +26,10 @@
             {
               "title": "Kill Bloated Controller with Method Chaining",
               "path": "/blog/method-chaining-with-query-object"
+            },
+            {
+              "title": "i hate fat models - part 1",
+              "path": "/blog/i-hate-fat-models-part-1-query-object"
             }
           ]
         },
