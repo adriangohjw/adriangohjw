@@ -50,7 +50,7 @@ return j.salary_range.within_1000?
 ```
 
 Why it is better:
-- This has been explained in greater detail in [Value Objects to avoid Primitive Obsession]({% post_url 2021-05-26-value-objects-to-avoid-primitive-obsession %})
+- This has been explained in greater detail in [Value Objects to avoid Primitive Obsession](/blog/value-objects-to-avoid-primitive-obsession)
   - Improved Readability
   - Business logics are abstracted and hidden away
   - The class can be extended easily

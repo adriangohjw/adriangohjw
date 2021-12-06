@@ -24,7 +24,7 @@ In this post, I will share how we use Materialized View instead of normal View t
 
 ## How it all started {/*how-it-all-started*/}
 
-Some time ago, I wrote a post [Rails: Scenic gem for Database Views]({% post_url 2021-05-19-ruby-scenic-gem %}) on how we are using database views to aggregate data from various sources to accurately compute salary data for NodeFlair Salaries.
+Some time ago, I wrote a post [Rails: Scenic gem for Database Views](/blog/ruby-scenic-gem) on how we are using database views to aggregate data from various sources to accurately compute salary data for NodeFlair Salaries.
 
 For those who did not read the post, here's a quick run-through on how we generate the salary data
 1. We create a view `UnifiedSalary` by aggregating individual data from user salaries and job listings

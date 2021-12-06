@@ -161,7 +161,7 @@ end
 ```
 
 Why it is better:
-- This is similar to using [Value Objects to avoid Primitive Obsession]({% post_url 2021-05-26-value-objects-to-avoid-primitive-obsession %})
+- This is similar to using [Value Objects to avoid Primitive Obsession](/blog/value-objects-to-avoid-primitive-obsession)
   - Improve readability
   - Business logics are abstracted and hidden away
 

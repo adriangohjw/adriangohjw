@@ -16,8 +16,8 @@ I did my 1st engineering sharing at RubySG's August Meetup for the new mini-seri
 ## Slides {/*slides*/}
 
 You can find the more detailed sharing in my blogposts:
-- [Rails: Scenic gem for Database Views]({% post_url 2021-05-19-ruby-scenic-gem %})
-- [To test or not to test (Startup Perspective)]({% post_url 2021-06-15-to-test-or-not-to-test-startup-perspective %})
+- [Rails: Scenic gem for Database Views](/blog/ruby-scenic-gem)
+- [To test or not to test (Startup Perspective)](/blog/to-test-or-not-to-test-startup-perspective)
 
 <div class="google-slides-container">
   <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vT76eh6UQW2-hK_FHqLLszwB61siRUNXZh1Xqmiyfhc-qowb5GJ0EdD6aYoIh3U2Y7TDmAClDQWjDLK/embed?start=false&loop=false&delayms=30000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
