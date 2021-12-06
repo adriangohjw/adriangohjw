@@ -30,12 +30,16 @@
           ]
         },
         {
-          "title": "Management",
+          "title": "Mindset + Management",
           "path": "/blog",
           "routes": [
             {
               "title": "engineering is cost management",
               "path": "/blog/engineering-is-cost-management"
+            },
+            {
+              "title": "To test or not to test (Startup Perspective)",
+              "path": "/blog/to-test-or-not-to-test-startup-perspective"
             }
           ]
         },
