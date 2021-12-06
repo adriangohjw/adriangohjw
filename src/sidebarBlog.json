@@ -34,6 +34,10 @@
             {
               "title": "Value Objects to avoid Primitive Obsession",
               "path": "/blog/value-objects-to-avoid-primitive-obsession"
+            },
+            {
+              "title": "Rails: Scenic gem for Database Views",
+              "path": "/blog/ruby-scenic-gem"
             }
           ]
         },
