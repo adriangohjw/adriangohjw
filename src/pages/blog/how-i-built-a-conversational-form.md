@@ -156,7 +156,7 @@ You can configure the form to better suit your needs. In my case, I want to
   - In this demo, I console logged the data collected
   - In your case, you can use this to send the data to your API
 
-```html
+```js
 window.onload = function() {
   var conversationalForm = window.cf.ConversationalForm.startTheConversation({
     formEl: document.getElementById("my-form-element"),
