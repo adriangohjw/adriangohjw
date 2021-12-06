@@ -30,6 +30,16 @@
           ]
         },
         {
+          "title": "Management",
+          "path": "/blog",
+          "routes": [
+            {
+              "title": "engineering is cost management",
+              "path": "/blog/engineering-is-cost-management"
+            }
+          ]
+        },
+        {
           "title": "Productivity",
           "path": "/blog",
           "routes": [
