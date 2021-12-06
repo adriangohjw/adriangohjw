@@ -30,6 +30,10 @@
             {
               "title": "i hate fat models - part 1",
               "path": "/blog/i-hate-fat-models-part-1-query-object"
+            },
+            {
+              "title": "Value Objects to avoid Primitive Obsession",
+              "path": "/blog/value-objects-to-avoid-primitive-obsession"
             }
           ]
         },
