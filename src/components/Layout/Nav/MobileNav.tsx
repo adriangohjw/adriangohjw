@@ -9,14 +9,11 @@ import {useRouter} from 'next/router';
 import {SidebarRouteTree} from '../Sidebar';
 import sidebarHome from '../../../sidebarHome.json';
 import sidebarLearn from '../../../sidebarLearn.json';
-import sidebarReference from '../../../sidebarReference.json';
 import sidebarBlog from '../../../sidebarBlog.json';
 
-function inferSection(pathname: string): 'learn' | 'reference' | 'home' | 'blog' {
+function inferSection(pathname: string): 'learn' | 'home' | 'blog' {
   if (pathname.startsWith('/learn')) {
     return 'learn';
-  } else if (pathname.startsWith('/reference')) {
-    return 'reference';
   } else if (pathname.startsWith('/blog')) {
     return 'blog';
   } else {
@@ -36,9 +33,6 @@ export function MobileNav() {
     case 'learn':
       tree = sidebarLearn.routes[0];
       break;
-    case 'reference':
-      tree = sidebarReference.routes[0];
-      break;
     case 'blog':
       tree = sidebarBlog.routes[0];
       break;
@@ -56,11 +50,6 @@ export function MobileNav() {
           isActive={section === 'learn'}
           onClick={() => setSection('learn')}>
           Learn
-        </TabButton>
-        <TabButton
-          isActive={section === 'reference'}
-          onClick={() => setSection('reference')}>
-          API
         </TabButton>
         <TabButton
           isActive={section === 'blog'}
