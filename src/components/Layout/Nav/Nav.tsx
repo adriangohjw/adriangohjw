@@ -9,7 +9,7 @@ import {useRouter} from 'next/router';
 
 import {IconClose} from 'components/Icon/IconClose';
 import {IconHamburger} from 'components/Icon/IconHamburger';
-import {Search} from 'components/Search';
+// import {Search} from 'components/Search';
 import {MenuContext} from 'components/useMenu';
 
 import NavLink from './NavLink';
@@ -129,7 +129,7 @@ export default function Nav() {
         </NavLink>
       </div>
       <div className="flex my-4 h-10 mx-0 w-full lg:hidden justify-end slg:max-w-sm">
-        <Search />
+        {/*< Search />*/} 
         <div className="block dark:hidden">
           <button
             type="button"

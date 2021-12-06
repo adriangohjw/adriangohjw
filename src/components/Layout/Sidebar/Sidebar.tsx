@@ -8,7 +8,7 @@ import {SidebarContext} from 'components/Layout/useRouteMeta';
 import {MenuContext} from 'components/useMenu';
 import {useMediaQuery} from '../useMediaQuery';
 import {SidebarRouteTree} from './SidebarRouteTree';
-import {Search} from 'components/Search';
+// import {Search} from 'components/Search';
 import {MobileNav} from '../Nav/MobileNav';
 
 const SIDEBAR_BREAKPOINT = 1023;
@@ -32,7 +32,7 @@ export function Sidebar({isMobileOnly}: {isMobileOnly?: boolean}) {
       )}
       aria-hidden={isHidden}>
       <div className="px-5">
-        <Search />
+        {/* < Search/> */}
       </div>
       <nav
         role="navigation"
