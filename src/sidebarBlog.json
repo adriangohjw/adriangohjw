@@ -77,7 +77,7 @@
         },
         {
           "title": "Management",
-          "path": "/blog",
+          "path": "/blog/engineering-is-cost-management",
           "routes": [
             {
               "title": "engineering is cost management",
@@ -87,7 +87,7 @@
         },
         {
           "title": "Opinions",
-          "path": "/blog",
+          "path": "/blog/to-test-or-not-to-test-startup-perspective",
           "routes": [
             {
               "title": "To test or not to test (Startup Perspective)",
@@ -97,7 +97,7 @@
         },
         {
           "title": "Others",
-          "path": "/blog",
+          "path": "/blog/i-spoke-at-rubysg-behind-the-gems",
           "routes": [
             {
               "title": "i spoke at RubySG Behind The Gems (19/08/21)",
