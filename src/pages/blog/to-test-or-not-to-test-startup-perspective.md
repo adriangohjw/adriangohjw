@@ -51,8 +51,6 @@ For example, here's a screenshot of [Salaries for Grab's Senior Software Enginee
 
 <Illustration src="/images/blog/to-test-or-not-to-test-startup-perspective/nf-salaries-grab-swe.png" />
 
-![NodeFlair Salaries - Grab Software Engineer][nf_salaries_grab_swe]
-
 To determine the seniority of a job listing, we have a module that requires several arguments such as the job title and years of experience required. We ensure the correctness of the module by running it against a large list of different job titles and checking if the result is correct. Should we make any changes to the way we are deriving the seniority, we don't want to manually test it against a hundred job title. In this situation, it makes sense to write unit tests, as we can run it against any changes, and therefore, can develop faster.
 
 ### Potentially catastrophic code {/*potentially-catastrophiic-code*/}
