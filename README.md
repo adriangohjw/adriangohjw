@@ -7,7 +7,7 @@
 - ⚙️ Tech stacks: `.rb`, `.py`, `.js`, `.sol`
 - 💎 Creator of [al_and_ml](https://github.com/adriangohjw/ai_and_ml) gem 
 - 📫 Reach me: [twitter.com/adriangohjw](https://twitter.com/adriangohjw)
-- 📓 My blog: [blog.adriangohjw.com](https://blog.adriangohjw.com/)
+- 📓 My blog: [adriangohjw.com/blog](https://adriangohjw.com/blog)
 
 #### Some projects:
 
