@@ -90,7 +90,7 @@
     "webpack-bundle-analyzer": "^4.5.0"
   },
   "engines": {
-    "node": ">=12.x"
+    "node": ">=12.22.0"
   },
   "nextBundleAnalysis": {
     "budget": null,
