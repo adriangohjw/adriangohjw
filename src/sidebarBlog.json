@@ -28,6 +28,36 @@
               "path": "/blog/method-chaining-with-query-object"
             },
             {
+              "title": "🚀 [Cheat Sheet] Refactoring: Improving the Design of Existing Code",
+              "path": "/blog/cheat-sheet-refactoring-improving-the-design-of-existing-code",
+              "routes": [
+                {
+                  "title": "Chapter 6: Composing Methods",
+                  "path": "/blog/cheat-sheet-refactoring-improving-the-design-of-existing-code/chapter-6-composing-methods"
+                },
+                {
+                  "title": "Chapter 7: Moving Features Between Objects",
+                  "path": "/blog/cheat-sheet-refactoring-improving-the-design-of-existing-code/chapter-7-moving-features-between-objects"
+                },
+                {
+                  "title": "Chapter 8: Organizing Data",
+                  "path": "/blog/cheat-sheet-refactoring-improving-the-design-of-existing-code/chapter-8-organizing-data"
+                },
+                {
+                  "title": "Chapter 9: Simplifying Conditional Expressions",
+                  "path": "/blog/cheat-sheet-refactoring-improving-the-design-of-existing-code/chapter-9-simplifying-conditional-expressions"
+                },
+                {
+                  "title": "Chapter 10: Making Method Calls Simpler",
+                  "path": "/blog/cheat-sheet-refactoring-improving-the-design-of-existing-code/chapter-10-making-method-calls-simpler"
+                },
+                {
+                  "title": "Chapter 11: Dealing with Generalization",
+                  "path": "/blog/cheat-sheet-refactoring-improving-the-design-of-existing-code/chapter-11-dealing-with-generalization"
+                }
+              ]
+            },
+            {
               "title": "i hate fat models - part 1",
               "path": "/blog/i-hate-fat-models-part-1-query-object"
             },
