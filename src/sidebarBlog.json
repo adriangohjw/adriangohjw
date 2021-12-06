@@ -18,6 +18,10 @@
         {
           "title": "i spoke at RubySG Behind The Gems (19/08/21)",
           "path": "/blog/i-spoke-at-rubysg-behind-the-gems"
+        },
+        {
+          "title": "Kill Bloated Controller with Method Chaining",
+          "path": "/blog/method-chaining-with-query-object"
         }
       ]
     }
