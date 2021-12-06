@@ -21,8 +21,6 @@ module.exports = async function (src) {
     .split(path.sep)
     .shift();
   const layoutMap = {
-    learn: 'Learn',
-    reference: 'API',
     blog: 'Blog',
   };
   const layout = layoutMap[pageParentDir] || 'Home';

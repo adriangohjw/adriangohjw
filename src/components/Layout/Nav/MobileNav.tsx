@@ -8,7 +8,6 @@ import {RouteItem} from 'components/Layout/useRouteMeta';
 import {useRouter} from 'next/router';
 import {SidebarRouteTree} from '../Sidebar';
 import sidebarHome from '../../../sidebarHome.json';
-import sidebarLearn from '../../../sidebarLearn.json';
 import sidebarBlog from '../../../sidebarBlog.json';
 
 function inferSection(pathname: string): 'learn' | 'home' | 'blog' {
@@ -30,9 +29,6 @@ export function MobileNav() {
     case 'home':
       tree = sidebarHome.routes[0];
       break;
-    case 'learn':
-      tree = sidebarLearn.routes[0];
-      break;
     case 'blog':
       tree = sidebarBlog.routes[0];
       break;
@@ -44,12 +40,7 @@ export function MobileNav() {
         <TabButton
           isActive={section === 'home'}
           onClick={() => setSection('home')}>
-          Home
-        </TabButton>
-        <TabButton
-          isActive={section === 'learn'}
-          onClick={() => setSection('learn')}>
-          Learn
+          About me
         </TabButton>
         <TabButton
           isActive={section === 'blog'}

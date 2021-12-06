@@ -1,5 +1,5 @@
 {
-  "title": "Home",
+  "title": "About me",
   "heading": true,
   "path": "/",
   "routes": [
@@ -8,7 +8,7 @@
       "path": "",
       "routes": [
         {
-          "title": "Overview",
+          "title": "Who am I?",
           "path": "/"
         }
       ]

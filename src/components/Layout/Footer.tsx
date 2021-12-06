@@ -70,25 +70,6 @@ export function Footer() {
               </div>
             </ExternalLink>
             <div className="flex flex-col">
-              <FooterLink href="/learn" isHeader={true}>
-                Learn React
-              </FooterLink>
-              <FooterLink href="/learn/">Quick Start</FooterLink>
-              <FooterLink href="/learn/installation">Installation</FooterLink>
-              <FooterLink href="/learn/describing-the-ui">
-                Describing the UI
-              </FooterLink>
-              <FooterLink href="/learn/adding-interactivity">
-                Adding Interactivity
-              </FooterLink>
-              <FooterLink href="/learn/managing-state">
-                Managing State
-              </FooterLink>
-              <FooterLink href="/learn/escape-hatches">
-                Escape Hatches
-              </FooterLink>
-            </div>
-            <div className="flex flex-col">
               <FooterLink isHeader={true}>More</FooterLink>
               {/* <FooterLink href="/">Tutorial</FooterLink> */}
               {/* <FooterLink href="/">Blog</FooterLink> */}
