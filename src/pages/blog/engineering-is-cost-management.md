@@ -44,7 +44,7 @@ No business dies from a legacy codebase. Well, at least not directly. A well-mai
 💰 High retention and low recruitment cost → Profit!
 <br></br><br></br>
 
-In my other blogpost [To test or not to test (Startup Perspective)][post-on-writing-test], I also explained the benefit of writing software test, even for a startup. TL;DR: Sometimes writing test can help you move faster.
+In my other blogpost [To test or not to test (Startup Perspective)](/blog/to-test-or-not-to-test-startup-perspective), I also explained the benefit of writing software test, even for a startup. TL;DR: Sometimes writing test can help you move faster.
 
 ## What do you mean we don't need Machine Learning? {/*what-do-you-mean-we-dont-need-machine-learning*/}
 
