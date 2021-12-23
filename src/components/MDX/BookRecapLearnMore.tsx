@@ -18,7 +18,7 @@ function BookRecapLearnMore() {
         <div className="flex flex-col justify-center">
           <YouWillLearnCard title="'The Cold Start Problem' by Andrew Chen" path="/blog/book_recaps/the-cold-start-problem">
             <p>
-              The Cold Start Problem explores how tech's most successful products and companies solved the dreaded "cold start problem” by using network effects to launch and ultimately scale to billions of users.
+              The Cold Start Problem explores how tech&apos;s most successful products and companies solved the dreaded &quot;cold start problem&quot; by using network effects to launch and ultimately scale to billions of users.
             </p>
           </YouWillLearnCard>
         </div>
