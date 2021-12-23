@@ -15,6 +15,7 @@ import {H1, H2, H3, H4} from './Heading';
 import HomepageHero from './HomepageHero';
 import RefactoringCheatSheetLearnMore from './RefactoringCheatSheetLearnMore';
 import BlogLearnMore from './BlogLearnMore';
+import BookRecapLearnMore from './BookRecapLearnMore';
 import InlineCode from './InlineCode';
 import Intro from './Intro';
 import Link from './Link';
@@ -353,6 +354,7 @@ export const MDXComponents = {
   HomepageHero,
   RefactoringCheatSheetLearnMore,
   BlogLearnMore,
+  BookRecapLearnMore,
   Illustration,
   IllustrationBlock,
   Intro,
