@@ -87,11 +87,25 @@
         },
         {
           "title": "Opinions",
-          "path": "/blog/to-test-or-not-to-test-startup-perspective",
+          "path": "/blog/engineering-productivity-for-everyone-including-co-workers",
           "routes": [
+            {
+              "title": "Engineering Productivity for Everyone (including co-workers)",
+              "path": "/blog/engineering-productivity-for-everyone-including-co-workers"
+            },
             {
               "title": "To test or not to test (Startup Perspective)",
               "path": "/blog/to-test-or-not-to-test-startup-perspective"
+            }
+          ]
+        },
+        {
+          "title": "Book Recaps",
+          "path": "/blog/book_recaps",
+          "routes": [
+            {
+              "title": "❄️ The Cold Start Problem: How to Start and Scale Network Effects",
+              "path": "/blog/book_recaps/the-cold-start-problem"
             }
           ]
         },
@@ -102,10 +116,6 @@
             {
               "title": "i spoke at RubySG Behind The Gems (19/08/21)",
               "path": "/blog/i-spoke-at-rubysg-behind-the-gems"
-            },
-            {
-              "title": "Engineering Productivity for Everyone (including co-workers)",
-              "path": "/blog/engineering-productivity-for-everyone-including-co-workers"
             }
           ]
         }

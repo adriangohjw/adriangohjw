@@ -3,14 +3,9 @@
  */
 
 import * as React from 'react';
-import NextLink from 'next/link';
-import cn from 'classnames';
 import {ExternalLink} from 'components/ExternalLink';
-import {IconFacebookCircle} from 'components/Icon/IconFacebookCircle';
-import {IconTwitter} from 'components/Icon/IconTwitter';
 
 export function Footer() {
-  const socialLinkClasses = 'hover:text-primary dark:text-primary-dark';
   return (
     <>
       <div className="self-stretch w-full sm:pl-0 lg:pl-80 sm:pr-0 2xl:pr-80 pl-0 pr-0">
@@ -26,50 +21,13 @@ export function Footer() {
                 adriangohjw
               </div>
               <div className="text-xs text-left mt-2 pr-0.5">
-                &copy;{new Date().getFullYear()}
+                &copy;{new Date().getFullYear()}<br></br>
+                <a href="https://github.com/reactjs/reactjs.org">Design forked from React</a>
               </div>
             </ExternalLink>
           </div>
         </footer>
       </div>
     </>
-  );
-}
-
-function FooterLink({
-  href,
-  children,
-  isHeader = false,
-}: {
-  href?: string;
-  children: React.ReactNode;
-  isHeader?: boolean;
-}) {
-  const classes = cn('border-b inline-block border-transparent', {
-    'text-sm text-primary dark:text-primary-dark': !isHeader,
-    'text-md text-secondary dark:text-secondary-dark my-2 font-bold': isHeader,
-    'hover:border-gray-10': href,
-  });
-
-  if (!href) {
-    return <div className={classes}>{children}</div>;
-  }
-
-  if (href.startsWith('https://')) {
-    return (
-      <div>
-        <ExternalLink href={href} className={classes}>
-          {children}
-        </ExternalLink>
-      </div>
-    );
-  }
-
-  return (
-    <div>
-      <NextLink href={href}>
-        <a className={classes}>{children}</a>
-      </NextLink>
-    </div>
   );
 }
