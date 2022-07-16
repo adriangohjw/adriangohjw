@@ -8,3 +8,4 @@
 - 💎 Creator of [al_and_ml](https://github.com/adriangohjw/ai_and_ml) gem 
 - 📫 Reach me: [twitter.com/adriangohjw](https://twitter.com/adriangohjw)
 - 📓 My blog: [adriangohjw.com/blog](https://adriangohjw.com/blog)
+- 📃 I give [free resume reviews](https://www.nodeflair.com/blog/giving-back-to-the-community-resume-review-with-adrian) for those in their early careers

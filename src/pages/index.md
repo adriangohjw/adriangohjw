@@ -14,6 +14,7 @@ I'm the Co-Founder of [NodeFlair](https://www.nodeflair.com/) - and we help peop
 - 🏢 [NodeFlair](https://www.nodeflair.com/), ShopBack
 - ⚙️ Tech stacks: `.rb`, `.py`, `.js`, `.sol`
 - 💎 Creator of [al_and_ml](https://github.com/adriangohjw/ai_and_ml) gem 
+- 📃 I give [free resume reviews](https://www.nodeflair.com/blog/giving-back-to-the-community-resume-review-with-adrian) for those in their early careers
 
 ## How do I reach out to me? {/*how-do-i-reach-out-to-me*/}
 
