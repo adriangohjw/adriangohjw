@@ -10,6 +10,16 @@
         {
           "title": "Who am I?",
           "path": "/"
+        },
+        {
+          "title": "Resume Review",
+          "path": "/resume-review",
+          "routes": [
+            {
+              "title": "Give testimonial",
+              "path": "/resume-review/give-testimonial"
+            }
+          ]
         }
       ]
     }
