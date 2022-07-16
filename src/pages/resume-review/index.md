@@ -22,3 +22,20 @@ Cheers!
 
 <script src="https://apps.elfsight.com/p/platform.js" defer></script>
 <div class="elfsight-app-42c27d81-9cc1-438c-bcad-a497bfdb6d16"></div>
+
+## Frequently Asked Questions (FAQs) {/*faq*/}
+
+### Is it free? {/*is-it-free*/}
+
+> Yup, 100% free.
+
+### Why are you doing this? {/*why-are-you-doing-this*/}
+
+> Being in the early stage of one's career can be pretty daunting. From those I have helped previously, I saw how a simple gesture like this was helpful (some got offers from popular tech companies), so I'm thinking of doing it more - just giving back to the community in every way within my means.
+
+### Am I eligible? {/*am-i-eligible*/}
+
+>  Yup, as long as you meet these criteria:
+- Based in Singapore
+- In your early careers (Students / Graduates / Junior Engineers)
+- In the tech space (Software Engineers, Data Scientists etc.)
