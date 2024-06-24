@@ -32,7 +32,7 @@ plugins:
   - jekyll-feed
 
 header_pages:
-  - who-am-i.markdown
+  - about-me.markdown
 
 minima:
   social_links:

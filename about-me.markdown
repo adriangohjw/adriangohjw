@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Who am I?
-permalink: /who-am-i/
+title: About me
+permalink: /about-me
 ---
 
 # 👋 Hi there, my name is Adrian Goh Jun Wei (@adriangohjw)
