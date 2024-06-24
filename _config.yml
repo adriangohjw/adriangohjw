@@ -19,18 +19,26 @@
 # in the templates via {{ site.myvariable }}.
 
 title: adriangohjw
-email: hello@adriangohjw.com
+author:
+  name: Adrian Goh Jun Wei (@adriangohjw)
+  email: hello@adriangohjw.com
+
 description: >- # this means to ignore newlines until "baseurl:"
   Just another coding blog
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: adriangohjw
-github_username:  adriangohjw
 
 # Build settings
 theme: minima
 plugins:
   - jekyll-feed
+
+header_pages:
+  - who-am-i.markdown
+
+minima:
+  social_links:
+  - { platform: github,         user_url: "https://github.com/adriangohjw" }
+  - { platform: linkedin,       user_url: "https://www.linkedin.com/in/adriangohjw" }
+  - { platform: twitter,        user_url: "https://twitter.com/adriangohjw" }
 
 permalink: /:title.html
 
