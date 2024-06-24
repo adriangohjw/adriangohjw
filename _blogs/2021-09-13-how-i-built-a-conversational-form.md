@@ -1,8 +1,8 @@
 ---
-layout: post
+layout: blog
 title:  "Conversational Form in 65 lines of code - Here's how I built it"
 date:   2021-09-13 03:09:00 +0800
-categories: posts
+categories: blogs
 ---
 
 [demo-app]:           https://conversational-form.adriangohjw.com

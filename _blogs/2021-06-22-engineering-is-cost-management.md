@@ -1,14 +1,14 @@
 ---
-layout: post
+layout: blog
 title:  "engineering is cost management"
 date:   2021-06-22 08:38:00 +0800
-categories: posts
+categories: blogs
 ---
 
 [nodeflair-website]:              https://nodeflair.com
 [nodeflair-salaries]:             https://nodeflair.com/salaries
 [nf-salaries-explore]:            /assets/nf_salaries_explore.png
-[post-on-writing-test]:           {% link _posts/2021-06-15-to-test-or-not-to-test-startup-perspective.md %}
+[post-on-writing-test]:           {% link _blogs/2021-06-15-to-test-or-not-to-test-startup-perspective.md %}
 
 Throughout my time managing Engineering at [NodeFlair][nodeflair-website]. Besides learning to write better code, I have also always learning to be a better engineering leader. Not quite there yet for sure, but often when making decisions, I realized that my decisions are guided by these thoughts.
 

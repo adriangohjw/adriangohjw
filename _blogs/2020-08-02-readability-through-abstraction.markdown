@@ -1,11 +1,11 @@
 ---
-layout: post
+layout: blog
 title:  "Improving code readability: Abstractions"
 date:   2020-08-02 08:55:38 +0800
-categories: posts
+categories: blogs
 ---
 
-In my previous [post]({{ site.baseurl }}{% link _posts/2020-08-01-writing-readable-code.markdown %}), I wrote about using abstractions to improve code readability.
+In my previous [post]({{ site.baseurl }}{% link _blogs/2020-08-01-writing-readable-code.markdown %}), I wrote about using abstractions to improve code readability.
 
 I had a life changing moment when I came across a conference video by Ben Orenstein titled [Refactoring from Good to Great][refactoring-from-good-to-great]. During the talk, he discussed about how abstraction lets you focus on what a code does by hiding it's implementation details. Therefore, wheoever reads the code can quickly understand what it does by focusing on it's high-level intent instead of being bothered by implementation details.
 

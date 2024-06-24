@@ -1,5 +1,7 @@
 ---
 layout: default
+title: Blog
+permalink: /blog
 ---
 
 <div class="home">
@@ -7,32 +9,30 @@ layout: default
     <h1 class="page-heading">{{ page.title }}</h1>
   {%- endif -%}
 
-  {{ content }}
-
 
   {% if site.paginate %}
-    {% assign posts = paginator.posts %}
+    {% assign blogs = paginator.blogs | sort: 'path' | reverse %}
   {% else %}
-    {% assign posts = site.posts %}
+    {% assign blogs = site.blogs | sort: 'path' | reverse %}
   {% endif %}
 
 
-  {%- if posts.size > 0 -%}
+  {%- if blogs.size > 0 -%}
     {%- if page.list_title -%}
       <h2 class="post-list-heading">{{ page.list_title }}</h2>
     {%- endif -%}
     <ul class="post-list">
       {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-      {%- for post in posts -%}
+      {%- for blog in blogs -%}
       <li>
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
+        <span class="post-meta">{{ blog.date | date: date_format }}</span>
         <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
+          <a class="post-link" href="{{ blog.url | relative_url }}">
+            {{ blog.title | escape }}
           </a>
         </h3>
         {%- if site.show_excerpts -%}
-          {{ post.excerpt }}
+          {{ blog.excerpt }}
         {%- endif -%}
       </li>
       {%- endfor -%}

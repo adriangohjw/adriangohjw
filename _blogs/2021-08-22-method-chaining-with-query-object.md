@@ -1,8 +1,8 @@
 ---
-layout: post
+layout: blog
 title:  "Kill Bloated Controller with Method Chaining"
 date:   2021-08-22 14:11:00 +0800
-categories: posts
+categories: blogs
 ---
 
 [nodeflair-salaries]:           https://nodeflair.com/salaries

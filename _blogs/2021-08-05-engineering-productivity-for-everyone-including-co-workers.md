@@ -1,8 +1,8 @@
 ---
-layout: post
+layout: blog
 title:  "Engineering Productivity for Everyone (including co-workers)"
 date:   2021-08-05 11:07:00 +0800
-categories: posts
+categories: blogs
 ---
 
 [nodeflair-website]:              https://nodeflair.com

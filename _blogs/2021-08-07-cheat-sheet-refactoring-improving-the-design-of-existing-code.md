@@ -1,9 +1,9 @@
 ---
-layout: post
+layout: blog
 title:  "[Cheat Sheet] Refactoring: Improving the Design of Existing Code"
 date:   2021-08-07 18:08:00 +0800
 image: /assets/refactoring-cheat-sheet-cover.png
-categories: posts
+categories: blogs
 ---
 
 [cover]:            /assets/refactoring-cheat-sheet-cover.png
@@ -518,7 +518,7 @@ end
 ```
 
 Why it is better:
-- This is similar to using [Value Objects to avoid Primitive Obsession]({% post_url 2021-05-26-value-objects-to-avoid-primitive-obsession %})
+- This is similar to using [Value Objects to avoid Primitive Obsession](/2021-05-26-value-objects-to-avoid-primitive-obsession)
   - Improve readability
   - Business logics are abstracted and hidden away
 
@@ -681,7 +681,7 @@ return j.salary_range.within_1000?
 ```
 
 Why it is better:
-- This has been explained in greater detail in [Value Objects to avoid Primitive Obsession]({% post_url 2021-05-26-value-objects-to-avoid-primitive-obsession %})
+- This has been explained in greater detail in [Value Objects to avoid Primitive Obsession](/2021-05-26-value-objects-to-avoid-primitive-obsession)
   - Improved Readability
   - Business logics are abstracted and hidden away
   - The class can be extended easily

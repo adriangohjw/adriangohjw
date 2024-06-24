@@ -1,8 +1,8 @@
 ---
-layout: post
+layout: blog
 title:  "Rails: Scenic gem for Database Views"
 date:   2021-05-19 10:54:00 +0800
-categories: posts
+categories: blogs
 ---
 
 [NodeFlair Salaries][nodeflair-salaries] is one of the many products by [NodeFlair][nodeflair-website], a Tech Career SuperApp. It allows tech talents to look up the latest updated salaries and compensation in the market. Candidates will also be able to filter salaries according to Seniority, Specialisation and Company over thousands of jobs, allowing for a more tailored experience with the click of a few buttons!

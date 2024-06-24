@@ -23,8 +23,7 @@ author:
   name: Adrian Goh Jun Wei (@adriangohjw)
   email: hello@adriangohjw.com
 
-description: >- # this means to ignore newlines until "baseurl:"
-  Just another coding blog
+description: Just another coding blog
 
 # Build settings
 theme: minima
@@ -32,15 +31,22 @@ plugins:
   - jekyll-feed
 
 header_pages:
-  - about-me.markdown
+  - blog.markdown
+  - talks.markdown
+
+collections:
+  blogs:
+    output: true
+    permalink: /:title
+  talks:
+    output: true
+    permalink: talks/:title
 
 minima:
   social_links:
   - { platform: github,         user_url: "https://github.com/adriangohjw" }
   - { platform: linkedin,       user_url: "https://www.linkedin.com/in/adriangohjw" }
   - { platform: twitter,        user_url: "https://twitter.com/adriangohjw" }
-
-permalink: /:title.html
 
 # Exclude from processing.
 # The following items will not be processed, by default.

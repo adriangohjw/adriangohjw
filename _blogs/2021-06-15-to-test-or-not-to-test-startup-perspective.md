@@ -1,8 +1,8 @@
 ---
-layout: post
+layout: blog
 title:  "To test or not to test (Startup Perspective)"
 date:   2021-06-15 15:05:00 +0800
-categories: posts
+categories: blogs
 ---
 
 [nodeflair-website]:              https://nodeflair.com

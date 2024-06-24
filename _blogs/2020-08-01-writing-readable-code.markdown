@@ -1,8 +1,8 @@
 ---
-layout: post
+layout: blog
 title:  "Improving code readability: 5 simple tips"
 date:   2020-08-01 02:57:38 +0800
-categories: posts
+categories: blogs
 ---
 
 When we call someone a good developer, we often meant that they are good at writing correct code. However, there's another aspect of good code that is just as important: Readability.
@@ -64,7 +64,7 @@ As you can see, in some instances where there are multple conditions, you might 
 
 Other than immediately improving the code readability, guard clauses also have other benefits like:
 - Easier to make changes to the code in the future
-- Possibility of refactoring the code to be even more readable (I wrote about this in [another post]({{ site.baseurl }}{% link _posts/2020-08-02-readability-through-abstraction.markdown %}))
+- Possibility of refactoring the code to be even more readable (I wrote about this in [another post]({{ site.baseurl }}{% link _blogs/2020-08-02-readability-through-abstraction.markdown %}))
 
 # <b>#4: Avoid reassigning variables</b>
 
