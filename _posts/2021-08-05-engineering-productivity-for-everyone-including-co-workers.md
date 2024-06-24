@@ -5,8 +5,8 @@ date:   2021-08-05 11:07:00 +0800
 categories: posts
 ---
 
-[nodeflair-website]:              https://www.nodeflair.com
-[nodeflair-salaries]:             https://www.nodeflair.com/salaries
+[nodeflair-website]:              https://nodeflair.com
+[nodeflair-salaries]:             https://nodeflair.com/salaries
 [developer-1-minute]:             /assets/developer_1_minute.gif
 [nf-salaries-addsalary]:          /assets/nf_salaries_addsalary.png
 

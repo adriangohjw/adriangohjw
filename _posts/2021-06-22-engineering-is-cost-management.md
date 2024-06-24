@@ -5,8 +5,8 @@ date:   2021-06-22 08:38:00 +0800
 categories: posts
 ---
 
-[nodeflair-website]:              https://www.nodeflair.com
-[nodeflair-salaries]:             https://www.nodeflair.com/salaries
+[nodeflair-website]:              https://nodeflair.com
+[nodeflair-salaries]:             https://nodeflair.com/salaries
 [nf-salaries-explore]:            /assets/nf_salaries_explore.png
 [post-on-writing-test]:           {% link _posts/2021-06-15-to-test-or-not-to-test-startup-perspective.md %}
 

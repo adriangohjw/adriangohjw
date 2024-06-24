@@ -52,5 +52,5 @@ At first glance, the code appears much longer (and you have to run additional DB
   - Able to use methods such as `where`, `scope`
 
 [scenic-gem]:                 https://github.com/scenic-views/scenic
-[nodeflair-website]:          https://www.nodeflair.com
-[nodeflair-salaries]:         https://www.nodeflair.com/salaries
+[nodeflair-website]:          https://nodeflair.com
+[nodeflair-salaries]:         https://nodeflair.com/salaries

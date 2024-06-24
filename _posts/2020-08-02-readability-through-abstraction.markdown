@@ -39,4 +39,4 @@ One of the reasons why we care about readability is because we would like to be 
 
 [refactoring-from-good-to-great]: https://youtu.be/DC-pQPq0acs?t=157
 [wet-codebase]:               https://www.deconstructconf.com/2019/dan-abramov-the-wet-codebase
-[nodeflair-website]:          https://www.nodeflair.com
+[nodeflair-website]:          https://nodeflair.com

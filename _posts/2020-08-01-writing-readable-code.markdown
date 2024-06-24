@@ -107,4 +107,4 @@ This blog post was inspired by [Gregory Witek][gregory-twitter]'s video [Becomin
 [gregory-twitter]:            https://twitter.com/gregorywitek
 [gregory-youtube-video]:      https://www.youtube.com/watch?v=R4MoHpSaX1I
 [gregory-youtube-channel]:    https://www.youtube.com/channel/UCj3PDQ-4n9sO0j3t2j608WQ
-[nodeflair-website]:          https://www.nodeflair.com
+[nodeflair-website]:          https://nodeflair.com

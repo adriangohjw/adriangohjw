@@ -5,7 +5,7 @@ date:   2021-08-22 14:11:00 +0800
 categories: posts
 ---
 
-[nodeflair-salaries]:           https://www.nodeflair.com/salaries
+[nodeflair-salaries]:           https://nodeflair.com/salaries
 [nf_salaries_explore_filters]:  /assets/nf_salaries_explore_filters.png
 [cover]:                        /assets/kill_bloated_controller_cover.png
 

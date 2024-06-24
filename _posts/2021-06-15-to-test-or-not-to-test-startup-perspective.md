@@ -5,8 +5,8 @@ date:   2021-06-15 15:05:00 +0800
 categories: posts
 ---
 
-[nodeflair-website]:              https://www.nodeflair.com
-[nodeflair-salaries]:             https://www.nodeflair.com/salaries
+[nodeflair-website]:              https://nodeflair.com
+[nodeflair-salaries]:             https://nodeflair.com/salaries
 [nodeflair-salaries-grab-swe]:    https://nodeflair.com/companies/grab/salaries/software_engineer/senior
 [nf_salaries_grab_swe]:           /assets/nf_salaries_grab_swe.png
 

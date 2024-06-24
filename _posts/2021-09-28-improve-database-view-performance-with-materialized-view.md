@@ -5,8 +5,8 @@ date:   2021-09-28 14:32:00 +0800
 categories: posts
 ---
 
-[nodeflair-salaries]:                     https://www.nodeflair.com/salaries
-[nodeflair-salaries-submission]:          https://www.nodeflair.com/salaries/addsalary
+[nodeflair-salaries]:                     https://nodeflair.com/salaries
+[nodeflair-salaries-submission]:          https://nodeflair.com/salaries/addsalary
 [cover]:                                  /assets/database-materialized-views.png
 [db-materialized-views-cpu-utilization]:  /assets/db-materialized-views-cpu-utilization.png
 

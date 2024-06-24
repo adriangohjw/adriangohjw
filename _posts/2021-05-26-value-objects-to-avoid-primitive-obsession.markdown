@@ -61,6 +61,6 @@ Let's say now we also want to determine the specialisation (e.g. data scientist,
 <script src="https://gist.github.com/adriangohjw/2fb900e738fc1c4ff2adf1d64fa866a6.js?file=why_better_easily_extended_class.rb"></script>
 
 [scenic-gem]:                 https://github.com/scenic-views/scenic
-[nodeflair-website]:          https://www.nodeflair.com
-[nodeflair-salaries]:         https://www.nodeflair.com/salaries
+[nodeflair-website]:          https://nodeflair.com
+[nodeflair-salaries]:         https://nodeflair.com/salaries
 [nf_salaries_past_listings]:  /assets/nf_salaries_past_listings.png

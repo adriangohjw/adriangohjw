@@ -5,8 +5,8 @@ date:   2021-06-05 15:52:00 +0800
 categories: posts
 ---
 
-[nodeflair-website]:              https://www.nodeflair.com
-[nodeflair-salaries]:             https://www.nodeflair.com/salaries
+[nodeflair-website]:              https://nodeflair.com
+[nodeflair-salaries]:             https://nodeflair.com/salaries
 [nf_salaries_popular_companies]:  /assets/nf_salaries_popular_companies.png
 
 At [NodeFlair][nodeflair-website], we started out using Ruby on Rails, a MVC (model–view–controller) framework.
