@@ -33,6 +33,8 @@ layout: default
     {{ content }}
   </div>
 
+  {%- include links_to_prev_next.html -%}
+
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 
   {% include what-i-do-footer.html %}
