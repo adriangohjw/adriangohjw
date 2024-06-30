@@ -25,6 +25,8 @@ author:
 
 description: Just another coding blog
 
+url: "https://adriangohjw.com"
+
 # Build settings
 theme: minima
 plugins:
