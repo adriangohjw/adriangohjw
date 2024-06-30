@@ -3,6 +3,7 @@ layout: talk
 title:  "RubySG - How we use Searchkick (ElasticSearch)"
 date:   2022-08-03 12:41:00 +0800
 categories: talks
+tags: [ruby, elasticsearch]
 ---
 
 [cover]:                        /assets/rubysg-how-we-use-searchkick-elasticsearch.jpg

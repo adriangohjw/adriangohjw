@@ -3,6 +3,7 @@ layout: talk
 title:  "RubySG - Scenic gem"
 date:   2021-08-19 12:41:00 +0800
 categories: talks
+tags: [ruby, database, postgresql]
 ---
 
 [nodeflair-salaries]:           https://nodeflair.com/salaries

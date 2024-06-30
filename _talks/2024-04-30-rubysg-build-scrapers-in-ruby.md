@@ -3,6 +3,7 @@ layout: talk
 title:  "RubySG - Building Scrapers in Ruby"
 date:   2024-04-30 12:41:00 +0800
 categories: talks
+tags: [ruby, scrapers]
 ---
 
 [cover]:                        /assets/rubysg-build-scrapers-in-ruby.png

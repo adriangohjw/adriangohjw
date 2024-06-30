@@ -31,6 +31,9 @@ permalink: /talks
         {%- if site.show_excerpts -%}
           {{ talk.excerpt }}
         {%- endif -%}
+        {% for tag in talk.tags %}
+          <code>{{ tag }}</code>
+        {% endfor %}
       </li>
       {%- endfor -%}
     </ul>
