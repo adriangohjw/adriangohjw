@@ -18,12 +18,12 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: adriangohjw
+title: Adrian Goh
 author:
-  name: Adrian Goh Jun Wei (@adriangohjw)
+  name: Adrian Goh (@adriangohjw)
   email: hello@adriangohjw.com
 
-description: Just another coding blog
+description: ""
 
 url: "https://adriangohjw.com"
 
