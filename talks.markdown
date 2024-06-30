@@ -18,19 +18,16 @@ permalink: /talks
 
 
   {%- if talks.size > 0 -%}
-    {%- if page.list_title -%}
-      <h2 class="post-list-heading">{{ page.list_title }}</h2>
-    {%- endif -%}
     <ul class="post-list">
       {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
       {%- for talk in talks -%}
       <li>
         <span class="post-meta">{{ talk.date | date: date_format }}</span>
-        <h3>
+        <h2>
           <a class="post-link" href="{{ talk.url | relative_url }}">
             {{ talk.title | escape }}
           </a>
-        </h3>
+        </h2>
         {%- if site.show_excerpts -%}
           {{ talk.excerpt }}
         {%- endif -%}

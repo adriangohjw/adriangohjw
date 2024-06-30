@@ -18,19 +18,16 @@ permalink: /blog
 
 
   {%- if blogs.size > 0 -%}
-    {%- if page.list_title -%}
-      <h2 class="post-list-heading">{{ page.list_title }}</h2>
-    {%- endif -%}
     <ul class="post-list">
       {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
       {%- for blog in blogs -%}
       <li>
         <span class="post-meta">{{ blog.date | date: date_format }}</span>
-        <h3>
+        <h2>
           <a class="post-link" href="{{ blog.url | relative_url }}">
             {{ blog.title | escape }}
           </a>
-        </h3>
+        </h2>
         {%- if site.show_excerpts -%}
           {{ blog.excerpt }}
         {%- endif -%}
