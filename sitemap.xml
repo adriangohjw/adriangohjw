@@ -1,0 +1,29 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>{{ site.url }}</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  {% assign blogs = site.blogs | sort: 'path' | reverse %}
+  {% for blog in blogs %}
+    <url>
+      <loc>{{ site.url }}{{ blog.url }}</loc>
+      <changefreq>monthly</changefreq>
+      <priority>0.7</priority>
+    </url>
+  {% endfor %}
+
+  {% assign talks = site.talks | sort: 'path' | reverse %}
+  {% for talk in talks %}
+    <url>
+      <loc>{{ site.url }}{{ talk.url }}</loc>
+      <changefreq>monthly</changefreq>
+      <priority>0.7</priority>
+    </url>
+  {% endfor %}
+</urlset>
