@@ -3,6 +3,7 @@ layout: blog
 title:  "i hate fat models - part 1"
 date:   2021-06-05 15:52:00 +0800
 categories: blogs
+tags: [refactoring]
 ---
 
 [nodeflair-website]:              https://nodeflair.com

@@ -3,6 +3,7 @@ layout: blog
 title:  "Value Objects to avoid Primitive Obsession"
 date:   2021-05-26 17:28:00 +0800
 categories: blogs
+tags: [refactoring]
 ---
 
 [NodeFlair Salaries][nodeflair-salaries] is one of the many products by [NodeFlair][nodeflair-website], a Tech Career SuperApp. It allows tech talents to look up the latest updated salaries and compensation in the market. 

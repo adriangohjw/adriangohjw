@@ -3,6 +3,7 @@ layout: blog
 title:  "Engineering Productivity for Everyone (including co-workers)"
 date:   2021-08-05 11:07:00 +0800
 categories: blogs
+tags: [ideology, productivity]
 ---
 
 [nodeflair-website]:              https://nodeflair.com

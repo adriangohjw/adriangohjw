@@ -3,6 +3,7 @@ layout: blog
 title:  "Improving code readability: 5 simple tips"
 date:   2020-08-01 02:57:38 +0800
 categories: blogs
+tags: [refactoring]
 ---
 
 When we call someone a good developer, we often meant that they are good at writing correct code. However, there's another aspect of good code that is just as important: Readability.

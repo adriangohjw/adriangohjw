@@ -3,6 +3,7 @@ layout: blog
 title:  Using Cloudflare's CF-IPCountry to Reduce Latencies by 300ms
 date:   2024-05-22 +0800
 categories: blogs
+tags: [optimization, cloudflare]
 ---
 
 [cover]:  /assets/improve-latency-of-1st-request-by-300ms.png

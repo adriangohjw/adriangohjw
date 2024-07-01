@@ -3,6 +3,7 @@ layout: blog
 title:  "i made our database queries 293x faster with materialized views"
 date:   2021-09-28 14:32:00 +0800
 categories: blogs
+tags: [optimization, database, postgresql]
 ---
 
 [nodeflair-salaries]:                     https://nodeflair.com/salaries

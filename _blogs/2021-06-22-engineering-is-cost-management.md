@@ -3,6 +3,7 @@ layout: blog
 title:  "engineering is cost management"
 date:   2021-06-22 08:38:00 +0800
 categories: blogs
+tags: [ideology]
 ---
 
 [nodeflair-website]:              https://nodeflair.com

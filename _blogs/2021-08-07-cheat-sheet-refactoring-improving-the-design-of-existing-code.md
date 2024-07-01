@@ -4,6 +4,7 @@ title:  "[Cheat Sheet] Refactoring: Improving the Design of Existing Code"
 date:   2021-08-07 18:08:00 +0800
 image: /assets/refactoring-cheat-sheet-cover.png
 categories: blogs
+tags: [refactoring]
 ---
 
 [cover]:            /assets/refactoring-cheat-sheet-cover.png

@@ -31,6 +31,9 @@ permalink: /blog
         {%- if site.show_excerpts -%}
           {{ blog.excerpt }}
         {%- endif -%}
+        {% for tag in blog.tags %}
+          <code>{{ tag }}</code>
+        {% endfor %}
       </li>
       {%- endfor -%}
     </ul>

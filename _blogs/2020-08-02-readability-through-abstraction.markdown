@@ -3,6 +3,7 @@ layout: blog
 title:  "Improving code readability: Abstractions"
 date:   2020-08-02 08:55:38 +0800
 categories: blogs
+tags: [refactoring]
 ---
 
 In my previous [post]({{ site.baseurl }}{% link _blogs/2020-08-01-writing-readable-code.markdown %}), I wrote about using abstractions to improve code readability.

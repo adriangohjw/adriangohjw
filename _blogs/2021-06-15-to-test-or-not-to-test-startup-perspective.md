@@ -3,6 +3,7 @@ layout: blog
 title:  "To test or not to test (Startup Perspective)"
 date:   2021-06-15 15:05:00 +0800
 categories: blogs
+tags: [ideology, tests]
 ---
 
 [nodeflair-website]:              https://nodeflair.com
