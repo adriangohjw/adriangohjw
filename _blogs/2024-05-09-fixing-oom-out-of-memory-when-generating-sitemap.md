@@ -14,7 +14,12 @@ When generating sitemaps, our application encountered an Out-of-Memory (OOM) iss
 
 # What is Sitemap?
 
-When users search for terms like <i>"XXX interview questions"</i>, I’m proud that [NodeFlair](https://nodeflair.com) often ranks in the top three results. This is despite competing against 1) companies that have been around longer, 2) those with higher [Domain Authority](https://moz.com/learn/seo/domain-authority) <i>(making it easier for them to rank if all else is equal)</i>, and 3) companies with dedicated SEO (Search Engine Optimization) teams.
+When users search for terms like <i>"XXX interview questions"</i>, I’m proud that [NodeFlair](https://nodeflair.com) often ranks in the top three results.
+
+This is despite competing against companies:
+1. That have been around longer
+2. Higher [Domain Authority](https://moz.com/learn/seo/domain-authority) <i>(making it easier for them to rank if all else is equal)</i>,
+3. Dedicated SEO teams
 
 ![](/assets/shopback-interview-questions-seo-demo.png)
 
@@ -24,7 +29,7 @@ One of the many things we did to make this possible was creating a [sitemap](htt
 
 [To generate the sitemap](https://github.com/kjvarga/sitemap_generator), we need to list all the URLs to be included.
 
-Here’s a snippet of code used to generate the sitemap. When we run this code, the application loads all records into memory. (Modified for simplicity and confidentiality purposes)
+Here’s a snippet of code used to generate the sitemap. When we run this code, the application <b>loads all records into memory</b>. <i>(Modified for simplicity and confidentiality purposes)</i>
 ```ruby
 # BEFORE
 CompanyInterviewQuestion
@@ -35,7 +40,7 @@ CompanyInterviewQuestion
 
 When we first started, generating sitemaps was quick and easy. After all, there weren’t many pages.
 
-However, over the years, with more data and pages on our site, the number of pages has grown to over 2 million. This means we are loading a large number of records into memory all at once, which causes the OOM issue.
+However, over the years, with more data and pages on our site, the number of pages has grown to <b>over 2 million</b>. This means we are loading a large number of records into memory all at once, which causes the OOM issue.
 
 ![](/assets/sitemap-number-of-pages.png)
 
@@ -43,7 +48,9 @@ However, over the years, with more data and pages on our site, the number of pag
 
 Of course, we could have easily used a machine with higher RAM, but that would be equivalent to buying a bigger house when your house has too many things instead of cleaning them up.
 
-Luckily for us Ruby on Rails folks, instead of loading all the data into memory at once, we can use `find_each` to load records in batches, reducing memory usage. This is especially important when dealing with large datasets, as it prevents loading all records into memory at once.
+Luckily for us Ruby on Rails folks, instead of loading all the data into memory at once, we can use `find_each` to load records in batches, reducing memory usage.
+
+This is especially important when dealing with large datasets, as it prevents loading all records into memory at once.
 
 ```ruby
 # AFTER
