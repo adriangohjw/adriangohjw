@@ -16,7 +16,7 @@ This post could be helpful for you if you are tired of:
 - Having controller bloated with conditional filtering logics OR
 - Having query objects that takes in multiple parameters (perhaps too many)
 
-# <b>How it started...</b>
+## <b>How it started...</b>
 
 With data from user submissions and past job listings, [NodeFlair Salaries][nodeflair-salaries] empowers tech talents to accurately understand what companies are paying for the different job roles. We improve the search experience by allowing users to filter by seniority, specialisation, company, only user submissions, and sort by attributes.
 
@@ -36,7 +36,7 @@ Wow, one look and this presents us with two issues:
 - <b>Bloated controller</b> - It should not have to worry about how the filtering is implemented
 - <b>Poor readability</b> - It takes some time to understand what the code does. The issue worsens when there’s some other non-related computation that’s happening in the controller.
 
-# <b>Abstracting logic using Query Object</b>
+## <b>Abstracting logic using Query Object</b>
 
 We can abstract the filtering logic into a query object `SalaryQuery` as such:
 
@@ -46,7 +46,7 @@ This hides the implementation logic from the controller - it is now skinnier and
 
 <script src="https://gist.github.com/adriangohjw/23ee6839536d3a837d2517140c34543d.js?file=1_query_object_in_controller.rb"></script>
 
-# <b>Good to Great: Improve it with Methods Chaining</b>
+## <b>Good to Great: Improve it with Methods Chaining</b>
 
 While using query object can already solve our initial two issues, we introduced a new code smell as we are <b>passing many parameters into the query object</b>. Readability worsens as the number of parameters being passed in increases- we simply have no idea what is happening and are just hoping for the best!
 
@@ -60,7 +60,7 @@ We also no longer have a bloated `call` method that does all the work.
 
 <script src="https://gist.github.com/adriangohjw/23ee6839536d3a837d2517140c34543d.js?file=2_query_object_with_method_chaining.rb"></script>
 
-# <b>Why do I think this is better?</b>
+## <b>Why do I think this is better?</b>
 
 ### Improved readability
 

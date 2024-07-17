@@ -8,11 +8,11 @@ tags: [ruby on rails]
 
 ![](/assets/oom-out-of-memory-when-generating-sitemap.png)
 
-# <b>TL;DR</b>
+## <b>TL;DR</b>
 
 When generating sitemaps, our application encountered an Out-of-Memory (OOM) issue due to the large number of records loaded. This is resolved by loading the records in batches instead.
 
-# What is Sitemap?
+## What is Sitemap?
 
 When users search for terms like <i>"XXX interview questions"</i>, I’m proud that [NodeFlair](https://nodeflair.com) often ranks in the top three results.
 
@@ -25,7 +25,7 @@ This is despite competing against companies:
 
 One of the many things we did to make this possible was creating a [sitemap](https://developers.google.com/search/docs/crawling-indexing/sitemaps/overview) and submitting it to Google. Think of sitemaps as directories that help search engines like Google crawl your site more efficiently.
 
-# The Issue
+## The Issue
 
 [To generate the sitemap](https://github.com/kjvarga/sitemap_generator), we need to list all the URLs to be included.
 
@@ -44,7 +44,7 @@ However, over the years, with more data and pages on our site, the number of pag
 
 ![](/assets/sitemap-number-of-pages.png)
 
-# Solution - Load the Data in Batches!
+## Solution - Load the Data in Batches!
 
 Of course, we could have easily used a machine with higher RAM, but that would be equivalent to buying a bigger house when your house has too many things instead of cleaning them up.
 

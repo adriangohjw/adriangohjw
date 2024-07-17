@@ -13,7 +13,7 @@ tags: [optimization, database, postgresql]
 
 ![][cover]
 
-# <b>Overview</b>
+## <b>Overview</b>
 
 Before I lose you, here's the performance improvement that we got out of this optimization technique.
 - Database query from 527ms to 1.8ms (293x faster)
@@ -28,7 +28,7 @@ In this post, I will share how we use Materialized View instead of normal View t
 - Keep view accurate by periodically refresh or update it when it changes
 - Don't use it if you don't access the view often, or if performance improvement is negligible
 
-# <b>How it all started</b>
+## <b>How it all started</b>
 
 Some time ago, I wrote a post [Rails: Scenic gem for Database Views](/2021-05-19-ruby-scenic-gem) on how we are using database views to aggregate data from various sources to accurately compute salary data for NodeFlair Salaries.
 
@@ -36,7 +36,7 @@ For those who did not read the post, here's a quick run-through on how we genera
 1. We create a view `UnifiedSalary` by aggregating individual data from user salaries and job listings
 2. We use the view to generate another view `SalaryGroup` to group the salary data
 
-# <b>Hey View, it's not working out for us anymore...</b>
+## <b>Hey View, it's not working out for us anymore...</b>
 
 However, over the past 4 months, <b>our data set used in salary computation has grown in size</b> as [more users are contributing their salaries][nodeflair-salaries-submission] and us getting more job listings. Thus, our queries and APIs were taking longer to complete (up to 5x longer).
 
@@ -44,7 +44,7 @@ In addition, this issue will only worsen over time as the data set continues to 
 
 <div style="width:100%;height:0;padding-bottom:71%;position:relative;"><iframe src="https://giphy.com/embed/xT9C25UNTwfZuk85WP" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/Giflytics-gif-jazminantoinette-giflytics-xT9C25UNTwfZuk85WP">via GIPHY</a></p>
 
-# <b>How does Materialized View reduce query time</b>
+## <b>How does Materialized View reduce query time</b>
 
 Before understanding this, we need to <b>understand how normal View works</b>.
 Every single time you query from a normal View, it will compute the underlying SELECT statements and return the results. What this means is if you call it 100 times, it will compute it 100 times. 
@@ -55,7 +55,7 @@ In our case, every time we query `SalaryGroup`, it will first have to compute `U
 
 On the other hand, <b>Materialization is a form of caching</b>. Instead of computing the result every single time, <b>Materialized View generates the view once and store a copy of the result</b>. Every subsequent read will be reading from this copy - just like reading from a table.
 
-# <b>Benefits beyond reducing query time</b>
+## <b>Benefits beyond reducing query time</b>
 
 Besides reducing query time, we also observed an unintended improvement in other aspects.
 
@@ -74,7 +74,7 @@ For instance, our <b>database's CPU utilization drops and fluctuates much less r
 
 This allows us to deal with spikes in database requests with greater ease, as well as scale down our database resources. As such, we can <b>save up on some of our costs for cloud services</b>. (Damn it, probably shouldn't have invested in Amazon)
 
-# <b>It sounds too good to be true..?</b>
+## <b>It sounds too good to be true..?</b>
 
 <div style="width:100%;height:0;padding-bottom:56%;position:relative;"><iframe src="https://giphy.com/embed/7JETj7u7jBmkTPn4Zb" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/animalkingdom-ak-animal-kingdom-tnt-7JETj7u7jBmkTPn4Zb">via GIPHY</a></p>
 
@@ -98,7 +98,7 @@ The above 2 factors will also determine your refresh frequencies. If you have a 
 
 In the case of NodeFlair Salaries, our data set is growing consistently at a predictable pace and we are alright with only refreshing our results every other minute. Therefore, we went with method 1.
 
-# <b>It's not for everyone (and that's fine)</b>
+## <b>It's not for everyone (and that's fine)</b>
 
 Let's recap on our intention of exploring Materialized View in the first place. We wanted a <b>more efficient query when reading from the view</b>, and that means that if this is not being achieved (or it comes at too large a trade-off), it might not make sense to use it.
 
@@ -118,7 +118,7 @@ As such, if a view has simple underlying logic and/or the data source has very f
 
 <div style="width:100%;height:0;padding-bottom:60%;position:relative;"><iframe src="https://giphy.com/embed/2F0kKth8MPc88LQsHQ" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/news-atlanta-georgia-keisha-lance-bottoms-just-because-you-can-do-it-doesnt-2F0kKth8MPc88LQsHQ">via GIPHY</a></p>
 
-# <b>Conclusion</b>
+## <b>Conclusion</b>
 
 Like every technical decision, there are trade-offs. What works for us might not work for you. Who knows, Materialized View might outgrow us after six months and we will need to look for another solution then. But hey, it is working great for us now, so all is good!
 

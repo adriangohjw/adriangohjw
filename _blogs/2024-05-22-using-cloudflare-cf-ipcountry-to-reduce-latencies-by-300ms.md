@@ -10,23 +10,23 @@ tags: [optimization, cloudflare]
 
 ![][cover]
 
-# <b>TL;DR</b>
+## <b>TL;DR</b>
 
 I reduced the latency of users' first requests by 300ms (from an average of 480ms to 180ms) by replacing blocking third-party Geolocation API calls with Cloudflare's in-built header fields.
 
-# Intro
+## Intro
 
 When users make their first request to [NodeFlair](https://nodeflair.com), we retrieve their country to localize the website for languages (I18n) and features.
 
 To do this, we make a request to a third-party geolocation API to determine their country.
 
-# The Issue
+## The Issue
 
 The API's website stated an average latency of 50ms.
 
 However, we were experiencing latencies of approximately 300ms. This could be due to our servers being based in Singapore.
 
-# Solution
+## Solution
 
 Since we are currently using Cloudflare, we can instead obtain the country code via `CF-IPCountry` in the request header fields. We only fall back to using the geolocation API if the value is invalid (which is rare).
 

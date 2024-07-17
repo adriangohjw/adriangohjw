@@ -17,7 +17,7 @@ categories: blogs
 </div>
 <br>
 
-# <b>Overview</b>
+## <b>Overview</b>
 
 Hey, you right there. Are you feeling lonely (not me) and wish that your form is more fun and interactive? You've come to the right place!
 
@@ -30,7 +30,7 @@ In this demo, I implemented the following features with just <b>65 lines of code
 - Asking a question with images and texts as answer options
 - Conditional rendering of questions
 
-# <b>Using ConversationalForm</b>
+## <b>Using ConversationalForm</b>
 
 To use the ConversationalForm library, we have to first include it in our project.
 
@@ -42,7 +42,7 @@ You can also download/install the latest release by cloning the repo or installi
 
 More can be found in the [source code's repository](https://github.com/space10-community/conversational-form).
 
-# <b>Responding with the user's answer</b>
+## <b>Responding with the user's answer</b>
 
 ![][demo-app-ss-1]
 
@@ -50,7 +50,7 @@ More can be found in the [source code's repository](https://github.com/space10-c
 
 After asking the question, you can insert the user's response in your message by calling `{input-name}`. In my case, it's `{name}`.
 
-# <b>Providing answer options with images</b>
+## <b>Providing answer options with images</b>
 
 ![][demo-app-ss-2]
 
@@ -58,7 +58,7 @@ After asking the question, you can insert the user's response in your message by
 
 I think the code is pretty self-explanatory - you can specify the path to the images using `cf-image`.
 
-# <b>Conditional rendering of questions</b>
+## <b>Conditional rendering of questions</b>
 
 In this demo, I would like to conditionally ask the user what is their favourite song(s) based on the band they have selected.
 
@@ -74,7 +74,7 @@ This can be easily achieved by adding a `cf-conditional-INPUT-NAME` in the `sele
 
 <script src="https://gist.github.com/adriangohjw/331234f164b45b39ed6338fecb96115a.js?file=conditional-rendering.html"></script>
 
-# <b>Customizing the form</b>
+## <b>Customizing the form</b>
 
 You can configure the form to better suit your needs. In my case, I want to
 - Change the avatar images
@@ -86,7 +86,7 @@ You can configure the form to better suit your needs. In my case, I want to
 
 <script src="https://gist.github.com/adriangohjw/331234f164b45b39ed6338fecb96115a.js?file=customizing.js"></script>
 
-# <b>Conclusion</b>
+## <b>Conclusion</b>
 
 I find the ConversationalForm library to be really easy to use and works pretty well right out of the box. 
 
@@ -96,7 +96,7 @@ Nevertheless, there are still some areas of improvement that I hope to see:
 - More features such as sending a message that includes media (gif, video, images, files etc.)
 - Integration with more 3rd-party software (currently there's GA and Mailchimp in the examples)
 
-# <b>Reference</b>
+## <b>Reference</b>
 
 - [Code][github-code]
 - [Demo][demo-app]

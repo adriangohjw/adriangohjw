@@ -13,7 +13,7 @@ Here's a definition I found:
 
 When I first started programming, I have no idea what that meant. However, once I started working on projects, I realised code readability is very similar to design and UI/UX: You know it's bad when you see it. It's much easier to identify poor code readability because you often feel frustruated and confused when you see them.
 
-# <b>Importance of writing readable code</b>
+## <b>Importance of writing readable code</b>
 
 The project you are working on is likely to be maintained by someone (or even yourself).
 
@@ -23,7 +23,7 @@ Even when you are writing code that no one is ever going to touch on, it is prob
 
 Here's <b>5 simple tips</b> on writing more readable code!
 
-# <b>#1: Line breaks to help segment thoughts</b>
+## <b>#1: Line breaks to help segment thoughts</b>
 
 Similar to how I separate the content of this post using headers, sub-headers and paragraphs, whitespaces are crucial to readable code. It helps in visually separating out logical blocks of code.
 
@@ -37,7 +37,7 @@ In the 2nd example, line breaks are used strategically to organize the code by b
 
 <script src="https://gist.github.com/adriangohjw/2bbea0f0df2fc7d77fc91552bc82d1bb.js?file=1_line_breaks_after.rb"></script>
 
-# <b>#2: If-else? Put the happy path first!</b>
+## <b>#2: If-else? Put the happy path first!</b>
 
 According to Wikipedia, happy path is defined as such
 
@@ -49,7 +49,7 @@ When we are reading code, we read it from top-down. As such, by putting the happ
 
 <script src="https://gist.github.com/adriangohjw/2bbea0f0df2fc7d77fc91552bc82d1bb.js?file=2_happypath_after.rb"></script>
 
-# <b>#3: Nested if-else? Try guard clauses instead</b>
+## <b>#3: Nested if-else? Try guard clauses instead</b>
 
 Guard clauses protect some code from running unless conditions are met. They are usually used to ensure that the parameters that were passed meet some criteria to avoid running into problems.
 
@@ -67,7 +67,7 @@ Other than immediately improving the code readability, guard clauses also have o
 - Easier to make changes to the code in the future
 - Possibility of refactoring the code to be even more readable (I wrote about this in [another post]({{ site.baseurl }}{% link _blogs/2020-08-02-readability-through-abstraction.markdown %}))
 
-# <b>#4: Avoid reassigning variables</b>
+## <b>#4: Avoid reassigning variables</b>
 
 At NodeFlair, we empower developers to code() at where they love by matching them with companies. For that to happen, developers have to sign up as users and fill up their specialisations (e.g. backend, frontend) during the onboarding process.
 
@@ -83,7 +83,7 @@ To offload the mental load of the readers, we can either introduce a new variabl
 
 My tip as to choosing which method to use depends on the probability of reusing the variable in the first line of code. If it's quite likely that I require the value of `Users.completed_onboarding_form`, method 1 will be used as it is flexible and easier to reuse existing variables. However in most cases, it is usually fine to use either method as it's quite easy to change the code subsequently.
 
-# <b>#5: Use meaningful names</b>
+## <b>#5: Use meaningful names</b>
 
 Without any context, can you take a guess at what this code does?
 
@@ -99,7 +99,7 @@ In addition, when calling the function `calculate_total_price`, the reader will 
 - What the function does (even without looking into it's implementation)
 - What are the arguments needed to be passed in
 
-# <b>Conclusion</b>
+## <b>Conclusion</b>
 
 Contrary to what popular belief, writing readable code doesn't actually take much technical knowledge or years of coding experience. Instead, it is a conscious effort to always put yourself in the shoes of someone reading it.
 

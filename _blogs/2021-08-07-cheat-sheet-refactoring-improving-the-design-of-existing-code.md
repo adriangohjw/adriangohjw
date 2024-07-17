@@ -17,7 +17,7 @@ Note:
 - As the source is in Java, I have modified the code to make more sense in Ruby
 - As I am trying to keep this concise such that my future self can easily refer to it (hi future self if you are reading this), I will be skipping the implementation steps as I find it to be rather straightforward once we grasped the concept.
 
-# <b>Why I recommend this book</b>
+## <b>Why I recommend this book</b>
 
 <b>1) Refactoring techniques are small</b>
 
@@ -34,7 +34,7 @@ They can take a few minutes to an hour at most (depends on the health of the cod
 
 Most approaches are objectively an improvement and do not require any degree of agreement among the engineering team
 
-# <b>Table of Content</b>
+## <b>Table of Content</b>
 - [Chapter 6: Composing Methods](#chapter-6-composing-methods)
   - Extract Method
   - Introduce Explaining Variable
@@ -85,9 +85,9 @@ Most approaches are objectively an improvement and do not require any degree of 
 ---
 <br>
 
-# <b>Chapter 6: Composing Methods</b>
+## <b>Chapter 6: Composing Methods</b>
 
-#### <b>>> Extract Method</b>
+### <b>>> Extract Method</b>
 
 <b>TL;DR: Turn the fragment into a method whose name explains the purpose of the method</b>
 
@@ -129,7 +129,7 @@ Note:
 
 ---<br>
 
-#### <b>>> Introduce Explaining Variable</b>
+### <b>>> Introduce Explaining Variable</b>
 
 <b>TL;DR: Put the result of a complicated expression, or parts of it, in a temporary variable</b>
 
@@ -164,7 +164,7 @@ Note:
 
 ---<br>
 
-#### <b>>> Inline Method</b>
+### <b>>> Inline Method</b>
 
 <b>TL;DR: Put the method's body into the body of its callers and remove the method.</b>
 
@@ -194,7 +194,7 @@ Why it is better:
 
 ---<br>
 
-#### <b>>> Replace Temp with Query</b>
+### <b>>> Replace Temp with Query</b>
 
 <b>TL;DR: Extract expression into a method and replace all temp references with it</b>
 
@@ -240,7 +240,7 @@ Note:
 
 ---<br>
 
-#### <b>>> Split Temporary Variable</b>
+### <b>>> Split Temporary Variable</b>
 
 <b>TL;DR: Make a separate temporary variable for each assignment</b>
 
@@ -270,7 +270,7 @@ Why it is better:
 
 ---<br>
 
-#### <b>>> Remove Assignments to Parameters</b>
+### <b>>> Remove Assignments to Parameters</b>
 
 <b>TL;DR: Use a temporary variable instead</b>
 
@@ -299,7 +299,7 @@ Why it is better:
 
 ---<br>
 
-#### <b>>> Replace Method with Method Object</b>
+### <b>>> Replace Method with Method Object</b>
 
 <b>TL;DR: Turn the method into its object so that all the local variables become fields on that object.
 You can then decompose the method into other methods on the same object.</b>
@@ -360,13 +360,13 @@ Why it is better:
 ---
 <br>
 
-# <b>Chapter 7: Moving Features Between Objects</b>
+## <b>Chapter  7: Moving Features Between Objects</b>
 
 Generally, we aim to ensure that each field and method are placed in the correct classes and objects, ensuring that responsibilities belong to its rightful owner. The refactoring approaches in this chapter address these code smells and closely enforces SOLID's SRP (Single Responsibility Principle). Also, this often led to small and concise classes, improving readability.
 
 <i>Note: For this chapter, I will be borrowing some concepts from ActiveRecord (Rails' ORM) to easier illustrate some of the pointers</i>
 
-#### <b>>> Move Method</b>
+### <b>>> Move Method</b>
 
 <b>TL;DR: Move the method into the class that uses it most + Turn the old method into a simple delegation, or remove it altogether</b>
 
@@ -418,7 +418,7 @@ Why it is better:
 
 ---<br>
 
-#### <b>>> Move Field</b>
+### <b>>> Move Field</b>
 
 <b>TL;DR: Move the field into the class that uses it the most</b>
 
@@ -478,7 +478,7 @@ Note:
 
 ---<br>
 
-#### <b>>> Extract Class</b>
+### <b>>> Extract Class</b>
 
 <b>TL;DR: Extract logics into a new class</b>
 
@@ -525,7 +525,7 @@ Why it is better:
 
 ---<br>
 
-#### <b>>> Hide Delegate (+ Remove Middle Man)</b>
+### <b>>> Hide Delegate (+ Remove Middle Man)</b>
 
 <b>TL;DR: Create a new method to hide delegate class from client</b>
 
@@ -572,7 +572,7 @@ Note:
 
 ---<br>
 
-#### <b>>> Introduce Local Extension</b>
+### <b>>> Introduce Local Extension</b>
 
 <b>TL;DR: Create a new class (subclass OR wrapper) as an extension of the original class</b>
 
@@ -632,9 +632,9 @@ Note:
 ---
 <br>
 
-# <b>Chapter 8: Organizing Data</b>
+## <b>Chapter  8: Organizing Data</b>
 
-#### <b>>> Replace Data Value with Object</b>
+### <b>>> Replace Data Value with Object</b>
 
 <b>TL;DR: Turn the data item into an object</b>
 
@@ -689,7 +689,7 @@ Why it is better:
 
 ---<br>
 
-#### <b>>> Replace Array with Object</b>
+### <b>>> Replace Array with Object</b>
 
 <b>TL;DR: Replace the array with an object that has a field for each element</b>
 
@@ -725,7 +725,7 @@ Note:
 
 ---<br>
 
-#### <b>>> Replace Magic Number with Symbolic Constant</b>
+### <b>>> Replace Magic Number with Symbolic Constant</b>
 
 <b>TL;DR: Replace the number with a constant instead</b>
 
@@ -754,7 +754,7 @@ Why it is better:
 
 ---<br>
 
-#### <b>>> Replace Type Code with Class</b>
+### <b>>> Replace Type Code with Class</b>
 
 <b>TL;DR: Replace the type with a new class</b>
 
@@ -798,7 +798,7 @@ Why it is better:
 
 ---<br>
 
-#### <b>>> Encapsulate Collection</b>
+### <b>>> Encapsulate Collection</b>
 
 <b>TL;DR: Make it return a read-only view + provide add/remove methods.</b>
 
@@ -847,9 +847,9 @@ Why it is better:
 ---
 <br>
 
-# <b>Chapter 9: Simplifying Conditional Expressions</b>
+## <b>Chapter  9: Simplifying Conditional Expressions</b>
 
-#### <b>>> Decompose Conditional</b>
+### <b>>> Decompose Conditional</b>
 
 <b>TL;DR: Extract methods in conditions</b>
 
@@ -883,7 +883,7 @@ Why it is better:
 
 ---<br>
 
-#### <b>>> Consolidate Conditional Expression</b>
+### <b>>> Consolidate Conditional Expression</b>
 
 <b>TL;DR: Extract conditional tests with the same results into a single conditional expression</b>
 
@@ -919,7 +919,7 @@ Note:
 
 ---<br>
 
-#### <b>>> Consolidate Duplicate Conditional Fragments</b>
+### <b>>> Consolidate Duplicate Conditional Fragments</b>
 
 <b>TL;DR: Move the repeated code fragment outside of the branch</b>
 
@@ -952,7 +952,7 @@ Why it is better:
 
 ---<br>
 
-#### <b>>> Remove Control Flag</b>
+### <b>>> Remove Control Flag</b>
 
 <b>TL;DR: Use a break or return instead.</b>
 
@@ -991,7 +991,7 @@ Why it is better:
 
 ---<br>
 
-#### <b>>> Replace Nested Conditional with Guard Clauses</b>
+### <b>>> Replace Nested Conditional with Guard Clauses</b>
 
 <b>TL;DR: Use guard clauses for all the special cases.</b>
 
@@ -1033,7 +1033,7 @@ Why it is better:
 
 ---<br>
 
-#### <b>>> Replace Conditional with Polymorphism</b>
+### <b>>> Replace Conditional with Polymorphism</b>
 
 <b>TL;DR: Move each leg of the conditional to an overriding method in a subclass</b>
 
@@ -1102,7 +1102,7 @@ Note:
 
 ---<br>
 
-#### <b>>> Introduce Null Object</b>
+### <b>>> Introduce Null Object</b>
 
 <b>TL;DR: Replace the null value with a null object</b>
 
@@ -1156,7 +1156,7 @@ Note:
 
 ---<br>
 
-#### <b>>> Introduce Assertion</b>
+### <b>>> Introduce Assertion</b>
 
 As it's less relevant for Ruby, I have replaced it with "Raising Exception", which is conceptually similar.
 
@@ -1195,9 +1195,9 @@ Why it is better:
 ---
 <br>
 
-# <b>Chapter 10: Making Method Calls Simpler</b>
+## <b>Chapter  10: Making Method Calls Simpler</b>
 
-#### <b>>> Rename Method</b>
+### <b>>> Rename Method</b>
 
 <b>TL;DR: Change the name of the method</b>
 
@@ -1226,7 +1226,7 @@ Note:
 
 ---<br>
 
-#### <b>>> Separate Query from Modifier</b>
+### <b>>> Separate Query from Modifier</b>
 
 <b>TL;DR: Split the method into 2 - Query & Modifier</b>
 
@@ -1295,7 +1295,7 @@ Note:
 
 ---<br>
 
-#### <b>>> Parameterize Method</b>
+### <b>>> Parameterize Method</b>
 
 <b>TL;DR: Create one method that uses a parameter for the different values.</b>
 
@@ -1362,7 +1362,7 @@ Why it is better:
 
 ---<br>
 
-#### <b>>> Replace Parameter with Explicit Methods</b>
+### <b>>> Replace Parameter with Explicit Methods</b>
 
 <b>TL;DR: Create a separate method for each value of the parameter.</b>
 
@@ -1414,7 +1414,7 @@ Note:
 
 ---<br>
 
-#### <b>>> Preserve Whole Object</b>
+### <b>>> Preserve Whole Object</b>
 
 <b>TL;DR: Send the whole object instead.</b>
 
@@ -1442,7 +1442,7 @@ Note:
 
 ---<br>
 
-#### <b>>> Replace Parameter with Method</b>
+### <b>>> Replace Parameter with Method</b>
 
 <b>TL;DR: Remove the parameter and let the receiver invoke the method</b>
 
@@ -1479,7 +1479,7 @@ Note:
 
 ---<br>
 
-#### <b>>> Introduce Parameter Object</b>
+### <b>>> Introduce Parameter Object</b>
 
 <b>TL;DR: Replace a group of parameters that naturally go together with an object.</b>
 
@@ -1516,7 +1516,7 @@ Why it is better:
 
 ---<br>
 
-#### <b>>> Hide Method</b>
+### <b>>> Hide Method</b>
 
 <b>TL;DR: Hide the method (make it protected / private)</b>
 
@@ -1570,7 +1570,7 @@ Note:
 ---<br>
 >
 
-#### <b>>> Replace Constructor with Factory Method</b>
+### <b>>> Replace Constructor with Factory Method</b>
 
 <b>TL;DR: Replace the constructor with a factory method</b>
 
@@ -1627,7 +1627,7 @@ Note:
 
 ---<br>
 
-#### <b>>> Replace Error Code with Exception</b>
+### <b>>> Replace Error Code with Exception</b>
 
 <b>TL;DR: Throw an exception instead</b>
 
@@ -1658,7 +1658,7 @@ Note:
 
 ---<br>
 
-#### <b>>> Replace Exception with Test</b>
+### <b>>> Replace Exception with Test</b>
 
 <b>TL;DR: Change the caller to make the test first. </b>
 
@@ -1691,7 +1691,7 @@ Note:
 ---
 <br>
 
-# <b>Chapter 11: Dealing with Generalization</b>
+## <b>Chapter  11: Dealing with Generalization</b>
 
 I will be skipping several approaches here, as I found it to be the default good practice for OOP in general. This includes:
 - Pull Up Field: Move similar fields across subclasses into the superclass
@@ -1702,7 +1702,7 @@ I will be skipping several approaches here, as I found it to be the default good
 
 ---<br>
 
-#### <b>>> Extract Subclass</b>
+### <b>>> Extract Subclass</b>
 
 <b>TL;DR: Create a subclass for the subset of features</b>
 
@@ -1761,7 +1761,7 @@ Why it is better:
 
 ---<br>
 
-#### <b>>> Extract Superclass</b>
+### <b>>> Extract Superclass</b>
 
 <b>TL;DR: Create a superclass and move the common features to the superclass.</b>
 
@@ -1833,7 +1833,7 @@ Note:
 
 ---<br>
 
-#### <b>>> Replace Inheritance with Delegation</b>
+### <b>>> Replace Inheritance with Delegation</b>
 
 <b>TL;DR: Create a field for the superclass and adjust methods to delegate to the superclass</b>
 
@@ -1890,7 +1890,7 @@ Why it is better:
 
 ---<br>
 
-#### <b>>> Replace Delegation with Inheritance</b>
+### <b>>> Replace Delegation with Inheritance</b>
 
 <b>TL;DR: Make the delegating class a subclass of the delegate</b>
 

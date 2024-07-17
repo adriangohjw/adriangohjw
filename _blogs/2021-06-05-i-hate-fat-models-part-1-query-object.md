@@ -18,31 +18,31 @@ As I was reading up about the MVC architecture, I came across some common practi
 
 Well, that doesn't sound too bad. However, what we realized is that over time, there is a tendency for the model class to grow way too huge, which make navigating the code base increasingly challenging.
 
-# <b>How it first started...</b>
+## <b>How it first started...</b>
 
 At the beginning of time (or the development of [NodeFlair Salaries][nodeflair-salaries]), there was a class `SalaryGroup`. Without complicating this post with unnecessary details, all we need to know is that it is one of the key models in this product.
 
 <script src="https://gist.github.com/adriangohjw/a081d63ebc10df611dfa37ab423e8a97.js?file=before.rb"></script>
 
-# <b>Implementing new feature - Popular Companies</b>
+## <b>Implementing new feature - Popular Companies</b>
 
 One of the features we added to [NodeFlair Salaries][nodeflair-salaries] recently is Popular Companies. The goal of it is to encourage users, especially those who stumbled across the product, to explore the product more. I find it rather useful and interesting to know what are the different companies that other people are also looking at.
 
 ![NodeFlair Salaries - Popular Companies][nf_salaries_popular_companies]
 
-# <b>Let's take a look at the initial implementation</b>
+## <b>Let's take a look at the initial implementation</b>
 
 <script src="https://gist.github.com/adriangohjw/a081d63ebc10df611dfa37ab423e8a97.js?file=before_after_some_time.rb"></script>
 
 This implementation is straightforward and easy to understand. However, our class has grown fatter with an additional method. Not an issue for a small object, but as the application grows and we have more requirements and features, I can foresee the model growing to a few hundred lines of code. 🤮
 
-# <b>Query Object to keep our models skinny</b>
+## <b>Query Object to keep our models skinny</b>
 
 Instead of extending the class `SalaryGroup`, we can simply create a new query object called `PopularSalariesQuery`
 
 <script src="https://gist.github.com/adriangohjw/a081d63ebc10df611dfa37ab423e8a97.js?file=after.rb"></script>
 
-# <b>Why do I think this is better?</b>
+## <b>Why do I think this is better?</b>
 
 ### Improve readability
 

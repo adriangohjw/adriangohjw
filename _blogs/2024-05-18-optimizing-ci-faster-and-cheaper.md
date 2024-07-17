@@ -10,18 +10,18 @@ tags: [optimization, ruby, ci/cd]
 
 ![][cover]
 
-# <b>TL;DR</b>
+## <b>TL;DR</b>
 
 - Run tests in parallelize with `flatware`
 - Switched our CI runners from Github Actions to third-party runners
 
-# Background
+## Background
 
 As we developed more features at [NodeFlair](https://nodeflair.com) and wrote more tests, the time for our CI started to creep up to as long as 15 minutes per build.
 
 While this isn’t necessarily a huge issue on its own, now that I have 2-3 engineering interns at any given time, this slow build results in slower feedback and <b>affects our shipping speed</b>.
 
-# Bottlenecks
+## Bottlenecks
 
 1. When I examined the build process log, I discovered that container initialization takes 1 minute.
 
@@ -29,9 +29,9 @@ While this isn’t necessarily a huge issue on its own, now that I have 2-3 engi
 
 3. Furthermore, our RSpec tests are taking a long time to run (~12 minutes).
 
-# Solutions
+## Solutions
 
-## 1. Switch to 3rd-party runners and caches
+### 1. Switch to 3rd-party runners and caches
 
 I researched third-party runners and decided to use [Blacksmith](https://blacksmith.sh/) <i>(comparisons can be found in the Appendix section)</i>. Blacksmith’s machines are faster because they use gaming CPUs that are better than GitHub’s decade-old server CPUs <i>([GitHub uses old hardwares from 2015](https://buildjet.com/for-github-actions/blog/a-performance-review-of-github-actions-the-cost-of-slow-hardware))</i>.
 
@@ -41,7 +41,7 @@ Additionally, with their 25 GB cache limit instead of GitHub’s 10 GB, we exper
 
 Also, not to worry – with all these improvements, they are still <b>2x cheaper than GitHub</b>!
 
-## 2. Parallize tests with Flatware
+### 2. Parallize tests with Flatware
 
 Previously, we were running our tests without parallelization. This means only one test runs at a time, despite having multiple CPU cores available. Given that our machines have multiple CPU cores, we can (and should) instead run the tests in parallel.
 
@@ -78,19 +78,19 @@ Machines with more vCPU cores typically incur higher costs, as cost tends to sca
 1. While more cores increase performance for the tests during parallelization, they <b>do not speed up other parts of the CI process</b>.
 2. Time savings is not linearly proportional to the number of cores due to <b>contention for other resources</b>, such as RAM.
 
-# Overall
+## Overall
 
 With the combinations of these methods:
 - The CI build time is reduced by 3x (from ~15 minutes to ~5 minutes)
 - Our CI bills are 6x cheaper ($0.12213/build → $0.02006/build)
 
-# Appendix: Comparison of 3rd-party runners
+## Appendix: Comparison of 3rd-party runners
 
-## 1. [BuildJet](https://buildjet.com/)
+### 1. [BuildJet](https://buildjet.com/)
 
 We initially went for BuildJet. While it worked well, we quickly learnt that Blacksmith provided faster caches and a more generous free tier.
 
-## 2. [Blacksmith](https://blacksmith.sh/)
+### 2. [Blacksmith](https://blacksmith.sh/)
 
 Blacksmith offers pricing that matches BuildJet’s rates, which are 50% cheaper than GitHub’s.
 
@@ -104,7 +104,7 @@ Most importantly, they offer a generous 3,000 free minutes per month, which is e
 
 Additionally, the founders are incredibly responsive via email. I reached out regarding a minor issue, and they fixed it within a few hours! Thanks, Aayush!
 
-## 3. [Ubicloud](https://www.ubicloud.com/)
+### 3. [Ubicloud](https://www.ubicloud.com/)
 
 Of all the third-party runners, <b>Ubicloud is the cheapest — 10 times cheaper than GitHub’s cost</b> and 5 times cheaper than Blacksmith and BuildJet.
 

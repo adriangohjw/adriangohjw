@@ -14,12 +14,12 @@ As such, one of the features of NodeFlair Salaries is to solve this issue is to 
 
 ![NodeFlair Salaries - Past Job Listings][nf_salaries_past_listings]
 
-# <b>Tagging seniorities of a job listing</b>
+## <b>Tagging seniorities of a job listing</b>
 
 There are many attributes that we use, but I will simplify it for this post to use just the job listing’s title.
 - If it contains the word 'junior', it's a junior position
 
-# <b>Issue with Primitive Obsession...</b>
+## <b>Issue with Primitive Obsession...</b>
 
 There's quite a couple of content out there that explains this, so let me just quote this blogpost on [Object Calisthenics](https://medium.com/@davidsen/clean-code-object-calisthenics-f6f4dec07c8b).
 
@@ -31,11 +31,11 @@ There's quite a couple of content out there that explains this, so let me just q
 
 Okay, not <i>THAT</i> bad. You kinda get what it is doing. But it does take you some time to digest it. And as this code smell appears in other parts of the code, the total time wasted will accumulate over time.
 
-# <b>Value Object to the rescue!</b>
+## <b>Value Object to the rescue!</b>
 
 <script src="https://gist.github.com/adriangohjw/2fb900e738fc1c4ff2adf1d64fa866a6.js?file=after.rb"></script>
 
-# <b>Why do I think this is better?</b>
+## <b>Why do I think this is better?</b>
 
 ### Improved Readability
 

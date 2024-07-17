@@ -16,7 +16,7 @@ Throughout my time managing Engineering at [NodeFlair][nodeflair-website]. Besid
 <b>Disclaimer</b><br>
 These are my personal opinions and what works for me now, and may not be as relevant for you. Well, they might not even be relevant to me in a year time, but who knows?
 
-# <b>Engineering is Cost Management</b>
+## <b>Engineering is Cost Management</b>
 
 What I am gonna say next is probably uncomfortable and you may not like it, but neither do I.
 
@@ -24,7 +24,7 @@ What I am gonna say next is probably uncomfortable and you may not like it, but 
 
 What you need to know is that as the management (oh wait, that's me too), the question I always ask is <i>"Does it bring the company more money than it cost?"</i>
 
-# <b>Why write good software then?</b>
+## <b>Why write good software then?</b>
 
 No business dies from a legacy codebase. Well, at least not directly. A well-maintained code base with nicely modularized code that follows good software engineering practices and is easy to test and change, means the company can move a lot faster.
 
@@ -44,7 +44,7 @@ No business dies from a legacy codebase. Well, at least not directly. A well-mai
 
 In my other blogpost [To test or not to test (Startup Perspective)][post-on-writing-test], I also explained the benefit of writing software test, even for a startup. TL;DR: Sometimes writing test can help you move faster.
 
-# <b>What do you mean we don't need Machine Learning?</b>
+## <b>What do you mean we don't need Machine Learning?</b>
 
 <i>Hey, let's add Artificial Intelligence... and Machine Learning! Oh wait, let's migrate to Microservices! No wait, let's rewrite our codebase in Golang. Look, let's try out that latest Javascript framework?</i>
 
@@ -60,7 +60,7 @@ But on multiple occasions, I have spotted teams adopting these new changes just 
 </div>
 <br>
 
-# <b>Wait, so I shouldn't hire the best talents?</b>
+## <b>Wait, so I shouldn't hire the best talents?</b>
 
 Yes, and no - it depends on the definition of "best".
 
@@ -74,7 +74,7 @@ In addition, you want to <b>avoid hiring someone overqualified for the role</b>.
 
 Also, from a perspective of the cost-to-output ratio, it might make a lot more financial sense to hire 2 great talents rather than 1 engineer from the 90th percentile.
 
-# <b>Conclusion</b>
+## <b>Conclusion</b>
 
 If you are an engineering leader at a larger company, or different industry, or simply has a different opinion, do let me know! More than happy to hear from everyone.
 

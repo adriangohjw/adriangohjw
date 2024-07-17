@@ -16,7 +16,7 @@ tags: [ideology, productivity]
 </div>
 <br>
 
-# <b>Overview</b>
+## <b>Overview</b>
 
 Productivity is very important to me. This is especially so, given my current position as the co-founder of [NodeFlair][nodeflair-website]. As the co-founder, beyond the usual engineering work, I also have non-engineering involvements such as OKR meetings with the respective department heads, interviewing and hiring of key roles, investor relations, finance and the list goes on.
 
@@ -27,9 +27,9 @@ Over time, I started reflecting on how my time is spent and looking into ways to
 
 ---<br>
 
-# <b>Personal productivity - O(n) to O(logn)</b>
+## <b>Personal productivity - O(n) to O(logn)</b>
 
-#### <b>15 mins + 15 mins != 30 mins</b>
+### <b>15 mins + 15 mins != 30 mins</b>
 
 <b>TL;DR: Block off your calendar + Leave awkward calendar gap for admin tasks</b>
 
@@ -46,7 +46,7 @@ Over time, I started reflecting on how my time is spent and looking into ways to
 </div>
 <br>
 
-#### <b>Say NO to meetings</b>
+### <b>Say NO to meetings</b>
 
 <b>TL;DR: Reject meetings w/o clear agendas + Leave meeting when you are no longer needed</b>
 
@@ -62,9 +62,9 @@ By rejecting and excusing yourself from these meetings, you are doing both parti
 
 ---<br>
 
-# <b>Team productivity - how managers can help</b>
+## <b>Team productivity - how managers can help</b>
 
-#### <b>You don't always need pair programming</b>
+### <b>You don't always need pair programming</b>
 
 <b>TL;DR: Only do pair-programming for challenging tickets</b>
 
@@ -80,7 +80,7 @@ For example, for one of the products we are building, [NodeFlair Salaries][nodef
 
 ![NodeFlair Salaries Submission Form][nf-salaries-addsalary]
 
-#### <b>That extra headcount might not be useful</b>
+### <b>That extra headcount might not be useful</b>
 
 <b>TL;DR: Re-evaluate your current team structure and processes</b>
 
@@ -109,9 +109,9 @@ However, the tough part about it is standing firm in your decision and communica
 
 ---<br>
 
-# <b>For non-engineering co-workers - this is how you can help</b>
+## <b>For non-engineering co-workers - this is how you can help</b>
 
-#### <b>Be mindful - don't disrupt unnecessarily</b>
+### <b>Be mindful - don't disrupt unnecessarily</b>
 
 <b>TL;DR: Ping first instead of interrupting them abruptly unless absolutely urgent</b>
 
@@ -125,7 +125,7 @@ However, the tough part about it is standing firm in your decision and communica
 
 ---<br>
 
-# <b>Conclusion</b>
+## <b>Conclusion</b>
 
 If you are an engineer and has different thoughts or more tips, do let me know! More than happy to hear from everyone.
 

@@ -10,13 +10,13 @@ In my previous [post]({{ site.baseurl }}{% link _blogs/2020-08-01-writing-readab
 
 I had a life changing moment when I came across a conference video by Ben Orenstein titled [Refactoring from Good to Great][refactoring-from-good-to-great]. During the talk, he discussed about how abstraction lets you focus on what a code does by hiding it's implementation details. Therefore, wheoever reads the code can quickly understand what it does by focusing on it's high-level intent instead of being bothered by implementation details.
 
-# <b>Before using abstraction</b>
+## <b>Before using abstraction</b>
 
 <script src="https://gist.github.com/adriangohjw/3003bf3360e2903130e62d54d4f6bbb2.js?file=before.rb"></script>
 
 Code readability is alright and it is easy to follow through what the code does. However, there is room for improvement and we can do so by saving the reader the trouble of reading the implementation details.
 
-# <b>After using abstraction</b>
+## <b>After using abstraction</b>
 
 <script src="https://gist.github.com/adriangohjw/3003bf3360e2903130e62d54d4f6bbb2.js?file=after.rb"></script>
 
@@ -28,7 +28,7 @@ Let me breakdown the 2 things I did here:
 
 What this means is that when someone is reading what `check_out` does, they are able to understand what it does faster. Only if they wish to understand what the statuses are or how the implementation of the different validations are being done, are they required to look into the private methods.
 
-# <b>Other benefits of abstraction...</b>
+## <b>Other benefits of abstraction...</b>
 
 Even though the purpose of this post is to share more about how abstraction helps with readability, I thought it would help if I briefly share about the other reasons why you should abstract aggressively.
 

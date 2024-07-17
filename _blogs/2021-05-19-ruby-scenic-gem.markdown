@@ -10,13 +10,13 @@ tags: [ruby, database, postgresql]
 
 For this product, we will be doing some computation across these data to derive meaningful insights.
 
-# <b>Some of data sources we are dealing with</b>
+## <b>Some of data sources we are dealing with</b>
 
 <script src="https://gist.github.com/adriangohjw/00f97a37cb5dcb5df5e25a21132086a4.js?file=models.rb"></script>
 
 Note: For this blogpost, I will simplify it down into 3 attributes (`a`, `b`, `c`)
 
-# <b>Initial implementation...</b>
+## <b>Initial implementation...</b>
 
 For NodeFlair Salaries, we have data from multiple sources - user-submitted salary, past job listings, external sources (e.g. MyCareersFuture). As different data sources have different attributes and types, we will need to transform the data into the same structure and type to do our computations.
 
@@ -26,7 +26,7 @@ It looks doesn't look <i>THAT</i> bad for now, but just imagine the horror if th
 
 And also, while the code works, the `Salary` class is doing too much of the work just to process the data from the different sources, which isn't ideal.
 
-# <b>Here comes Scenic!</b>
+## <b>Here comes Scenic!</b>
 
 ### What is Scenic
 

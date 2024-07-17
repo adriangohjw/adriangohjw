@@ -13,7 +13,7 @@ tags: [ideology, tests]
 
 Ahhhh testing in software engineering. It is not uncommon to hear developers skip writing test, or proclaim their annoyance with it at least. But if that's the case, why do we still write tests?
 
-# <b>Importance of tests</b>
+## <b>Importance of tests</b>
 
 Before we proceed further, we need to first understand the importance of writing tests. 
 
@@ -24,13 +24,13 @@ TL;DR:
 - Give other developers (or future you) a better idea of what the code was intended to do
 - And the list goes on...
 
-# <b>But almost always, speed is more important</b>
+## <b>But almost always, speed is more important</b>
 
 As Facebook founder Mark Zuckerberg once famously said <b><i>"Move fast and break things"</i></b>. How I look at it is, we could spend time writing tests to make sure it's 99% bug-free, or we could spend the same time launching a couple of new features. This is because startups have limited resources like time and money.
 
 Sure, things might break sometimes, but for a startup, moving fast is almost always more rewarding than being right.  According to this article on <a href='https://www.cbinsights.com/research/startup-failure-reasons-top/'>The Top 20 Reasons Startups Fail</a> by CB Insights, 9/10 startups fail due to no product-market fit, running out of cash or getting outcompeted. Most of these scenarios seem to stem from a lack of speed and agility. 
 
-# <b>Why bother writing tests then</b>
+## <b>Why bother writing tests then</b>
 
 Most people probably don't know about this, but in 2014, Facebook's new motto has been changed to <b><i>'Move fast with stable infrastructure'</i></b>. 
 
@@ -39,7 +39,7 @@ As the product grows, at some point, <b>not writing tests slow down the developm
 As Mark Zuckerberg nicely explained
 > ... as the company has grown to such mammoth proportions that spending time fixing bugs was slowing it down faster than its risky attitude toward development.
 
-# <b>So when do we write tests?</b>
+## <b>So when do we write tests?</b>
 
 Since startups have limited resources but tests are also important at the same time, when should a startup write tests? Here at [NodeFlair][nodeflair-website], we mostly follow these 2 rules to decide if we should write a test, and it turns out to be working pretty well (so far).
 
@@ -61,7 +61,7 @@ Forget about the Space-Time complexity. I use the <b>Fuck-My-Life complexity</b>
 - How badly can this piece of code fucks up my day
 - How tough is it to recover from the worst-case scenario
 
-# <b>Conclusion</b>
+## <b>Conclusion</b>
 
 Here's a disclaimer: What works for us might not work for you. For example, if you are a fintech startup, there's probably less room for errors, so more stringent testings will be required. Do adapt as you see fit.
 
