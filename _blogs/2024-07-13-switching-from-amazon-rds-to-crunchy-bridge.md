@@ -16,7 +16,7 @@ Amazon RDS was excellent for NodeFlair, but its high egress fees made it expensi
 
 Amazon RDS (Relational Database Service) is highly regarded for its stability and reliability, having consistently performed well throughout our years of building [NodeFlair](https://nodeflair.com).
 
-Additionally, it provides extensive metrics that prove invaluable in optimizing database scalability. [Performance Insights](https://aws.amazon.com/rds/performance-insights/), for example, excels in identifying CPU-intensive queries, offering crucial insights for pinpointing optimizations.
+Additionally, it provides extensive metrics that prove invaluable in optimizing database scalability. [Performance Insights](https://aws.amazon.com/rds/performance-insights/), for example, excels in identifying CPU-intensive queries, offering crucial insights for pinpointing optimizations - [I shared more about how I used it to cut our database load by 72%](/reducing-latencies-cutting-database-load)
 
 ![](/assets/switching-from-amazon-rds-to-crunchy-bridge-performance-insights.png)
 
