@@ -3,7 +3,7 @@ layout: blog
 title:  "Reducing Latencies: Cutting Database Load by 72%"
 date:   2024-05-02 +0800
 categories: blogs
-tags: [optimization, ruby on rails, database, postgresql]
+tags: [optimization, database, postgresql]
 ---
 
 ## TL;DR
