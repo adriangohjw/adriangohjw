@@ -26,7 +26,7 @@ You can find the more detailed sharing in my blogposts:
 - [To test or not to test (Startup Perspective)](/2021-06-15-to-test-or-not-to-test-startup-perspective)
 
 <div class="google-slides-container">
-  <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vT76eh6UQW2-hK_FHqLLszwB61siRUNXZh1Xqmiyfhc-qowb5GJ0EdD6aYoIh3U2Y7TDmAClDQWjDLK/embed?start=false&loop=false&delayms=30000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+  <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vS8tIpAsp9fm1ZiPy0Lqu-K8j5rhA4MoIuwxW6L05Rv8cWWpj8v9VrswW_91KDiWLdzakxawbhMgjt_/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 </div>
 <br>
 

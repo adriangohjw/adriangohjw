@@ -21,7 +21,7 @@ I shared about the basics of building scrapers in Ruby
 # <b>/slides</b>
 
 <div class="google-slides-container">
-  <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRnM6jlMtBzwk1E6opY4yDslSI-lYjwZQ6r2yiUiQ8dh2SnM5Asz88aSM3GtgNHC97Nl6mvdMbb4it0/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+  <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSRZEJ90imQgX8i4G6NYHr0_rUAu561c_1HMd_imbP99Qm3SPswAfGIOVdCYosf6QCd_ZJ8HQ3AA8BT/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 </div>
 <br>
 

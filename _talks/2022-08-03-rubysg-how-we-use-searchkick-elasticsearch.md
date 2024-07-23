@@ -21,7 +21,7 @@ I shared about how I used Searchkick gem to build search features with ElasticSe
 # <b>/slides</b>
 
 <div class="google-slides-container">
-  <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vR5tkcXL2pVwfMCje7_tbGqzBGzwoDMpWVzsJ05bCQlEvYHvQlAfUV3i45oouN_b23zSfXDgzFFjV10/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+  <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSfqXCG40jXnnXDDKLyVilBajFat1x2fCg_S6CF07cu8MNooBv1W_l4jan9R3wf-iz2eXzM3v4OF7nP/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 </div>
 <br>
 
