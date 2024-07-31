@@ -35,6 +35,7 @@ plugins:
 header_pages:
   - blog.markdown
   - talks.markdown
+  - resume.markdown
 
 collections:
   blogs:
