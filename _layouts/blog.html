@@ -1,6 +1,9 @@
 ---
 layout: default
 ---
+<div id="progress-bar"></div>
+<div id="progress-text"></div>
+
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
@@ -48,23 +51,60 @@ layout: default
   {% include what-i-do-footer.html %}
 </article>
 
+<style>
+  #progress-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 5px;
+    background-color: #1DC769; /* Green color for the bar */
+    z-index: 1000; /* Ensure it stays on top */
+    transition: width 0.2s ease; /* Smooth transition */
+  }
+  #progress-text {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 5px 10px;
+    border-radius: 0px 8px 0px 0px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: #fff;
+    font-family: Arial, sans-serif;
+    z-index: 1001; /* Ensure it stays on top */
+    white-space: nowrap;
+  }
+</style>
+
 <script>
-  // Function to calculate the percentage of the page viewed and prepend to the page title
-  function updatePageTitleWithPercentage() {
-      // Get the height of the viewport and the total document height
-      const viewportHeight = window.innerHeight;
-      const documentHeight = document.documentElement.scrollHeight;
-      const scrollTop = window.scrollY;
+  const originalTitle = document.title;  
 
-      // Calculate the percentage of the page viewed
-      const scrollPosition = scrollTop + viewportHeight;
-      const percentageViewed = (scrollPosition / documentHeight) * 100;
-
-      // Prepend the percentage viewed to the existing page title
-      const originalTitle = document.title.replace(/^\d+(\.\d+)?% • /, '');
-      document.title = `${percentageViewed.toFixed(0)}% • ${originalTitle}`;
+  function getPercentageViewed() {
+    const viewportHeight = window.innerHeight;
+    const documentHeight = document.documentElement.scrollHeight;
+    const scrollTop = window.scrollY;
+    const scrollPosition = scrollTop + viewportHeight;
+    return Math.round((scrollPosition / documentHeight) * 100);
   }
 
-  // Event listener to update the title as the user scrolls
-  window.addEventListener('scroll', updatePageTitleWithPercentage);
+  function updateProgressBar(percentageViewed) {
+    document.getElementById('progress-bar').style.width = `${percentageViewed}%`;
+    document.getElementById('progress-text').textContent = `${percentageViewed}%`;
+  }
+
+  function updatePageTitleWithPercentage(percentageViewed) {
+    document.title = `${percentageViewed}% • ${originalTitle}`;
+  }
+
+  window.addEventListener('scroll', () => {
+    const percentageViewed = getPercentageViewed();
+    updateProgressBar(percentageViewed);
+    updatePageTitleWithPercentage(percentageViewed);
+  });
+
+  window.addEventListener('load', () => {
+    const percentageViewed = getPercentageViewed();
+    updateProgressBar(percentageViewed);
+    // don't update page title on load
+  });
 </script>
