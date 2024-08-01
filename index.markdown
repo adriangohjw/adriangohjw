@@ -11,4 +11,5 @@ I write my [technical learnings and opinions](/blog) and gave [talks](/talks) at
 
 - 📋 28 years old + Male
 - 🏢 [NodeFlair](https://nodeflair.com), [ShopBack](https://www.shopback.sg)
+- 🛠️ Building [bebetter.engineer](https://bebetter.engineer)
 - ⚙️ Tech stacks: `.rb` `.js` `.py` 
