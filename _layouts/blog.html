@@ -47,3 +47,24 @@ layout: default
 
   {% include what-i-do-footer.html %}
 </article>
+
+<script>
+  // Function to calculate the percentage of the page viewed and prepend to the page title
+  function updatePageTitleWithPercentage() {
+      // Get the height of the viewport and the total document height
+      const viewportHeight = window.innerHeight;
+      const documentHeight = document.documentElement.scrollHeight;
+      const scrollTop = window.scrollY;
+
+      // Calculate the percentage of the page viewed
+      const scrollPosition = scrollTop + viewportHeight;
+      const percentageViewed = (scrollPosition / documentHeight) * 100;
+
+      // Prepend the percentage viewed to the existing page title
+      const originalTitle = document.title.replace(/^\d+(\.\d+)?% • /, '');
+      document.title = `${percentageViewed.toFixed(0)}% • ${originalTitle}`;
+  }
+
+  // Event listener to update the title as the user scrolls
+  window.addEventListener('scroll', updatePageTitleWithPercentage);
+</script>
