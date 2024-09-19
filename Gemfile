@@ -16,7 +16,3 @@ gem "minima", :github => 'jekyll/minima'
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.17"
 end
-
-group :development do
-  gem 'autogitc'
-end
