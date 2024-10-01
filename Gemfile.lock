@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/jekyll/minima.git
-  revision: d7122a0c3e8a61c0e13de37a72c7d8c7b5f3886f
+  revision: bdd81e68f02ad33b7120f565c606a7c5dc25c6e1
   specs:
     minima (3.0.0.dev)
       jekyll (>= 3.5, < 5.0)
@@ -67,10 +67,10 @@ GEM
     rb-fsevent (0.11.2)
     rb-inotify (0.11.1)
       ffi (~> 1.0)
-    rexml (3.3.7)
+    rexml (3.3.8)
     rouge (4.4.0)
     safe_yaml (1.0.5)
-    sass-embedded (1.79.3)
+    sass-embedded (1.79.4)
       google-protobuf (~> 4.27)
       rake (>= 13)
     terminal-table (3.0.2)
