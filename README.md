@@ -9,3 +9,6 @@ I previously co-founded [NodeFlair](https://nodeflair.com/) (Series A) and singl
 - ⚙️ Tech stacks: `.rb`, `.py`, `.js`
 - 📫 Reach me: [twitter.com/adriangohjw](https://twitter.com/adriangohjw)
 - 📓 My blog: [adriangohjw.com/blog](https://adriangohjw.com/blog)
+
+Other projects:
+- 🎮 [LinkedIn Queens Game Solver](https://linkedin-queens-game-solver.adriangohjw.com/)

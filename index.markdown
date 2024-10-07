@@ -14,3 +14,6 @@ I write my [technical learnings and opinions](/blog) and gave [talks](/talks) at
 - 🛠️ Building [bebetter.engineer](https://bebetter.engineer) (WIP)
 - 💎 Building [autogitc](https://github.com/adriangohjw/autogitc) (use LLM to write git commit messages)
 - ⚙️ Tech stacks: `.rb` `.js` `.py` 
+
+Other projects:
+- 🎮 [LinkedIn Queens Game Solver](https://linkedin-queens-game-solver.adriangohjw.com/)
