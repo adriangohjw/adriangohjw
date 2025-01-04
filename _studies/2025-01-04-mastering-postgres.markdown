@@ -287,6 +287,35 @@ Rule of thumb: ONLY use hash indexes when:
 1) columns that are used in equality checks (or `IN` clause)
 2) dealing with a very large number of rows
 
+## Understanding Query Plans
+
+### Scan Types
+
+Reading rows from physical disk is expensive, so we want to minimize the number of disk reads. Here's the order from slowest to fastest:
+
+| Scan Type | Description |
+|-|-|
+| Sequential | Read the entire table in physical order |
+| Bitmap index | Scans the index, produces a map, then reads pages in physical order |
+| Index | Scans the index, then reads pages (without any order) |
+| Index only | Scans the index (RE: Covering Index) |
+
+### Reading output
+
+Example:
+`Bitmap Heap Scan on users (cost=33356.31..18398.43 rows=108889 width=76)`
+
+| Metric | Value | Description |
+|-|-|-|
+| startup cost | 33356.31 | Before starting the scan<br>Need to wait for all children nodes to complete |
+| total cost | 18398.43 | Inclusive of cost of children nodes |
+| rows | 108889 | Estimated number of rows it will return to parent node |
+| width | 76 | Estimated number of bytes returned per row |
+
+Note: total cost will be thrown off if we use a LIMIT in the query (and no ORDER BY). For example, the parent node (LIMIT) has a lower total cost than the children nodes (Seq Scan)
+
+![](/assets/mastering-postgres/query-plan-limit.png)
+
 ## Others
 
 ### `RETURNING`
