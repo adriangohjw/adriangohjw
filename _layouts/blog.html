@@ -41,6 +41,12 @@ layout: default
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
+    {% if page.toc %}
+      <div class="toc-box" style="background-color: #f9f9f9; border: 1px solid #ddd; border-radius: 10px; padding: 15px; margin: 20px 0; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);">
+        <span style="font-size: 1.5em; margin-bottom: 10px; color: #333;">Table of Contents</span>
+        <div style="margin-top: 15px;">{% toc %}</div>
+      </div>
+    {% endif %}
     {{ content }}
   </div>
 
