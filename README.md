@@ -6,7 +6,7 @@ I previously co-founded [NodeFlair](https://nodeflair.com/) (Series A) and singl
 - 🏢 [NodeFlair](https://nodeflair.com/), ShopBack
 - 🛠️ Building [bebetter.engineer](https://bebetter.engineer) (WIP)
 - 💎 Building [autogitc](https://github.com/adriangohjw/autogitc) (use LLM to write git commit messages)
-- ⚙️ Tech stacks: `.rb`, `.py`, `.js`
+- ⚙️ Tech stacks: `.rb`, `.ts`, `.js`, `.py`
 - 📫 Reach me: [twitter.com/adriangohjw](https://twitter.com/adriangohjw)
 - 📓 My blog: [adriangohjw.com/blog](https://adriangohjw.com/blog)
 
