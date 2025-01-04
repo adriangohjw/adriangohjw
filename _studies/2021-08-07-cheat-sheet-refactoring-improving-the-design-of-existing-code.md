@@ -5,6 +5,7 @@ date:   2021-08-07 18:08:00 +0800
 image: /assets/refactoring-cheat-sheet-cover.png
 categories: studies
 tags: [refactoring]
+toc: true
 ---
 
 [cover]:            /assets/refactoring-cheat-sheet-cover.png
