@@ -268,7 +268,8 @@ Indexes that use a function to create the index key.
 
 ```sql
 CREATE INDEX my_index
-ON users (split_part(email, '@', 2))
+ON users ((split_part(email, '@', 2)))
+-- note: need to wrap it in parentheses because it's an expression
 ```
 
 This index will be used for queries like `... WHERE split_part(email, '@', 2) = 'gmail.com'`.
