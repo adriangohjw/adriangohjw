@@ -35,6 +35,7 @@ plugins:
 header_pages:
   - blog.markdown
   - talks.markdown
+  - study.markdown
   - resume.markdown
 
 collections:
@@ -44,6 +45,9 @@ collections:
   talks:
     output: true
     permalink: talks/:title
+  studies:
+    output: true
+    permalink: /:title
 
 minima:
   social_links:
