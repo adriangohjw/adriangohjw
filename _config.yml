@@ -50,6 +50,10 @@ collections:
     output: true
     permalink: /:title
 
+defaults:
+  - values:
+      toc: true
+
 minima:
   social_links:
   - { platform: github,         user_url: "https://github.com/adriangohjw" }
