@@ -159,6 +159,134 @@ INSERT INTO addresses (address) VALUES
 SELECT (address).street FROM addresses;
 ```
 
+## Indexes
+
+### When to use indexes
+
+#### Cardinality
+
+Number of unique values in a column
+
+`SELECT COUNT(DISTINCT column_name) FROM table_name;`
+
+#### Selectivity
+
+Ratio (number of unique values / total number of values)
+
+`SELECT COUNT(DISTINCT column_name) / COUNT(*) FROM table_name;`
+
+- Higher selectivity = more efficient index (e.g., primary key)
+- For example, for 1 million users and 10 unique countries, selectivity is 0.00001, indicating low index efficiency.
+- However, if there's 1 million users and 2 unique countries (99% Singapore, 1% Malaysia), while selectivity is low at 0.000002, adding index will improve performance if we are querying for the minority (users in Malaysia), but not for the majority (users in Singapore).
+
+### Partial Indexes
+
+If we still want to add index, we can use `WHERE` to limit the rows to include in the index.
+
+For this example, if we have multiple rows of users with same email but frequently search for active users, we can add index to only include rows where `deleted_at` is `NULL`.
+
+```sql
+CREATE INDEX my_index
+ON users (deleted_at)
+WHERE deleted_at IS NOT NULL;
+```
+
+### Composite Indexes
+
+- Orders matter for composite indexes
+  - Equality on the left, range scans on the right
+  - e.g. `CREATE INDEX example_index ON users (first_name, last_name, birthday);`. 
+- Not always true, but a single composite indexes are more efficient than multiple single-column indexes
+  - Composite indexes is faster when using a `AND` in WHERE clause
+  - However, multiple single-column indexes are faster when using a `OR` in WHERE clause
+
+### Covering Indexes
+
+Indexes that include all the columns needed for a query (SELECT, WHERE, ORDER BY, etc.)
+
+For example, we need `first_name`, `last_name`, and `id` in this query
+
+```sql
+SELECT first_name, last_name, id
+FROM users
+WHERE first_name = 'John' AND last_name = 'Doe';
+```
+
+A covering index for this query would be
+```sql
+CREATE INDEX my_index ON
+users (first_name, last_name, id);
+```
+
+However, we might want to exclude `id` in the index since it's not used in the query. Instead, we can use `INCLUDE`.
+
+```sql
+CREATE INDEX my_index
+ON users (first_name, last_name)
+INCLUDE (id);
+```
+
+The upsides are:
+- Smaller index size + Avoid b-tree bloat
+- Improved INSERT/UPDATE performance
+
+### Ordering indexes
+
+```sql
+CREATE INDEX my_index
+ON users (created_at, deleted_at)
+```
+This above index will be used when doing:
+- `... ORDER BY created_at ASC, deleted_at ASC`
+- `... ORDER BY created_at DESC, deleted_at DESC` (backward index scan)
+
+However, if we order in different direction e.g. `created_at ASC, deleted_at DESC`, the index will not be used. To do that, we need to add ordering in the index.
+
+```sql
+CREATE INDEX my_index
+ON users (created_at ASC, deleted_at DESC)
+```
+This index will be used for both:
+- `... ORDER BY created_at ASC, deleted_at DESC`
+- `... ORDER BY created_at DESC, deleted_at ASC` (backward index scan)
+
+But by doing so, it then won't be used when we order by both ASC/DESC.
+
+#### NULLS
+
+By default, (when doing `ASC`) `NULLs` are ordered last as they are the largest value.
+
+We can override this by using `NULLS FIRST` (or `NULLS LAST` when doing `DESC`).
+```sql
+CREATE INDEX my_index
+ON users (created_at ASC NULLS FIRST)
+```
+
+### Functional Indexes
+
+Indexes that use a function to create the index key.
+
+```sql
+CREATE INDEX my_index
+ON users (split_part(email, '@', 2))
+```
+
+This index will be used for queries like `... WHERE split_part(email, '@', 2) = 'gmail.com'`.
+
+NOTE: This index will only be used when the query is exactly the same as the index. It won't be used for queries like `... WHERE split_part(email, '@', 1)`
+
+Nevertheless, still useful in cases where a 3rd party system is querying the data in ways where we have no control over the query since we are still able to add the index.
+
+### Hash Indexes
+
+By default, indexes are B-tree indexes.
+
+Hash indexes are faster for equality checks (e.g. `WHERE column = 'value'`) but not used for range scans (e.g. `WHERE column > 'value'`).
+
+Rule of thumb: ONLY use hash indexes when:
+1) columns that are used in equality checks (or `IN` clause)
+2) dealing with a very large number of rows
+
 ## Others
 
 ### `RETURNING`
