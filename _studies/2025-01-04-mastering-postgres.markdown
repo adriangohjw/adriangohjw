@@ -9,7 +9,7 @@ tags: [postgres]
 
 Just jotting down some quick notes and learnings from the [video course](https://masteringpostgres.com/) by Aaron Francis.
 
-![](/assets/mastering-postgres/cover.jpg)
+![](/assets/mastering-postgres/cover.png)
 
 ## Advanced Data Types
 
@@ -316,6 +316,84 @@ Example:
 Note: total cost will be thrown off if we use a LIMIT in the query (and no ORDER BY). For example, the parent node (LIMIT) has a lower total cost than the children nodes (Seq Scan)
 
 ![](/assets/mastering-postgres/query-plan-limit.png)
+
+## Advanced SQL
+
+### GROUP 
+
+#### BOOL_AND, BOOL_OR
+
+```sql
+-- returns true if any sale is greater than 1000
+-- bool_and returns true if all sales are greater than 1000
+SELECT
+    employee_id,
+    bool_or(amount > 1000)
+FROM sales
+GROUP BY employee_id;
+```
+
+#### FILTER
+
+```sql
+-- count the number of sales greater than 1000
+SELECT
+    employee_id,
+    count(*) FILTER (WHERE amount > 1000)
+FROM sales
+GROUP BY employee_id;
+```
+
+### Window Functions
+
+#### OVER, PARTITION
+
+```sql
+SELECT
+    employee_id,
+    -- get the first sale amount for each employee
+    first_value(amount)
+    OVER (PARTITION BY employee_id ORDER BY date),
+    -- get the last sale amount for each employee
+    -- note: first_value + desc
+    first_value(amount)
+    OVER (PARTITION BY employee_id ORDER BY date DESC)
+FROM sales;
+```
+
+#### Frames (ROWS)
+
+```sql
+SELECT
+    employee_id,
+    sum(amount) OVER (
+        PARTITION BY employee_id
+        ORDER BY date
+        ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
+        -- or ROWS BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING
+        -- or ROWS BETWEEN 1 PRECEDING AND 1 FOLLOWING
+    )
+FROM sales;
+```
+
+#### Examples
+
+This query fetches all bookmark details for each user, while also numbering the bookmarks and identifying the first and last bookmarks for each user.
+
+```sql
+SELECT
+    *,
+     row_number() OVER user_bookmarks,
+     first_value(id) OVER user_bookmarks,
+     last_value(id) OVER user_bookmarks
+FROM bookmarks
+WINDOW
+    user_bookmarks AS (
+        PARTITION BY user_id
+        ORDER BY id ASC
+        ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING
+    )
+```
 
 ## Others
 
