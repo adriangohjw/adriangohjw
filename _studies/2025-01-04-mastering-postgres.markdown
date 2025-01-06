@@ -395,6 +395,49 @@ WINDOW
     )
 ```
 
+### Recursive CTE
+
+Note: Ensure there's end condition in the recursion.
+
+#### Example 1 (ascending numbers generator)
+
+```sql
+WITH RECURSIVE numbers AS (
+    -- anchor
+    SELECT 1 AS n
+    UNION ALL
+    -- recursion
+    SELECT n + 1 FROM numbers WHERE n < 10
+)
+SELECT * FROM numbers;
+```
+
+#### Example 2 (random numbers generator)
+
+```sql
+WITH RECURSIVE random_numbers AS (
+    -- anchor
+    SELECT
+        1 as n,
+        (floor(random() * 10) + 1)::integer AS my_rand
+    UNION ALL
+    -- recursion
+    SELECT
+        n + 1,
+        (my_rand + floor(random() * 10) + 1)::integer
+    FROM random_numbers
+)
+SELECT * FROM random_numbers;
+```
+
+#### Putting column names in CTE
+
+```sql
+with recursive numbers (n, my_rand) as (
+    -- some query
+)
+```
+
 ## Others
 
 ### `RETURNING`
