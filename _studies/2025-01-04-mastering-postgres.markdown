@@ -493,3 +493,82 @@ VALUES
 ('John Doe', '2024-01-01', 100.00)
 RETURNING *; -- or RETURNING id (or other columns);
 ```
+
+## Full Text Search
+
+### Query
+
+`WHERE to_tsvector(title) @@ to_tsquery('star & wars');`
+- Must have both `star` and `wars` in the title
+
+`WHERE to_tsvector(title) @@ to_tsquery('star | wars');`
+- Must have either `star` or `wars` in the title
+
+`WHERE to_tsvector(title) @@ to_tsquery('star & !wars');`
+- Must have `star` but not `wars` in the title
+
+`WHERE to_tsvector(title) @@ to_tsquery('star <-> wars');`
+- Must have `star` followed by `wars` in the title
+- `<->` is equilvalent to `<1>`
+- `<2>` means it's "star X wars" where X is any word (skip 1 word)
+
+`WHERE to_tsvector(title) @@ to_tsquery('star <-> (wars | trek)');`
+- Must have `star` followed by either `wars` or `trek` in the title
+
+### Ranking
+
+```sql
+SELECT
+    *,
+    ts_rank(
+        to_tsvector(title), -- base vector
+        to_tsquery('star & (wars | trek)'), -- query vector
+        1 -- weight (optional)
+    ) AS rank
+FROM bookmarks
+ORDER BY rank DESC;
+```
+
+- `1` as weight means it favours shorter results
+
+
+#### Example 1: Assign heavier weight to title
+```sql
+... setweight(to_tsvector(title), 'A') || setweight(to_tsvector(title))
+```
+
+#### Example 2: Assign heavier weight on conditions
+
+Assign higher weight to results with `action` genre.
+
+```sql
+ts_rank(
+    (
+        setweight(to_tsvector(title), 'A') ||
+        setweight(to_tsvector(title), 'B')
+    ),
+    to_tsquery('fight')
+) + (
+    -- note: vector max score is 1
+    case when genre = 'action' then 0.1 else 0 end
+)
+```
+
+### Websearch 
+
+These are useful helper methods for converting search queries to tsquery.
+
+`plainto_tsquery('star wars')`
+- Converts "star wars" to `star & wars`
+
+`phraseto_tsquery('star wars')`
+- Converts "star wars" to `star <-> wars`
+
+`websearch_to_tsquery('"star wars"')`
+- More Google-like and user friendly
+- Will not throw error if the query is invalid
+- Note: it is `websearch_to` and not `websearchto`
+- Example: `"star wars"` to `'start' <-> 'wars'`
+- Example: `"star wars" -clone` to `'start' <-> 'wars' & !clone`
+- Example: `"star wars" +clone` to `'start' <-> 'wars' & clone`
+- Example: `star wars or trek` to `'star' & 'wars' | 'trek'`
