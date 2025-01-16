@@ -438,7 +438,49 @@ with recursive numbers (n, my_rand) as (
 )
 ```
 
-## Others
+### Removing duplicates
+
+```sql
+WITH duplicates_identified AS (
+    SELECT
+        id, -- Assuming primary key
+        ROW_NUMBER() OVER (
+            -- unique identifier for each row
+            PARTITION BY user_id, url
+            ORDER BY id
+        ) > 1 as is_duplicate
+    FROM bookmarks
+)
+
+DELETE FROM bookmarks WHERE id IN (
+    SELECT id FROM duplicates_identified WHERE is_duplicate = true
+);
+```
+
+### Upsert
+
+- `EXCLUDED` is a special variable that contains the values of the row that would have been inserted if there were no conflicts.
+- `WHERE` statement is optional, but it's useful to avoid updating the row if the condition is not met.
+
+#### Example 1: Update only if the url is null
+```sql
+INSERT INTO bookmarks (user_id, url)
+VALUES (1, 'https://example.com')
+ON CONFLICT (user_id) DO UPDATE
+    SET url = EXCLUDED.url
+    WHERE bookmarks.url IS NULL;
+```
+
+#### Example 2: Add to the count on conflict
+
+Create a user if it doesn't exist, otherwise add to the bank balance.
+
+```sql
+INSERT INTO bookmarks (user_id, bank_balance)
+VALUES (1, 100)
+ON CONFLICT (user_id) DO UPDATE
+    SET bank_balance = bookmarks.bank_balance + EXCLUDED.bank_balance;
+```
 
 ### `RETURNING`
 
