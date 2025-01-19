@@ -642,3 +642,61 @@ These are useful helper methods for converting search queries to tsquery.
 - Example: `"star wars" -clone` to `'start' <-> 'wars' & !clone`
 - Example: `"star wars" +clone` to `'start' <-> 'wars' & clone`
 - Example: `star wars or trek` to `'star' & 'wars' | 'trek'`
+
+## pgvector
+
+Note: assuming pgvector extension is installed.
+
+```sql
+CREATE TABLE products_v (
+    id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    name TEXT,
+    embedding VECTOR(4) -- 4 dimensions
+)
+```
+
+### Operators
+
+Note: Refer to the recommendations of the data or model on what's the best operator to use.
+
+- `<+>` is the L1 operator (l1)
+- `<->` is the L2 operator (l2)
+- `<=>` is the cosine similarity operator (cosine)
+- `<#>` is the inner product operator (ip)
+
+### Example 1: 10-nearest neighbors
+
+Find the 10 products with the highest cosine similarity to the vector `(1, 2, 3, 4)`.
+
+Note: (1,2,3,4) is the vector we are querying against. This is an embeddings returned from a model.
+
+```sql
+SELECT * FROM products_v
+ORDER BY embedding <=> vector(1, 2, 3, 4)
+LIMIT 10;
+```
+
+### Example 2: 10-nearest neighbors (related products)
+
+Assuming we have a product with id 1, we want to find the 10 most similar products.
+
+```sql
+SELECT * FROM products_v
+WHERE id != 1
+ORDER BY embedding <=> (
+    SELECT embedding FROM products_v WHERE id = 1
+)
+LIMIT 10;
+```
+
+### Indexes
+
+`... USING ivfflat (embedding vector_cosine_ops) with (lists = 100)`
+
+`vector_cosine_ops` is the operator class for cosine similarity. You can also use `vector_l2_ops` for L2 distance.
+
+Rule of thumb for `lists`: square root of the number of rows. Higher -> Improves recall/accuracy but increases query time and memory usage.
+
+`... USING hnsw (embedding vector_cosine_ops)`
+
+IVF Flat is a solid general-purpose index if resources allow. HNSW offers better performance and accuracy but is more costly.
