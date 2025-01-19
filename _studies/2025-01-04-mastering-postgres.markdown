@@ -58,6 +58,76 @@ TL;DR: always use JSONB
   - remove duplicate keys
   - reorder keys if needed (since keys are unordered in JSON)
 
+#### Querying JSON
+
+`SELECT data->'name' FROM ...`
+- Return value of `name` key in the `data` JSON object
+- E.g. `{"name": "John Doe"}` will return `"John Doe"`
+- Also can shorthand to `data#>'{customer,name}'` (cleaner)
+
+`SELECT data->>'name' FROM ...`
+- Return value of `name` key in the `data` JSON object as text
+- E.g. `{"name": "John Doe"}` will return `John Doe`
+- Also can shorthand to `data#>>'{customer,name}'` (cleaner)
+
+`SELECT data->'items'->0 FROM ...`
+- Return the first item in the `items` array in the `data` JSON object
+- E.g. `{"items": [{"name": "Item 1"}, {"name": "Item 2"}]}` will return `{"name": "Item 1"}`
+- Can also use `->-1` to return the last item in the array
+
+`SELECT jsonb_path_query(data, '$.items[0]') FROM ...`
+- Return the first item in the `items` array in the `data` JSON object
+- Same as `data->'items'->0`
+- Cons: Need to add weird `#>> '{}'` to return the value as text
+
+`... WHERE data ? 'items'`
+- Return all rows where the `data` JSON object contains the `items` key
+
+`... WHERE data ?| array['name', 'email']`
+- Return all rows where the `data` JSON object contains the `name` or `email` key
+
+`... WHERE data ?& array['name', 'email']`
+- Return all rows where the `data` JSON object contains both `name` and `email` keys
+
+#### Creating JSON objects
+
+```sql
+SELECT row_to_json(t)
+FROM (
+    SELECT id, name, email
+    FROM users
+) t;
+-- Results:
+-- {"id":1,"name":"John Doe","email":"john@example.com"}
+-- {"id":2,"name":"Jane Doe","email":"jane@example.com"}
+```
+
+#### Creating JSON arrays (typically more useful)
+
+```sql
+SELECT json_agg(row_to_json(t))
+FROM (
+    SELECT id, name, email
+    FROM users
+) t;
+-- Results:
+-- [
+--   {"id":1,"name":"John Doe","email":"john@example.com"},
+--   {"id":2,"name":"Jane Doe","email":"jane@example.com"}
+-- ]
+```
+
+#### Updating JSON
+
+`SET settings = settings - 'theme'`
+- Remove the `theme` key from the `settings` JSON object
+
+`SET settings = settings || '{"theme": "dark"}'::jsonb`
+- Add the `theme` key to the `settings` JSON object
+
+`SET settings = jsonb_set(settings, '{"config,theme"}', 'dark')`
+- Add the `theme` key to the `settings` JSON object
+
 ### Array
 
 `SELECT example_array[1] FROM ...`
