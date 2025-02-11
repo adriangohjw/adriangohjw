@@ -102,6 +102,7 @@ kara.ns.cloudflare.com.
 
 - Designed with a leader/follower model (primary/secondary)
 - All servers should reply with the same DNS data. It's kept in sync through a process called zone transfers.
+- FYI: Many DNS providers do not actually use zone transfer but their own proprietary database replication mechanism.
 
 ```bash
 dig adriangohjw.com SOA +short
@@ -137,7 +138,3 @@ Many DNS servers disable AXFR by default for security reasons:
 1. <b>Exposed internal network topology</b> - Attackers can identify internal services that should not be exposed to the public internet
 2. <b>Facilitate phising attack</b>. E.g. if they find `vpn.example.com`, they might create `vpn-secure.example.com` and phish users to input their credentials.
 3. <b>DoS via large zone transfers</b> - high bandwidth usage
-
-### Note
-
-- Many DNS providers do not actually use zone transfer but their own proprietary database replication mechanism.
