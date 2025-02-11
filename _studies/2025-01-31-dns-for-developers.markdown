@@ -79,9 +79,25 @@ linkedin-queens-game-solver.adriangohjw.com. 300 IN A 104.21.112.1
 linkedin-queens-game-solver.adriangohjw.com. 300 IN A 104.21.32.1
 ;; Received 184 bytes from 108.162.192.123#53(kara.ns.cloudflare.com) in 5 ms
 ```
-
+    
 1. First, we get a list of all 13 root DNS servers.
 2. Our resolver picks one root server (`i.root-servers.net`) to query for the `.com` TLD nameservers
 3. From the `.com` TLD nameservers received, it queries `m.gtld-servers.net` to find nameservers for `adriangohjw.com`. The query returns Cloudflare's nameservers (`kara.ns.cloudflare.com` and `carlos.ns.cloudflare.com`)
 4. Finally, querying `kara.ns.cloudflare.com` gives us seven A records (IP addresses) for `linkedin-queens-game-solver.adriangohjw.com`
 5. The resolver picks one of the IP addresses and uses it to connect to the server.
+
+## Authorative DNS servers
+
+- Every DNS zone must have at least 2 name servers to serve its DNS records.
+- They are "authoritative NS" because they are the only servers trusted to reply with the correct DNS records for that zone.
+- For example, `adriangohjw.com` has Cloudflare's name servers as its authoritative NS.
+
+```bash
+dig adriangohjw.com SOA
+
+;; QUESTION SECTION:
+;adriangohjw.com.               IN      SOA
+
+;; ANSWER SECTION:
+adriangohjw.com.        1772    IN      SOA     carlos.ns.cloudflare.com. dns.cloudflare.com. 2364141204 10000 2400 604800 1800
+```
