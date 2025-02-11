@@ -135,9 +135,9 @@ adriangohjw.com.        1772    IN      SOA     carlos.ns.cloudflare.com. dns.cl
 ### Why are zone transfers not enabled by default?
 
 Many DNS servers disable AXFR by default for security reasons:
-1. <b>Exposed internal network topology</b> - Attackers can identify internal services that should not be exposed to the public internet
-2. <b>Facilitate phising attack</b>. E.g. if they find `vpn.example.com`, they might create `vpn-secure.example.com` and phish users to input their credentials.
-3. <b>DoS via large zone transfers</b> - high bandwidth usage
+1. **Exposed internal network topology** - Attackers can identify internal services that should not be exposed to the public internet
+2. **Facilitate phising attack** - E.g. if they find `vpn.example.com`, they might create `vpn-secure.example.com` and phish users to input their credentials.
+3. **DoS via large zone transfers** - high bandwidth usage
 
 ## Recursive v.s. Iterative queries
 
@@ -157,3 +157,42 @@ Many DNS servers disable AXFR by default for security reasons:
 
 ![Iterative Query](/assets/dns-for-developers/iterative-query.png)
 <p style="text-align: center;">Image source: <a href="https://threat.media/definition/what-is-an-iterative-dns-query/">threat.media</a></p>
+
+## Glue records
+
+- Why: help resolve domain names when the NS is within the same domain.
+- For example, if `example.com` uses `ns1.example.com` as its name servers.
+- Without glue records, the resolver will not be able to resolve `ns1.example.com` to its IP address as it's stuck in a loop.
+- To add glue records, the registrar includes glue records (A/AAAA) at the parent DNS levels. 
+- **If you see A/AAAA records in the "additional" section, those are the glue records.**
+
+```bash
+dig google.com NS
+
+; <<>> DiG 9.10.6 <<>> google.com NS +additional
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 45537
+;; flags: qr rd ra; QUERY: 1, ANSWER: 4, AUTHORITY: 0, ADDITIONAL: 9
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 512
+;; QUESTION SECTION:
+;google.com.                    IN      NS
+
+;; ANSWER SECTION:
+google.com.             247628  IN      NS      ns3.google.com.
+google.com.             247628  IN      NS      ns1.google.com.
+google.com.             247628  IN      NS      ns4.google.com.
+google.com.             247628  IN      NS      ns2.google.com.
+
+;; ADDITIONAL SECTION:
+ns1.google.com.         247630  IN      A       216.239.32.10
+ns1.google.com.         247633  IN      AAAA    2001:4860:4802:32::a
+ns4.google.com.         247631  IN      A       216.239.38.10
+ns4.google.com.         247634  IN      AAAA    2001:4860:4802:38::a
+ns2.google.com.         247629  IN      A       216.239.34.10
+ns2.google.com.         247630  IN      AAAA    2001:4860:4802:34::a
+ns3.google.com.         247632  IN      A       216.239.36.10
+ns3.google.com.         247628  IN      AAAA    2001:4860:4802:36::a
+```
