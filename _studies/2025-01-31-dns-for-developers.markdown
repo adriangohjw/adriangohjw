@@ -196,3 +196,13 @@ ns2.google.com.         247630  IN      AAAA    2001:4860:4802:34::a
 ns3.google.com.         247632  IN      A       216.239.36.10
 ns3.google.com.         247628  IN      AAAA    2001:4860:4802:36::a
 ```
+
+## DNS Caching
+
+### Pros
+1. **Faster** - Speed up future website access without needing to query the DNS server again.
+2. **Less load on the DNS server** - Less DNS requests to the server.
+
+### Cons
+1. **Outdated DNS records** - If TTL is 1 hour, it means it might take up to 1 hour to update the DNS records locally.
+2. **DNS poisoning** - Inserting malicious DNS records into the cache and redirecting users to malicious websites.
