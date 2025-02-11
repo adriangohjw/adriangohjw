@@ -93,18 +93,51 @@ linkedin-queens-game-solver.adriangohjw.com. 300 IN A 104.21.32.1
 
 ```bash
 dig adriangohjw.com NS +short
+
 carlos.ns.cloudflare.com.
 kara.ns.cloudflare.com.
 ```
 
 ## Zone transfers
 
+- Designed with a leader/follower model (primary/secondary)
+- All servers should reply with the same DNS data. It's kept in sync through a process called zone transfers.
+
 ```bash
-dig adriangohjw.com SOA
+dig adriangohjw.com SOA +short
 
-;; QUESTION SECTION:
-;adriangohjw.com.               IN      SOA
-
-;; ANSWER SECTION:
 adriangohjw.com.        1772    IN      SOA     carlos.ns.cloudflare.com. dns.cloudflare.com. 2364141204 10000 2400 604800 1800
 ```
+
+![](/assets/dns-for-developers/soa-record-adriangohjw.png)
+
+| Field | Description |
+|-------|-------------|
+| Name | Where the primary NS is hosted |
+| Email | Email address of the administrator of the zone |
+| Serial | The serial number of the zone. It's like a version number to see if the follower already has the most recent data. |
+| Refresh | How often the secondary server should ask for updates |
+| Retry | How often the secondary server should retry if the transfer fails |
+| Expire | How long the secondary server should keep the zone in its cache |
+
+### AXFR (Authoritative Zone Transfer)
+
+- Used to transfer the entire zone from the primary to the secondary server.
+- Response contains all DNS records for a domain, including internal hosts, subdomains, mail servers, and sometimes even private infrastructure.
+- Example `dig adriangohjw.com AXFR`
+
+### IXFR (Incremental Zone Transfer)
+
+- Response contains only the changes to the zone, not the entire zone.
+- Example `dig adriangohjw.com IXFR=2364141203` will return only the changes to the zone since the serial number 2364141203.
+
+### Why are zone transfers not enabled by default?
+
+Many DNS servers disable AXFR by default for security reasons:
+1. <b>Exposed internal network topology</b> - Attackers can identify internal services that should not be exposed to the public internet
+2. <b>Facilitate phising attack</b>. E.g. if they find `vpn.example.com`, they might create `vpn-secure.example.com` and phish users to input their credentials.
+3. <b>DoS via large zone transfers</b> - high bandwidth usage
+
+### Note
+
+- Many DNS providers do not actually use zone transfer but their own proprietary database replication mechanism.
