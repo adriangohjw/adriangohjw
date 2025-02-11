@@ -211,3 +211,22 @@ ns3.google.com.         247628  IN      AAAA    2001:4860:4802:36::a
 
 - DNS server will cache the failed DNS request and return the cached result.
 - Duration for which a negative response is cached: Lesser of 2 values in the SOA record (TTL + minimum TTL a.k.a negative TTL)
+
+## EDNS (Extension Mechanisms for DNS)
+
+- Enhances DNS capabilities by supporting larger message sizes and more features e.g. DNSSEC.
+- FYI: Default in most modern DNS resolvers
+
+### Pros (key features)
+
+1. **Larger UDP packets** - 4096 bytes (default 512 bytes) - avoid TCP fallback, making DNS faster
+2. **DNSSEC** - Make DNS more secure (cryptographic validation for DNS responses)
+3. **Client subnet (ECS)** - Sends part of the user's IP to to help CDNs serve geo-optimized content
+4. **Extensible** - Allows for new features to be added without breaking backward compatibility
+
+### Cons
+
+1. **Firewall issues** - Some firewalls block EDNS packets
+2. **Increased attack surface** - Can be abused for DNS amplification attacks*
+
+*\* Attacker can send multiple DNS requests to a server while spoofing the victim's IP address. The server, thinking these requests are legitimate, responds to the victim's IP. This overwhelms the victim's network with a flood of unsolicited responses, resulting in a DoS attack. Mitigation strategies include rate limiting, traffic filtering and network firewalls (block known malicious IPs).*
