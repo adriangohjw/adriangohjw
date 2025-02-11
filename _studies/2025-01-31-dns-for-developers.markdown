@@ -138,3 +138,22 @@ Many DNS servers disable AXFR by default for security reasons:
 1. <b>Exposed internal network topology</b> - Attackers can identify internal services that should not be exposed to the public internet
 2. <b>Facilitate phising attack</b>. E.g. if they find `vpn.example.com`, they might create `vpn-secure.example.com` and phish users to input their credentials.
 3. <b>DoS via large zone transfers</b> - high bandwidth usage
+
+## Recursive v.s. Iterative queries
+
+### Recursive Query
+
+- DNS client requests that the DNS resolver fully resolves the domain name.
+- Mainly used by end-users' devices as it obtain complete answers with minimal effort (does not require multiple queries)
+
+![Recursive Query](/assets/dns-for-developers/recursive-query.png)
+<p style="text-align: center;">Image source: <a href="https://threat.media/definition/what-is-a-recursive-dns-query/">threat.media</a></p>
+
+
+### Iterative Query
+
+- DNS client queries the DNS servers sequentially.
+- Mainly used by DNS resolvers to methodically resolve domain names by consulting multiple servers.
+
+![Iterative Query](/assets/dns-for-developers/iterative-query.png)
+<p style="text-align: center;">Image source: <a href="https://threat.media/definition/what-is-an-iterative-dns-query/">threat.media</a></p>
