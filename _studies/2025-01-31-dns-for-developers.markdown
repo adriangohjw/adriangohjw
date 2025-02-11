@@ -230,3 +230,41 @@ ns3.google.com.         247628  IN      AAAA    2001:4860:4802:36::a
 2. **Increased attack surface** - Can be abused for DNS amplification attacks*
 
 *\* Attacker can send multiple DNS requests to a server while spoofing the victim's IP address. The server, thinking these requests are legitimate, responds to the victim's IP. This overwhelms the victim's network with a flood of unsolicited responses, resulting in a DoS attack. Mitigation strategies include rate limiting, traffic filtering and network firewalls (block known malicious IPs).*
+
+## Dynamic DNS responses
+
+### Round-robin DNS
+
+- Load balancing technique to distribute traffic evenly across multiple servers.
+- **Pros**: Simple and easy
+- **Cons**: Can actually be unequal distribution + Ignores server load
+- E.g.
+  - 1st request -> server 1
+  - 2nd request -> server 2
+  - 3rd request -> server 1
+  - 4th request -> server 2
+  - etc.
+
+### Weighted round-robin DNS
+
+- Similar to round-robin, but each server has a weight.
+- **Pros**: More efficient resource utilization + Considers server load
+- **Cons**: Static weights + More complex to implement
+- E.g. server 1 has a weight of 1, server 2 has a weight of 2. Then
+  - 1st request -> server 1
+  - 2nd request -> server 1
+  - 3rd request -> server 2
+  - 4th request -> server 1
+  - etc.
+
+### Dynamic load balancing
+
+- Actively monitors server load and adjusts the distribution accordingly.
+- **Pros**: Real-time traffic management + More reliable
+- **Cons**: More complex to implement + Requires more resources to monitor server load
+
+### Split-horizon DNS
+
+- **Pros**: More secure + customized access
+- **Cons**: Compled to manage + Potential for misconfigurations
+- Example: Making an internal website accessible only within the office network.
