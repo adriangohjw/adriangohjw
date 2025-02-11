@@ -120,7 +120,7 @@ adriangohjw.com.        1772    IN      SOA     carlos.ns.cloudflare.com. dns.cl
 | Retry | How often the secondary server should retry if the transfer fails |
 | Expire | How long the secondary server should keep the zone in its cache |
 
-### AXFR (Authoritative Zone Transfer)
+### AXFR (Asynchronous Transfer Full Range)
 
 - Used to transfer the entire zone from the primary to the secondary server.
 - Response contains all DNS records for a domain, including internal hosts, subdomains, mail servers, and sometimes even private infrastructure.
