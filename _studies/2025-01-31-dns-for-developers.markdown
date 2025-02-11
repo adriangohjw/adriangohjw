@@ -206,3 +206,8 @@ ns3.google.com.         247628  IN      AAAA    2001:4860:4802:36::a
 ### Cons
 1. **Outdated DNS records** - If TTL is 1 hour, it means it might take up to 1 hour to update the DNS records locally.
 2. **DNS poisoning** - Inserting malicious DNS records into the cache and redirecting users to malicious websites.
+
+### Negative caching
+
+- DNS server will cache the failed DNS request and return the cached result.
+- Duration for which a negative response is cached: Lesser of 2 values in the SOA record (TTL + minimum TTL a.k.a negative TTL)
