@@ -90,7 +90,14 @@ linkedin-queens-game-solver.adriangohjw.com. 300 IN A 104.21.32.1
 
 - Every DNS zone must have at least 2 name servers to serve its DNS records.
 - They are "authoritative NS" because they are the only servers trusted to reply with the correct DNS records for that zone.
-- For example, `adriangohjw.com` has Cloudflare's name servers as its authoritative NS.
+
+```bash
+dig adriangohjw.com NS +short
+carlos.ns.cloudflare.com.
+kara.ns.cloudflare.com.
+```
+
+## Zone transfers
 
 ```bash
 dig adriangohjw.com SOA
