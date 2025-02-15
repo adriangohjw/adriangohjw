@@ -10,5 +10,6 @@ I previously co-founded [NodeFlair](https://nodeflair.com/) (Series A) and singl
 - 📓 My blog: [adriangohjw.com/blog](https://adriangohjw.com/blog)
 
 Other projects:
+- 🎨 [Image Text Overlay Generator](https://text-over-image.adriangohjw.com/)
 - 💎 [autogitc](https://github.com/adriangohjw/autogitc) (use LLM to write git commit messages)
 - 🎮 [LinkedIn Queens Game Solver](https://linkedin-queens-game-solver.adriangohjw.com/)

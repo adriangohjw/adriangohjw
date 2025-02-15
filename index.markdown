@@ -15,6 +15,7 @@ I write my [technical learnings and opinions](/blog) and gave [talks](/talks) at
 - ⚙️ Tech stacks: `.rb` `.ts` `.js` `.py` 
 
 Other projects:
+- 🎨 [Image Text Overlay Generator](https://text-over-image.adriangohjw.com/)
 - 💎 [autogitc](https://github.com/adriangohjw/autogitc) (use LLM to write git commit messages)
 - 🎮 [LinkedIn Queens Game Solver](https://linkedin-queens-game-solver.adriangohjw.com/)
 
