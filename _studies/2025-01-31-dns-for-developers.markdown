@@ -268,3 +268,169 @@ ns3.google.com.         247628  IN      AAAA    2001:4860:4802:36::a
 - **Pros**: More secure + customized access
 - **Cons**: Compled to manage + Potential for misconfigurations
 - Example: Making an internal website accessible only within the office network.
+
+## Types of DNS records
+
+| Type | Description | Example |
+|------|-------------|---------|
+| A | Maps a domain name to an IPv4 address | `192.0.2.1` |
+| AAAA | Maps a domain name to an IPv6 address | `2001:db8:1:1:1:1:1:1` |
+| CNAME | Maps a domain name to another domain name | `www.example.com.cdn.net` |
+| TXT | Stores arbitrary text data | `v=spf1 +all` |
+
+### A & AAAA
+
+- If both A & AAAA present, a client can connect to either as DNS cannot dictate which one to use.
+
+### CNAME
+
+- No other records with the same name can exist.
+- Building on the pointer above, only one CNAME record per domain (or subdomain) too.
+- No CNAME allowed for NS and MX records
+  - e.g. `mail.domain.com` MX record pointing to `mailserver.domain.com` cannot have a CNAME of `mailserver.domain.com`
+
+| Common pitfall | Description |
+|---------------|-------------|
+| Having a loop | e.g. `www.domain.com` CNAME to `mail.domain.com` and CNAME back to `www.domain.com` |
+| Pointing to a IP address | Because the IP e.g. `1.2.3.4` will be interpreted as a subdomain, not a IP address. |
+| Setting a URL | e.g. `www.domain.com` CNAME to `https://domain.com/about` |
+
+### TXT
+
+- Mainly used to protect against spam and phishing
+  - e.g. SPF, DKIM, DMARC, Domain Verification.
+- Value cannot only contain 255 characters.
+
+### SRV
+
+- Specify the location of servers for specific services, including hostnames and ports.
+
+```bash
+dig _sip._tcp.example.com SRV
+
+_sip._tcp.example.com. 86400 IN SRV 10 5 5060 sipserver.example.com.
+```
+
+| Field | Description | Example |
+|-------|-------------|---------|
+| Priority | Lower value = higher priority | 10 |
+| Weight | Used to distribute traffic | 5 |
+| Port | Port number | 5060 |
+| Target | Hostname of the server | sipserver.example.com |
+
+
+- By configuring multiple SRV records with different priorities and weights, you can load balance your SIP (Session Initiation Protocol) servers.
+
+### PTR
+
+- Reverse DNS lookup
+- Maps an IP address to a domain name.
+
+## Types of DNS records (Emails)
+
+| Type | Description |
+|------|-------------|
+| MX | Maps a domain name to be the recipient of emails |
+| SPF | Specifies who can send emails for a domain |
+| DKIM | Allows senders to sign their emails (stronger proof than SPF) |
+| DMARC | Specifies how strict the receiving email server should be about accepting emails |
+
+### MX
+
+- Maps a domain name to be the recipient of emails.
+- The receiving email server will use the MX record to determine where to send the email.
+
+```bash
+dig adriangohjw.com MX
+
+adriangohjw.com.        1772    IN      MX      10 mail.adriangohjw.com.
+adriangohjw.com.        1772    IN      MX      20 mail2.adriangohjw.com.
+```
+
+| Field | Description |
+|-------|-------------|
+| Priority | Lower value = higher priority | 10 |
+| Target | Hostname of the mail server | mail.adriangohjw.com |
+
+- MX value cannot be a CNAME
+- MX value cannot be an IP address
+
+### TLSA (TLS Authentication)
+
+- A user visiting a website checks the TLS certificate issued by a Certificate Authority (CA). But if an attacker is able to intercept the TLS handshake, they can issue a fake certificate.
+
+#### DANE
+- DANE (DNS-Based Authentication of Named Entities) is a protocol that allows website owners to publish their own certificate information in DNS, ensuring only the correct certificate is trusted. It store information such as:
+  - Type of certificate (e.g. full certificate, public key, CA)
+  - A fingerprint hash of the certificate
+  - The certificate usage policy
+- DANE requires DNSSEC to prevent man-in-the-middle DNS records tampering.
+
+```bash
+dig _443._tcp.example.com TLSA
+
+_443._tcp.example.com. IN TLSA 3 1 1 2B5B3D6C...
+```
+
+| Field | Description |
+|-------|-------------|
+| Usage | 3 = certificate usage policy |
+| Selector | 1 = selector |
+| Matching Type | 1 = matching type |
+| Certificate | 2B5B3D6C... = certificate hash |
+
+This means:
+- When a browser connects to `example.com` using port 443 (https), it checks the DNS for a TLSA record
+- It verfieies that the server's public key matches the stored hash
+- Rejects the connection if it doesn't match
+
+![DANE](/assets/dns-for-developers/DANE.png)
+<p style="text-align: center;">Image source: <a href="https://www.csa.gov.sg/resources/internet-hygiene-portal/information-resources/dane">CSA</a></p>
+
+#### DANE Usage Scenarios
+
+1. *Preventing Rogue CAs* - If a CA is compromised, browsers will reject the certificate because it doesn't match the TLSA record.
+2. *Self-signed certificates* - You can published hash of your self-signed certificate in DNS
+3. *SMTP Security* - Email servers using DANE for SMTP can verify TLS certificates via DNS.
+
+### MTA-STS (Mail Transfer Agent Strict Transport Security)
+
+- Enhances the security of email transmission between mail servers
+- Note: it encrypts the transmission path, not the email content
+- Done by enforcing the use of TLS encryption
+
+![MTA-STS](/assets/dns-for-developers/mta-sts.png)
+
+#### Step 1: MTA-STS DNS TXT Record
+
+```bash
+dig _mta-sts.google.com TXT
+
+_mta-sts.google.com.    900     IN      TXT     "v=STSv1; id=20210803T010101;"
+```
+
+| Field | Description |
+|-------|-------------|
+| v | Version of the MTA-STS policy (STSv1) |
+| id | Can be any string, but timestamp is common practice |
+
+#### Step 2: MTA-STS Policy File
+
+- Should be hosted on a web server accessible via HTTPS
+- e.g. `https://mta-sts.google.com/.well-known/mta-sts.txt`
+
+```txt
+version: STSv1
+mode: enforce
+mx: smtp.google.com
+mx: aspmx.l.google.com
+mx: *.aspmx.l.google.com
+max_age: 86400
+```
+
+| Field | Description |
+|-------|-------------|
+| version | Version of the MTA-STS policy (STSv1) |
+| mode | enforce / testing / none |
+| mx | Mail server to use (min. 1 required) |
+| max_age | How long the policy is valid (86400 seconds = 1 day) |
