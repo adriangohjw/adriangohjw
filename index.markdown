@@ -9,7 +9,7 @@ I previously co-founded [NodeFlair](https://nodeflair.com/) (Series A) and singl
 
 I write my [technical learnings and opinions](/blog) and gave [talks](/talks) at meetups and conferences.
 
-- 📋 28 years old + Male
+- 📋 29 years old + Male
 - 🏢 [NodeFlair](https://nodeflair.com), [ShopBack](https://www.shopback.sg)
 - 🛠️ Building [bebetter.engineer](https://bebetter.engineer) (WIP)
 - ⚙️ Tech stacks: `.rb` `.ts` `.js` `.py` 
