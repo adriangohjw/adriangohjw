@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/jekyll/minima.git
-  revision: ad5e904e6fe43ff2931ee2f0f7d044d46c17416b
+  revision: 7576b06384c888ee5b654ffa3316d1c0eac13e81
   specs:
     minima (3.0.0.dev)
       jekyll (>= 3.5, < 5.0)
@@ -23,7 +23,7 @@ GEM
     eventmachine (1.2.7)
     ffi (1.17.1)
     forwardable-extended (2.6.0)
-    google-protobuf (4.29.3)
+    google-protobuf (4.30.1)
       bigdecimal
       rake (>= 13)
     http_parser.rb (0.8.0)
@@ -59,7 +59,7 @@ GEM
       nokogiri (~> 1.12)
     jekyll-watch (2.2.1)
       listen (~> 3.0)
-    json (2.10.1)
+    json (2.10.2)
     kramdown (2.5.1)
       rexml (>= 3.3.9)
     kramdown-parser-gfm (1.1.0)
@@ -84,7 +84,7 @@ GEM
     rexml (3.4.1)
     rouge (4.5.1)
     safe_yaml (1.0.5)
-    sass-embedded (1.85.0)
+    sass-embedded (1.85.1)
       google-protobuf (~> 4.29)
       rake (>= 13)
     terminal-table (3.0.2)
