@@ -11,5 +11,6 @@ I previously co-founded [NodeFlair](https://nodeflair.com/) (Series A) and singl
 
 Other projects:
 - 🎨 [Image Overlay Generator](https://image-overlay-generator.adriangohjw.com/)
+- 😎 [Alt Text Generator API](https://github.com/adriangohjw/alt-text-generator)
 - 💎 [autogitc](https://github.com/adriangohjw/autogitc) (use LLM to write git commit messages)
 - 🎮 [LinkedIn Queens Game Solver](https://linkedin-queens-game-solver.adriangohjw.com/)
