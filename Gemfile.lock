@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/jekyll/minima.git
-  revision: ad5e904e6fe43ff2931ee2f0f7d044d46c17416b
+  revision: f1a2af473935661dda2d1532de8bda3035b4202a
   specs:
     minima (3.0.0.dev)
       jekyll (>= 3.5, < 5.0)
@@ -16,14 +16,14 @@ GEM
     bigdecimal (3.1.9)
     colorator (1.1.0)
     concurrent-ruby (1.3.5)
-    csv (3.3.2)
+    csv (3.3.3)
     em-websocket (0.5.3)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0)
     eventmachine (1.2.7)
     ffi (1.17.1)
     forwardable-extended (2.6.0)
-    google-protobuf (4.29.3)
+    google-protobuf (4.30.2)
       bigdecimal
       rake (>= 13)
     http_parser.rb (0.8.0)
@@ -84,8 +84,8 @@ GEM
     rexml (3.4.1)
     rouge (4.5.1)
     safe_yaml (1.0.5)
-    sass-embedded (1.85.0)
-      google-protobuf (~> 4.29)
+    sass-embedded (1.86.0)
+      google-protobuf (~> 4.30)
       rake (>= 13)
     terminal-table (3.0.2)
       unicode-display_width (>= 1.1.1, < 3)
