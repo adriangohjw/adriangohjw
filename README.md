@@ -4,7 +4,6 @@ I previously co-founded [NodeFlair](https://nodeflair.com/) (Series A) and singl
 
 - 📋 29 years old + Male
 - 🏢 [NodeFlair](https://nodeflair.com/), ShopBack
-- 🛠️ Building [bebetter.engineer](https://bebetter.engineer) (WIP)
 - ⚙️ Tech stacks: `.rb`, `.ts`, `.js`, `.py`
 - 📫 Reach me: [twitter.com/adriangohjw](https://twitter.com/adriangohjw)
 - 📓 My blog: [adriangohjw.com/blog](https://adriangohjw.com/blog)
@@ -14,3 +13,4 @@ Other projects:
 - 😎 [Alt Text Generator API](https://alt-text-generator.adriangohjw.com/)
 - 💎 [autogitc](https://github.com/adriangohjw/autogitc) (use LLM to write git commit messages)
 - 🎮 [LinkedIn Queens Game Solver](https://linkedin-queens-game-solver.adriangohjw.com/)
+- 🛠️ Building [bebetter.engineer](https://bebetter.engineer) (WIP)
