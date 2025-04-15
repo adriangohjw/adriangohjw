@@ -11,7 +11,6 @@ I write my [technical learnings and opinions](/blog) and gave [talks](/talks) at
 
 - 📋 29 years old + Male
 - 🏢 [NodeFlair](https://nodeflair.com), [ShopBack](https://www.shopback.sg)
-- 🛠️ Building [bebetter.engineer](https://bebetter.engineer) (WIP)
 - ⚙️ Tech stacks: `.rb` `.ts` `.js` `.py` 
 
 Other projects:
@@ -19,6 +18,7 @@ Other projects:
 - 😎 [Alt Text Generator API](https://alt-text-generator.adriangohjw.com/)
 - 💎 [autogitc](https://github.com/adriangohjw/autogitc) (use LLM to write git commit messages)
 - 🎮 [LinkedIn Queens Game Solver](https://linkedin-queens-game-solver.adriangohjw.com/)
+- 🛠️ Building [bebetter.engineer](https://bebetter.engineer) (WIP)
 
 <hr>
 
