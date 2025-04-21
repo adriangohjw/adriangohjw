@@ -1,9 +1,10 @@
 ### Hi there 👋
 
-I previously co-founded [NodeFlair](https://nodeflair.com/) (Series A) and single-handedly scaled it to >400k monthly visitors.
+I am a Software Engineer @ [Open Government Products (OGP)](https://www.open.gov.sg/) working on [Isomer](https://www.isomer.gov.sg/) and empowering government to set up better websites - faster and cheaper.
 
-- 📋 29 years old + Male
-- 🏢 [NodeFlair](https://nodeflair.com/), ShopBack
+- 📋 29 years old
+- 🏢 2018 to 2024: Technical Co-Founder @ [NodeFlair](https://nodeflair.com) (Series A) & single-handledly scaled it to >400k monthly visitors.
+- 🏢 2017, 2018: Product @ [ShopBack](https://www.shopback.sg)
 - ⚙️ Tech stacks: `.rb`, `.ts`, `.js`, `.py`
 - 📫 Reach me: [twitter.com/adriangohjw](https://twitter.com/adriangohjw)
 - 📓 My blog: [adriangohjw.com/blog](https://adriangohjw.com/blog)
