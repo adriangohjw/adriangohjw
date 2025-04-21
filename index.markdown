@@ -10,8 +10,8 @@ I am a Software Engineer @ [Open Government Products (OGP)](https://www.open.gov
 I write my [technical learnings and opinions](/blog) and gave [talks](/talks) at meetups and conferences.
 
 - 📋 29 years old
-- 🏢 2018 to 2024: Technical Co-Founder @ [NodeFlair](https://nodeflair.com) (Series A) & single-handledly scaled it to >400k monthly visitors.
-- 🏢 2017, 2018: Product @ [ShopBack](https://www.shopback.sg)
+- 👣 Until 2024: Co-Founder (Product & Engineering) @ [NodeFlair](https://nodeflair.com) (Series A). Single-handledly scaled it to >400k monthly visitors.
+- 👣 2017, 2018: Data & Product @ [ShopBack](https://www.shopback.sg)
 - ⚙️ Tech stacks: `.rb` `.ts` `.js` `.py` 
 
 Other projects:
