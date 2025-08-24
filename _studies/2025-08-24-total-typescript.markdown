@@ -13,4 +13,44 @@ Just jotting down some quick notes and learnings from the [course](https://www.t
 
 # TypeScript Pro Essentials
 
-- `Readonly` -> good for ensuring certain objects aren't mutable e.g. `Readonly<SearchParams>`
+## `Readonly<>`
+
+- Good for ensuring certain objects aren't mutable e.g. `Readonly<SearchParams>`
+
+## `Parameters<>`
+
+Gives us tuple type (array-like), because functions' parameters are, by default, a list of arguments.
+
+```ts
+function greet(name: string, age: number) {
+  return `Hello ${name}, age ${age}`;
+}
+
+type GreetParams = Parameters<typeof greet>;
+// GreetParams = [name: string, age: number]
+```
+
+Useful when writing wrappers, especially <b>around 3rd party functions where we cannot rewrite it to use our own types</b>:
+```ts
+function fetchUser(id: number, includePosts: boolean) {}
+
+type FetchUserArgs = Parameters<typeof fetchUser>;
+// Automatically = [id: number, includePosts: boolean]
+
+function callApi(...args: FetchUserArgs) {
+  return fetchUser(...args);
+}
+```
+
+## `ReturnType<>`
+
+Similar to `Parameters<>` where it's more useful when using with wrappers.
+
+```ts
+const userQuery = () => {
+  return prisma.user.findUnique({   where: { id: "1" } })
+};
+
+type User = Awaited<ReturnType<typeof userQuery>>;
+// User = { id: string; name: string; ... } | null
+```
