@@ -54,3 +54,35 @@ const userQuery = () => {
 type User = Awaited<ReturnType<typeof userQuery>>;
 // User = { id: string; name: string; ... } | null
 ```
+
+## `satisfies`
+
+- `as` is *"Trust me, I know the type of this value."* - it forces the type without checking
+- `satisfies` checks that it matches a type but keeps the original type. Allows for extra properties.
+
+```ts
+/* Use `as` */
+let value: unknown = "123";
+
+// TypeScript doesn't know it's a string, so we force it
+let length = (value as string).length;
+
+////
+
+/* Use `satisfies` */
+type User = { name: string };
+
+const user = {
+  name: "Alice",
+  age: 30 // extra property
+} satisfies User;
+
+// TypeScript knows user has name, AND age
+console.log(user.age); // 30
+```
+
+| Feature     | `as`                | `satisfies`                            |
+| ----------- | ------------------- | -------------------------------------- |
+| Type check  | No (forces type)    | Yes (checks type compatibility)        |
+| Keeps type  | No (overrides type) | Yes (keeps full type inference)        |
+| Extra props | Can hide them       | Allows them while ensuring type safety |
