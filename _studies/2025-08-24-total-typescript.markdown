@@ -48,7 +48,7 @@ Similar to `Parameters<>` where it's more useful when using with wrappers.
 
 ```ts
 const userQuery = () => {
-  return prisma.user.findUnique({   where: { id: "1" } })
+  return prisma.user.findUnique({ where: { id: "1" } })
 };
 
 type User = Awaited<ReturnType<typeof userQuery>>;
@@ -86,3 +86,48 @@ console.log(user.age); // 30
 | Type check  | No (forces type)    | Yes (checks type compatibility)        |
 | Keeps type  | No (overrides type) | Yes (keeps full type inference)        |
 | Extra props | Can hide them       | Allows them while ensuring type safety |
+
+## Weird Parts of TypeScript
+
+### Accept any but null or undefined
+
+Use `{}` to accept any but null or undefined
+
+```ts
+const myFunction = (input : {}) => {}
+// throw error if null/undefined
+// any other input like number, string etc. all works fine
+```
+
+### Truly empty object
+
+`Record<PropertyKey, never>` used to type a truly empty object `{}`
+
+### `Object.keys` and `Object.entries`
+
+TypeScript considers `Object.keys` to return an array of strings, without the guarantee of containing all the correct properties.
+
+Looking at `Object.entries`, we end up with a `Record<string, any>` as the output
+
+```ts
+const keys = Object.entries(user).forEach(([key, value]) => {
+  // key is string, and value is any
+});
+```
+
+### Evolving `any`
+
+myValue infers the type to be string
+
+```ts
+let myValue = 'abc'
+myValue = 123 // <-- this throws type error
+```
+
+myValue has no type yet so no type attached to it yet
+
+```ts
+let myValue
+myValue = 'abc'
+myValue = 123 // <-- this doe not throw type error
+```
