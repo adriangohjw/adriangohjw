@@ -131,3 +131,10 @@ let myValue
 myValue = 'abc'
 myValue = 123 // <-- this doe not throw type error
 ```
+
+## Declation files `.d.ts`
+
+- For type declarations only
+- Runtime code is not allowed
+- Types declared inside can be exported and imported elsewhere in the project
+- If writing own app or library in TypeScript → just write `.ts`, and let the compiler emit `.d.ts` if you want consumers to use your types. Only hand-write `.d.ts` when describing JS code or external/global stuff.
