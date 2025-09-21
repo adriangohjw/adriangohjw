@@ -5,6 +5,7 @@ date:   2025-01-31 00:00:00 +0800
 image: /assets/dns-for-developers/cover.png
 categories: studies
 tags: [dns]
+uncompleted: true
 ---
 
 Just jotting down some quick notes and learnings from the [video course](https://www.nslookup.io/dns-course/) by Ruurtjan Pul from nslookup.io.

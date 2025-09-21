@@ -27,10 +27,12 @@ Other projects:
 
 {% assign latest_studies = site.studies | sort: 'date' | reverse %}
 <ul>
-  {% for study in latest_studies limit: 1 %}
-    <li>
-      <a href="{{ study.url }}">{{ study.title }}</a>
-    </li>
+  {% for study in latest_studies %}
+    {% if study.uncompleted %}
+      <li>
+        <a href="{{ study.url }}">{{ study.title }}</a>
+      </li>
+    {% endif %}
   {% endfor %}
 </ul>
 

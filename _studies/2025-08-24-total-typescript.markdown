@@ -5,6 +5,7 @@ date:   2025-08-24 00:00:00 +0800
 image: /assets/total-typescript/cover.jpg
 categories: studies
 tags: [typescript]
+uncompleted: true
 ---
 
 Just jotting down some quick notes and learnings from the [course](https://www.totaltypescript.com/) by Matt Pocock.

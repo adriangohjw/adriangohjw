@@ -5,6 +5,7 @@ date:   2025-09-21 00:00:00 +0800
 image: /assets/joy-of-react/cover.jpg
 categories: studies
 tags: [typescript]
+uncompleted: true
 ---
 
 Just jotting down some quick notes and learnings from the [course](https://www.joyofreact.com/) by Josh Comeau.
