@@ -311,3 +311,52 @@ type AttributeGetters = {
   getLastName: () => Attributes["lastName"];
 }
 ```
+
+## Utils Folder
+
+### `asserts`
+
+```ts
+function assertIsAdminUser(user: User): asserts user is AdminUser {
+  if (!("roles" in user)) {
+    throw new Error("User is not an admin");
+  }
+}
+
+const handleRequest = (user: User | AdminUser) => {
+  // user can be User or AdminUser here
+
+  assertIsAdminUser(user);
+
+  // user can only be AdminUser here
+};
+```
+
+### Function overloads
+
+When to use overloads:
+
+1. Different parameter shapes → different return types
+```ts
+function parse(input: string): object;
+function parse(input: string, asArray: true): object[];
+function parse(input: string, asArray?: boolean): object | object[] {
+  return asArray ? JSON.parse(input) as object[] : JSON.parse(input);
+}
+
+const one = parse('{"a":1}');       // object
+const many = parse('[{"a":1}]', true); // object[]
+```
+
+
+2. Same function, different argument types
+```ts
+function length(value: string): number;
+function length<T>(value: T[]): number;
+function length(value: string | any[]): number {
+  return value.length;
+}
+
+length("hello");   // number
+length([1, 2, 3]); // number
+```
