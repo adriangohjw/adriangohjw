@@ -138,3 +138,176 @@ myValue = 123 // <-- this doe not throw type error
 - Runtime code is not allowed
 - Types declared inside can be exported and imported elsewhere in the project
 - If writing own app or library in TypeScript → just write `.ts`, and let the compiler emit `.d.ts` if you want consumers to use your types. Only hand-write `.d.ts` when describing JS code or external/global stuff.
+
+## Designing Your Types
+
+### Basics
+
+Let's say we have this:
+
+```ts
+type ErrorShape = {
+  error: {
+    message: string;
+  };
+};
+
+type UserDataShape =
+  | {
+      data: {
+        id: string;
+        name: string;
+        email: string;
+      };
+    }
+  | ErrorShape;
+
+type PostDataShape =
+  | {
+      data: {
+        id: string;
+        title: string;
+        body: string;
+      };
+    }
+  | ErrorShape;
+```
+
+Instead of repeating this pattern, we can define a reusable generic type:
+
+```ts
+// TData is a name we give
+type DataShape<TData> =
+  | {
+      data: TData
+    }
+  | ErrorShape;
+
+type UserDataShape = DataShape<{
+  id: string;
+  name: string;
+  email: string;
+}>;
+
+type PostDataShape = DataShape<{
+  id: string;
+  title: string;
+  body: string;
+}>;
+```
+
+### Functions
+
+```ts
+type PromiseFunc<
+  TInput,
+  TOutput
+> = (input: TInput) => Promise<TOutput>;
+
+type Example1 = PromiseFunc<string, any>
+type Example2 = PromiseFunc<number, boolean>
+```
+
+### Default type
+
+```ts
+type Result<
+  TSuccess,
+  TError = Error // If TError not passed in, it defaults to Error
+>
+```
+
+### Constraints `extends`
+
+```ts
+type Result<
+  TSuccess,
+  TError extends { message: string } = Error
+  // TError must have `.message` string prop
+>
+```
+
+### Stricter Omit
+
+```ts
+type StricterOmit<
+  TInput,
+  K extends keyof TInput
+> = Omit<TInput, K>
+
+type AllowedExample = StricterOmit<
+  { a: string },
+  "a"
+>
+
+type NotAllowedExample = StricterOmit<
+  { a: string },
+  "b" // <-- "b" is not a key
+>
+```
+
+### Template Literal Types
+
+```ts
+// This must be a string starting with "/"
+type RouteType = `/${string}`
+const goToRoute = (string: RouteType) => {}
+
+goToRoute("/home") // allowed
+goToRoute("home") // not allowed
+```
+
+Another example use case:
+```ts
+type BreadType = 'rye' | 'brown' | 'white';
+type Filling = 'cheese' | 'ham' | 'salami';
+type Sandwich = `${BreadType} sandwich with ${Filling}`;
+
+const allowedOne: Sandwich = 'rye sandwich with cheese'
+const allowedTwo: Sandwich = 'brown sandwich with ham'
+
+// chicken is not Filling
+const notAllowed: Sandwich = 'rye sandwich with chicken'
+```
+
+### Mapped Types
+
+```ts
+interface Attributes {
+  firstName: string
+  lastName: string
+}
+
+// DOES NOT WORK:
+type AttributesGetter = Record<
+  keyof Attributes,
+  () => string
+>
+// generates this with generic string value
+type AttributesGetter = {
+  firstName: () => string;
+  lastName: () => string;
+}
+
+// WORKS:
+type AttributesGetter = {
+  [K in keyof Attributes]: () => Attributes[K]
+}
+// generates this as we can reference K in both key-value
+type AttributeGetters = {
+  firstName: () => Attributes["firstName"];
+  lastName: () => Attributes["lastName"];
+}
+```
+
+More advanced possibilities:
+```ts
+type AttributesGetter = {
+  [K in keyof Attributes as `get${Capitalize<K>}`]: () => Attributes[K]
+}
+// generates this
+type AttributeGetters = {
+  getFirstName: () => Attributes["firstName"];
+  getLastName: () => Attributes["lastName"];
+}
+```
