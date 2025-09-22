@@ -90,3 +90,77 @@ const [stickersWithKeys, setStickersWithKeys] = useState(
   stickers.map(s => ({ ...s, key: crypto.randomUUID() }))
 )
 ```
+
+## Hooks
+
+### `useId`
+
+- Each instance of this component will receive a different value -> Multiple instances of the component can exist compared to if we hardcode `id`
+- Produces the same value across server and client renders
+
+```ts
+function LoginForm() {
+  const id = React.useId();
+  return <Something id={id}>
+}
+```
+
+### `useRef`
+
+Why:
+
+1. Accessing DOM elements directly
+
+```ts
+const videoRef = useRef()
+
+// assigning it
+<video ref={videoRef}>
+
+// accessing it
+videoRef.current.playbackRate = 2
+```
+
+2. Storing value without causing a re-render
+
+```ts
+const countRef = useRef(0);
+
+const increment = () => {
+  countRef.current += 1; // doesn't trigger render
+  console.log(countRef.current);
+};
+```
+
+### `useEffect`
+
+#### Event subscriptions
+
+Instead of:
+```ts
+<div
+  className="wrapper"
+  onMouseMove={(event) => {
+    setMousePosition({
+      x: event.clientX,
+      y: event.clientY,
+    });
+  }}
+/>
+```
+
+Do this:
+```ts
+// Avoids recreating the event listener on every render
+React.useEffect(() => {
+  function handleMouseMove(event) {
+    setMousePosition({
+      x: event.clientX,
+      y: event.clientY,
+    });
+  }
+  window.addEventListener('mousemove', handleMouseMove);
+}, []);
+
+<div className="wrapper" />
+```
