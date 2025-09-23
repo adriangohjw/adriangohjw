@@ -338,27 +338,26 @@ const handleRequest = (user: User | AdminUser) => {
 When to use overloads:
 
 1. Different parameter shapes → different return types:
-
-```ts
-function parse(input: string): object;
-function parse(input: string, asArray: true): object[];
-function parse(input: string, asArray?: boolean): object | object[] {
-  return asArray ? JSON.parse(input) as object[] : JSON.parse(input);
-}
-
-const one = parse('{"a":1}');       // object
-const many = parse('[{"a":1}]', true); // object[]
-```
+    ```ts
+    function parse(input: string): object;
+    function parse(input: string, asArray: true): object[];
+    function parse(input: string, asArray?: boolean): object | object[] {
+      return asArray ? JSON.parse(input) as object[] : JSON.parse(input);
+    }
+    
+    const one = parse('{"a":1}');       // object
+    const many = parse('[{"a":1}]', true); // object[]
+    ```
 
 2. Same function, different argument types:
 
-```ts
-function length(value: string): number;
-function length<T>(value: T[]): number;
-function length(value: string | any[]): number {
-  return value.length;
-}
-
-length("hello");   // number
-length([1, 2, 3]); // number
-```
+    ```ts
+    function length(value: string): number;
+    function length<T>(value: T[]): number;
+    function length(value: string | any[]): number {
+      return value.length;
+    }
+    
+    length("hello");   // number
+    length([1, 2, 3]); // number
+    ```
