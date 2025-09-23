@@ -338,6 +338,7 @@ const handleRequest = (user: User | AdminUser) => {
 When to use overloads:
 
 1. Different parameter shapes → different return types:
+
 ```ts
 function parse(input: string): object;
 function parse(input: string, asArray: true): object[];
@@ -350,6 +351,7 @@ const many = parse('[{"a":1}]', true); // object[]
 ```
 
 2. Same function, different argument types:
+
 ```ts
 function length(value: string): number;
 function length<T>(value: T[]): number;
