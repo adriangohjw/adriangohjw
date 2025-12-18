@@ -164,3 +164,30 @@ React.useEffect(() => {
 
 <div className="wrapper" />
 ```
+
+#### Cleanups
+
+Before React can re-run the effect, it'll invoke the cached cleanup function, to make sure we're starting from a "clean slate".
+
+```ts
+React.useEffect(() => {
+  if (isEnabled) {
+    function handleMouseMove(event) {
+      setMousePosition({
+        x: event.clientX,
+        y: event.clientY,
+      });
+    }
+
+    window.addEventListener('mousemove', handleMouseMove);
+
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+    };
+  }
+}, [isEnabled]);
+```
+
+![](/assets/joy-of-react/effects-cleanup.svg)
+
+![](/assets/joy-of-react/effects-cleanup-timeline.svg)
