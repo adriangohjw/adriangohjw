@@ -191,3 +191,14 @@ React.useEffect(() => {
 ![](/assets/joy-of-react/effects-cleanup.svg)
 
 ![](/assets/joy-of-react/effects-cleanup-timeline.svg)
+
+## Strict Mode
+
+Purpose:
+- Safeguards designed to amplify potential issues
+- Warnings about deprecated APIs
+
+What to take note of:
+- Will run any render twice
+- Thus, for useEffct, it will effect -> cleanup -> effect
+- Full list: https://react.dev/reference/react/StrictMode
