@@ -2,8 +2,8 @@
 
 I am a Software Engineer @ [Open Government Products (OGP)](https://www.open.gov.sg/) working on [Isomer](https://www.isomer.gov.sg/) and empowering government to set up better websites - faster and cheaper.
 
-- 📋 29 years old
-- 👣 Until 2024: Co-Founder (Product & Engineering) @ [NodeFlair](https://nodeflair.com) (Series A). Scaled to >400k monthly visitors.
+- 👴🏻 30 years old
+- 👣 Till 2024: Co-Founder (Product & Engineering) @ [NodeFlair](https://nodeflair.com) (Series A). Scaled to >400k monthly visitors.
 - 👣 2017, 2018: Data & Product @ [ShopBack](https://www.shopback.sg)
 - ⚙️ Tech stacks: `.rb`, `.ts`, `.js`, `.py`
 - 📫 Reach me: [x.com/adriangohjw](https://x.com/adriangohjw)
