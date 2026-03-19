@@ -23,19 +23,6 @@ Other projects:
 
 <hr>
 
-## What I'm learning
-
-{% assign latest_studies = site.studies | sort: 'date' | reverse %}
-<ul>
-  {% for study in latest_studies %}
-    {% if study.uncompleted %}
-      <li>
-        <a href="{{ study.url }}">{{ study.title }}</a>
-      </li>
-    {% endif %}
-  {% endfor %}
-</ul>
-
 ## Some latest blog posts
 
 {% assign latest_blogs = site.blogs | sort: 'date' | reverse %}
@@ -55,5 +42,18 @@ Other projects:
     <li>
       <a href="{{ talk.url }}">{{ talk.title }}</a>
     </li>
+  {% endfor %}
+</ul>
+
+## What I'm learning
+
+{% assign latest_studies = site.studies | sort: 'date' | reverse %}
+<ul>
+  {% for study in latest_studies %}
+    {% if study.uncompleted %}
+      <li>
+        <a href="{{ study.url }}">{{ study.title }}</a>
+      </li>
+    {% endif %}
   {% endfor %}
 </ul>
