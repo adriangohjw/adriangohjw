@@ -6,7 +6,7 @@ I am a Software Engineer @ [Open Government Products (OGP)](https://www.open.gov
 - 👣 Until 2024: Co-Founder (Product & Engineering) @ [NodeFlair](https://nodeflair.com) (Series A). Single-handledly scaled it to >400k monthly visitors.
 - 👣 2017, 2018: Data & Product @ [ShopBack](https://www.shopback.sg)
 - ⚙️ Tech stacks: `.rb`, `.ts`, `.js`, `.py`
-- 📫 Reach me: [twitter.com/adriangohjw](https://twitter.com/adriangohjw)
+- 📫 Reach me: [x.com/adriangohjw](https://x.com/adriangohjw)
 - 📓 My blog: [adriangohjw.com/blog](https://adriangohjw.com/blog)
 
 Other projects:
