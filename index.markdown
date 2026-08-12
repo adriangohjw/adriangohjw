@@ -15,10 +15,8 @@ I write my [technical learnings and opinions](/blog) and gave [talks](/talks) at
 - ⚙️ Tech stacks: `.rb` `.ts` `.js` `.py` 
 
 Other projects:
-- 🔒 [Saltman](https://github.com/adriangohjw/saltman) (Github Action for AI Code Review)
 - 📁 [Telegram Sync](https://github.com/adriangohjw/telegram-sync)
 - 🎨 [Image Overlay Generator](https://image-overlay-generator.adriangohjw.com/)
-- 😎 [Alt Text Generator API](https://alt-text-generator.adriangohjw.com/)
 - 🎮 [LinkedIn Queens Game Solver](https://linkedin-queens-game-solver.adriangohjw.com/)
 
 <hr>

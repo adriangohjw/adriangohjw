@@ -10,8 +10,6 @@ I am a Software Engineer @ [Open Government Products (OGP)](https://www.open.gov
 - 📓 My blog: [adriangohjw.com/blog](https://adriangohjw.com/blog)
 
 Other projects:
-- 🔒 [Saltman](https://github.com/adriangohjw/saltman) (Github Action for AI Code Review)
 - 📁 [Telegram Sync](https://github.com/adriangohjw/telegram-sync)
 - 🎨 [Image Overlay Generator](https://image-overlay-generator.adriangohjw.com/)
-- 😎 [Alt Text Generator API](https://alt-text-generator.adriangohjw.com/)
 - 🎮 [LinkedIn Queens Game Solver](https://linkedin-queens-game-solver.adriangohjw.com/)
