@@ -16,7 +16,6 @@ I write my [technical learnings and opinions](/blog) and gave [talks](/talks) at
 
 Other projects:
 - 📁 [Telegram Sync](https://github.com/adriangohjw/telegram-sync)
-- 🎨 [Image Overlay Generator](https://image-overlay-generator.adriangohjw.com/)
 - 🎮 [LinkedIn Queens Game Solver](https://linkedin-queens-game-solver.adriangohjw.com/)
 
 <hr>
