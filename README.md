@@ -7,7 +7,7 @@ Main quest: Building [Isomer](https://www.isomer.gov.sg/) and empowering governm
 Side quest: Optimise teams' DX, e.g. adopting oxlint/oxfmt, TS7, PNPM, and sped up tests and build by up to 10x
 
 - 👴🏻 30 years old
-- 👣 Till 2024: Co-Founder (Product & Engineering) @ [NodeFlair](https://nodeflair.com) (Series A). Scaled to >400k monthly visitors.
+- 👣 Till 2024: Co-Founder (Eng. & Product) @ [NodeFlair](https://nodeflair.com) (Series A). Scaled to >400k monthly visitors.
 - 👣 2017, 2018: Data & Product @ [ShopBack](https://www.shopback.sg)
 - ⚙️ Tech stacks: `.rb`, `.ts`, `.js`, `.py`
 - 📫 Reach me: [x.com/adriangohjw](https://x.com/adriangohjw)
