@@ -8,7 +8,7 @@ About me:
 - 👴🏻 30 years old
 - 👣 Till 2024: Co-Founder (Eng. & Product) @ [NodeFlair](https://nodeflair.com) (Series A). Scaled to >400k monthly visitors.
 - 👣 2017, 2018: Data & Product @ [ShopBack](https://www.shopback.sg)
-- ⚙️ Tech stacks: `.rb`, `.ts`, `.js`, `.py`
+- ⚙️ Tech stacks: `.ts` `.rb` `.py`
 - 📫 Reach me: [x.com/adriangohjw](https://x.com/adriangohjw)
 - 📓 My blog: [adriangohjw.com/blog](https://adriangohjw.com/blog)
 
