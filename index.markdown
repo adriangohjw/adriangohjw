@@ -5,14 +5,18 @@ permalink: /
 
 # 👋 Hi, I'm Adrian Goh
 
-I am a Software Engineer @ [Open Government Products (OGP)](https://www.open.gov.sg/) working on [Isomer](https://www.isomer.gov.sg/) and empowering government to set up better websites - faster and cheaper.
+Current: Senior Software Engineer @ [Open Government Products (OGP)](https://www.open.gov.sg/) since 2024
+
+Main quest: Building [Isomer](https://www.isomer.gov.sg/) and empowering government to set up better websites - better, faster and cheaper.
+
+Side quest: Optimising teams' DX, such as adopting oxlint/oxfmt, TS7, PNPM, and speeding up tests and build by up to 10x.
 
 I write my [technical learnings and opinions](/blog) and gave [talks](/talks) at meetups and conferences.
 
 - 👴🏻 30 years old
-- 👣 Till 2024: Co-Founder (Product & Engineering) @ [NodeFlair](https://nodeflair.com) (Series A). Scaled to >400k monthly visitors.
+- 👣 2018 - 2024: Co-Founder (Product & Engineering) @ [NodeFlair](https://nodeflair.com) (Series A). Scaled to >400k monthly visitors.
 - 👣 2017, 2018: Data & Product @ [ShopBack](https://www.shopback.sg)
-- ⚙️ Tech stacks: `.rb` `.ts` `.js` `.py` 
+- ⚙️ Tech stacks: `.ts` `.rb` `.py` 
 
 Other projects:
 - 📁 [Telegram Sync](https://github.com/adriangohjw/telegram-sync)
