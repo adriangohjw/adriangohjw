@@ -11,5 +11,4 @@ I am a Software Engineer @ [Open Government Products (OGP)](https://www.open.gov
 
 Other projects:
 - 📁 [Telegram Sync](https://github.com/adriangohjw/telegram-sync)
-- 🎨 [Image Overlay Generator](https://image-overlay-generator.adriangohjw.com/)
 - 🎮 [LinkedIn Queens Game Solver](https://linkedin-queens-game-solver.adriangohjw.com/)
