@@ -4,7 +4,7 @@ Current: Senior Software Engineer @ [Open Government Products (OGP)](https://www
 
 Main quest: Building [Isomer](https://www.isomer.gov.sg/) and empowering government to set up better, faster and cheaper websites
 
-Side quest: Optimising teams' DX, e.g. adopting oxlint/oxfmt, TS7, PNPM, and speeding up tests and build by up to 10x
+Side quest: Optimise teams' DX, e.g. adopting oxlint/oxfmt, TS7, PNPM, and sped up tests and build by up to 10x
 
 - 👴🏻 30 years old
 - 👣 Till 2024: Co-Founder (Product & Engineering) @ [NodeFlair](https://nodeflair.com) (Series A). Scaled to >400k monthly visitors.
